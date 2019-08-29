@@ -1,5 +1,5 @@
-# coding: utf-8
-"""*****************************************************************************
+<#--
+/*******************************************************************************
 * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
@@ -20,13 +20,7 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*****************************************************************************"""
-
-def loadModule():
-    print("Load Module: Third Party Library - ExpressLogic ThreadX")
-
-    thirdPartyThreadX = Module.CreateComponent("ThreadX", "ThreadX", "/Third Party Libraries/RTOS/", "config/threadx.py")
-    thirdPartyThreadX.setDisplayType("Third Party Library")
-    thirdPartyThreadX.addCapability("ThreadX", "RTOS", True)
-
-    execfile(Module.getPath() + "/config/threadx.py")
+*******************************************************************************/
+-->
+    /*Enter the ThreadX kernel.*/
+    tx_kernel_enter();
