@@ -52,8 +52,8 @@
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
 #include "bsp/bsp.h"
-#include "peripheral/tmr1/plib_tmr1.h"
 #include "tx_api.h"
+#include "tx_tmr1.h"
 #include "osal/osal.h"
 #include "app.h"
 

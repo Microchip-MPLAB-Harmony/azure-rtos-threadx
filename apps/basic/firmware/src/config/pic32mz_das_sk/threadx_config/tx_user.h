@@ -134,9 +134,9 @@
 #define TX_THREAD_USER_EXTENSION                ????
 */
 
+#define TX_CPU_CLOCK_HZ                         200000000
 #define TX_TICK_RATE_HZ                         1000
 #define TX_TICK_PERIOD_MS                       (1000 / TX_TICK_RATE_HZ)
-
 
 /*
 #define TX_DISABLE_ERROR_CHECKING

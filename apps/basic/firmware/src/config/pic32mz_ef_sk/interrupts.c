@@ -63,41 +63,6 @@
 
 
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
-void ReloadTimer(void);
-
-extern void _tx_timer_interrupt( void );
-
-void __ISR(_TIMER_1_VECTOR, ipl1AUTO) TIMER_1_Handler (void)
-{
-    /* Call ThreadX context save. */
-    _tx_thread_context_save();
-
-    /* Reload timer period */
-    ReloadTimer();
-
-    /* Call ThreadX timer interrupt processing. */
-    _tx_timer_interrupt();
-
-    /* Call ThreadX context restore. */
-    _tx_thread_context_restore();
-}
-
-/*******************************************************************************
- * This function is written to reload the Timer1, which sources the RTOS tick
- * in this application.
- ******************************************************************************/
-void ReloadTimer(void)
-{
-    unsigned int interrupt_save;
-
-    /*do this operation atomically*/
-    interrupt_save = __builtin_disable_interrupts();
-
-    IFS0CLR = _IFS0_T1IF_MASK;
-
-    __builtin_mtc0(12, 0, interrupt_save);
-}
-
 
 
 

@@ -1,25 +1,23 @@
 /*******************************************************************************
-  TMR1 Peripheral Library Interface Header File
+  Board Support Package Header File.
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_tmr1_common.h
+  File Name:
+    bsp.h
 
-  Summary
-    TMR1 peripheral library interface.
+  Summary:
+    Board Support Package Header File 
 
-  Description
-    This file defines the interface to the TC peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
-
+  Description:
+    This file contains constants, macros, type definitions and function
+    declarations 
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -42,9 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_TMR1_COMMON_H    // Guards against multiple inclusion
-#define PLIB_TMR1_COMMON_H
-
+#ifndef _BSP_H
+#define _BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -52,69 +49,76 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*  This section lists the other files that are included in this file.
-*/
-#include <stddef.h>
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-extern "C" {
-
-#endif
-
-// DOM-IGNORE-END
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include "device.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Data Types
+// Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part of it.
-*/
+/*** LED Macros for LED1 ***/
+#define LED1_Toggle() (LATBINV = (1<<8))
+#define LED1_Get() ((PORTB >> 8) & 0x1)
+#define LED1_On() (LATBCLR = (1<<8))
+#define LED1_Off() (LATBSET = (1<<8))
+/*** LED Macros for LED2 ***/
+#define LED2_Toggle() (LATAINV = (1<<10))
+#define LED2_Get() ((PORTA >> 10) & 0x1)
+#define LED2_On() (LATACLR = (1<<10))
+#define LED2_Off() (LATASET = (1<<10))
+/*** SWITCH Macros for SWITCH ***/
+#define SWITCH_Get() ((PORTE >> 13) & 0x1)
+#define SWITCH_STATE_PRESSED 0
+#define SWITCH_STATE_RELEASED 1
+
+
 
 
 // *****************************************************************************
-/* TMR1_CALLBACK
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+// *****************************************************************************
+
+// *****************************************************************************
+/* Function:
+    void BSP_Initialize(void)
 
   Summary:
-    Use to register a callback with the TMR1.
+    Performs the necessary actions to initialize a board
 
   Description:
-    When a match is asserted, a callback can be activated.
-    Use TMR1_CALLBACK as the function pointer to register the callback
-    with the match.
+    This function initializes the LED and Switch ports on the board.  This
+    function must be called by the user before using any APIs present on this
+    BSP.
+
+  Precondition:
+    None.
+
+  Parameters:
+    None
+
+  Returns:
+    None.
+
+  Example:
+    <code>
+    //Initialize the BSP
+    BSP_Initialize();
+    </code>
 
   Remarks:
-    The callback should look like:
-      void callback(handle, context);
-	Make sure the return value and parameters of the callback are correct.
+    None
 */
 
-typedef void (*TMR1_CALLBACK)(uint32_t status, uintptr_t context);
+void BSP_Initialize(void);
 
-// *****************************************************************************
+#endif // _BSP_H
 
-typedef struct
-{
-    /*TMR1 callback function happens on Period match*/
-    TMR1_CALLBACK callback_fn;
-    /* - Client data (Event Context) that will be passed to callback */
-    uintptr_t context;
-
-}TMR1_TIMER_OBJECT;
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-}
-
-#endif
-// DOM-IGNORE-END
-
-#endif //_PLIB_TMR1_COMMON_H
-
-/**
+/*******************************************************************************
  End of File
 */

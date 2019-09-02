@@ -1,23 +1,4 @@
-/*******************************************************************************
-  Data Type definition of Timer PLIB
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    plib_tmr1.h
-
-  Summary:
-    Data Type definition of the Timer Peripheral Interface Plib.
-
-  Description:
-    This file defines the Data Types for the Timer Plib.
-
-  Remarks:
-    None.
-
-*******************************************************************************/
-
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
@@ -40,59 +21,53 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
+/*******************************************************************************
+  User Configuration Header
 
-#ifndef PLIB_TMR1_H
-#define PLIB_TMR1_H
+  File Name:
+    user.h
 
-#include <stddef.h>
-#include <stdint.h>
-#include "device.h"
-#include "plib_tmr1_common.h"
+  Summary:
+    Build-time configuration header for the user defined by this project.
 
+  Description:
+    An MPLAB Project may have multiple configurations.  This file defines the
+    build-time options for a single configuration.
+
+  Remarks:
+    It only provides macro definitions for build-time configuration options
+
+*******************************************************************************/
+
+#ifndef USER_H
+#define USER_H
+#include "bsp/bsp.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
-    extern "C" {
+extern "C" {
 
 #endif
 // DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Data Types
+// Section: User Configuration macros
 // *****************************************************************************
 // *****************************************************************************
+#define LED_ON()        LED2_On()
+#define LED_OFF()       LED2_Off()
+#define LED_TOGGLE()    LED2_Toggle()
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface Routines
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-void TMR1_Initialize(void);
-
-void TMR1_Start(void);
-
-void TMR1_Stop(void);
-
-void TMR1_PeriodSet(uint16_t);
-
-uint16_t TMR1_PeriodGet(void);
-
-uint16_t TMR1_CounterGet(void);
-
-uint32_t TMR1_FrequencyGet(void);
-
-void TMR1_InterruptEnable(void);
-
-void TMR1_InterruptDisable(void);
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
+}
 #endif
-// DOM-IGNORE-END
+//DOM-IGNORE-END
 
-#endif /* PLIB_TMR1_H */
+#endif // USER_H
+/*******************************************************************************
+ End of File
+*/

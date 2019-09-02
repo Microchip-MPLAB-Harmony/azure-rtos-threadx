@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_tmr1.h
+    tmr1.h
 
   Summary:
     Data Type definition of the Timer Peripheral Interface Plib.
@@ -41,14 +41,8 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#ifndef PLIB_TMR1_H
-#define PLIB_TMR1_H
-
-#include <stddef.h>
-#include <stdint.h>
-#include "device.h"
-#include "plib_tmr1_common.h"
-
+#ifndef THREADX_TMR1_H
+#define THREADX_TMR1_H
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -59,35 +53,8 @@
 // DOM-IGNORE-END
 
 // *****************************************************************************
-// *****************************************************************************
-// Section: Data Types
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Interface Routines
-// *****************************************************************************
-// *****************************************************************************
-
-// *****************************************************************************
 void TMR1_Initialize(void);
 
-void TMR1_Start(void);
-
-void TMR1_Stop(void);
-
-void TMR1_PeriodSet(uint16_t);
-
-uint16_t TMR1_PeriodGet(void);
-
-uint16_t TMR1_CounterGet(void);
-
-uint32_t TMR1_FrequencyGet(void);
-
-void TMR1_InterruptEnable(void);
-
-void TMR1_InterruptDisable(void);
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -95,4 +62,4 @@ void TMR1_InterruptDisable(void);
 #endif
 // DOM-IGNORE-END
 
-#endif /* PLIB_TMR1_H */
+#endif /* THREADX_TMR1_H */

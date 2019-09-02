@@ -183,10 +183,6 @@ void SYS_Initialize ( void* data )
 	/* Enable global interrupts */
     __builtin_enable_interrupts();
 
-    /* Clear and Enable Timer1 Interrupt */
-    EVIC_SourceStatusClear(INT_SOURCE_TIMER_1);
-    EVIC_SourceEnable(INT_SOURCE_TIMER_1);
-
 
 }
 

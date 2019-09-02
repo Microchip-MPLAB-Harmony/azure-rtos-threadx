@@ -4,7 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="f2" displayName="config" projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
         <logicalFolder name="f1" displayName="pic32mz_das_sk" projectFiles="true">
           <logicalFolder name="f2" displayName="bsp" projectFiles="true">
             <itemPath>../src/config/pic32mz_das_sk/bsp/bsp.h</itemPath>
@@ -18,10 +18,6 @@
             </logicalFolder>
             <logicalFolder name="f2" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mz_das_sk/peripheral/gpio/plib_gpio.h</itemPath>
-            </logicalFolder>
-            <logicalFolder name="f4" displayName="tmr1" projectFiles="true">
-              <itemPath>../src/config/pic32mz_das_sk/peripheral/tmr1/plib_tmr1_common.h</itemPath>
-              <itemPath>../src/config/pic32mz_das_sk/peripheral/tmr1/plib_tmr1.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f3" displayName="threadx_config" projectFiles="true">
@@ -38,7 +34,7 @@
         <itemPath>../src/config/pic32mz_das_sk/osal/osal_definitions.h</itemPath>
         <itemPath>../src/config/pic32mz_das_sk/osal/osal_threadx.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="f1" displayName="packs" projectFiles="true">
+      <logicalFolder name="f2" displayName="packs" projectFiles="true">
         <logicalFolder name="f1"
                        displayName="PIC32MZ2064DAS169_DFP"
                        projectFiles="true">
@@ -46,23 +42,22 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="ThreadX" projectFiles="true">
-        <logicalFolder name="f1" displayName="gcc" projectFiles="true">
-          <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_cpu.inc</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_port.h</itemPath>
-          </logicalFolder>
+        <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_tmr1.h</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_cpu.inc</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_port.h</itemPath>
         </logicalFolder>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_api.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_initialize.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer.h</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_api.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_initialize.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer.h</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
@@ -88,9 +83,6 @@
             <logicalFolder name="f2" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mz_das_sk/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="tmr1" projectFiles="true">
-              <itemPath>../src/config/pic32mz_das_sk/peripheral/tmr1/plib_tmr1.c</itemPath>
-            </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f1" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/pic32mz_das_sk/stdio/xc32_monitor.c</itemPath>
@@ -105,202 +97,201 @@
         <itemPath>../src/config/pic32mz_das_sk/osal/osal_threadx.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="ThreadX" projectFiles="true">
-        <logicalFolder name="f1" displayName="gcc" projectFiles="true">
-          <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_initialize_low_level.S</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_thread_context_restore.S</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_thread_context_save.S</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_thread_interrupt_control.S</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_thread_schedule.S</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_thread_stack_build.S</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_thread_system_return.S</itemPath>
-            <itemPath>../src/third_party/rtos/ThreadX/gcc/PIC32MZ/tx_timer_interrupt.S</itemPath>
-          </logicalFolder>
+        <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_tmr1.c</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_initialize_low_level.S</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_context_restore.S</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_context_save.S</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_interrupt_control.S</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_schedule.S</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_stack_build.S</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_system_return.S</itemPath>
+          <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_interrupt.S</itemPath>
         </logicalFolder>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_block_allocate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_block_pool_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_block_pool_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_block_pool_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_block_pool_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_block_release.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_byte_allocate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_byte_pool_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_byte_pool_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_byte_pool_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_byte_pool_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_byte_release.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_event_flags_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_event_flags_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_event_flags_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_event_flags_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_event_flags_set.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_event_flags_set_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_mutex_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_mutex_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_mutex_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_mutex_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_mutex_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_mutex_put.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_flush.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_front_send.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_receive.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_send.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_queue_send_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_ceiling_put.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_put.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_semaphore_put_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_entry_exit_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_preemption_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_priority_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_relinquish.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_reset.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_resume.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_suspend.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_terminate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_time_slice_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_thread_wait_abort.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_timer_activate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_timer_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_timer_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_timer_deactivate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_timer_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/txe_timer_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_allocate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_cleanup.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_pool_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_block_release.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_allocate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_cleanup.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_pool_search.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_byte_release.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_cleanup.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_set.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_event_flags_set_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_initialize_high_level.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_initialize_kernel_enter.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_initialize_kernel_setup.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_cleanup.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_priority_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_mutex_put.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_cleanup.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_flush.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_front_send.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_receive.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_send.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_queue_send_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_ceiling_put.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_cleanup.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_prioritize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_put.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_semaphore_put_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_entry_exit_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_identify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_preemption_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_priority_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_relinquish.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_reset.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_resume.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_shell_entry.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_sleep.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_stack_analyze.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_stack_error_handler.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_stack_error_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_suspend.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_system_preempt_check.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_system_resume.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_system_suspend.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_terminate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_timeout.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_time_slice.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_time_slice_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_thread_wait_abort.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_activate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_change.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_create.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_deactivate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_delete.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_expiration_process.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_performance_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_performance_system_info_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_system_activate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_system_deactivate.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_timer_thread_entry.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_time_get.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_time_set.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_buffer_full_notify.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_disable.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_enable.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_event_filter.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_event_unfilter.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_initialize.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_interrupt_control.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_isr_enter_insert.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_isr_exit_insert.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_object_register.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_object_unregister.c</itemPath>
-        <itemPath>../src/third_party/rtos/ThreadX/tx_trace_user_event_insert.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_block_allocate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_block_pool_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_block_pool_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_block_pool_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_block_pool_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_block_release.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_byte_allocate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_byte_pool_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_byte_pool_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_byte_pool_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_byte_pool_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_byte_release.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_event_flags_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_event_flags_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_event_flags_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_event_flags_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_event_flags_set.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_event_flags_set_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_mutex_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_mutex_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_mutex_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_mutex_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_mutex_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_mutex_put.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_flush.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_front_send.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_receive.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_send.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_queue_send_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_ceiling_put.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_put.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_semaphore_put_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_entry_exit_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_preemption_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_priority_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_relinquish.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_reset.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_resume.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_suspend.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_terminate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_time_slice_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_thread_wait_abort.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_timer_activate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_timer_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_timer_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_timer_deactivate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_timer_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/txe_timer_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_allocate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_cleanup.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_pool_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_block_release.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_allocate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_cleanup.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_pool_search.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_byte_release.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_cleanup.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_set.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_event_flags_set_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_initialize_high_level.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_initialize_kernel_enter.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_initialize_kernel_setup.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_cleanup.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_priority_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_mutex_put.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_cleanup.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_flush.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_front_send.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_receive.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_send.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_queue_send_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_ceiling_put.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_cleanup.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_prioritize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_put.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_semaphore_put_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_entry_exit_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_identify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_preemption_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_priority_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_relinquish.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_reset.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_resume.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_shell_entry.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_sleep.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_stack_analyze.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_stack_error_handler.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_stack_error_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_suspend.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_system_preempt_check.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_system_resume.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_system_suspend.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_terminate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_timeout.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_time_slice.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_time_slice_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_thread_wait_abort.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_activate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_change.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_create.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_deactivate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_delete.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_expiration_process.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_performance_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_performance_system_info_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_system_activate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_system_deactivate.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_timer_thread_entry.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_time_get.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_time_set.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_buffer_full_notify.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_disable.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_enable.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_event_filter.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_event_unfilter.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_initialize.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_interrupt_control.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_isr_enter_insert.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_isr_exit_insert.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_object_register.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_object_unregister.c</itemPath>
+        <itemPath>../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/tx_trace_user_event_insert.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
@@ -322,9 +313,9 @@
         <targetDevice>PIC32MZ2064DAS169</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.00</languageToolchainVersion>
+        <languageToolchainVersion>2.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -356,13 +347,14 @@
       </makeCustomizationType>
       <C32>
         <property key="additional-warnings" value="true"/>
+        <property key="addresss-attribute-use" value="false"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;;../src/mips;../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX;../src/third_party/rtos/ThreadX/gcc/PIC32MZ/"/>
+                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;../src/mips;../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -374,6 +366,8 @@
         <property key="preprocessor-macros" value="TX_INCLUDE_USER_DEFINE_FILE"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
@@ -382,16 +376,36 @@
         <property key="additional-options-chop-files" value="false"/>
       </C32-AR>
       <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;"/>
+                  value="../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;"/>
+                  value="../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx"/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
+        <property key="additional-options-write-sla" value="false"/>
+        <property key="allocate-dinit" value="false"/>
+        <property key="code-dinit" value="false"/>
+        <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
         <property key="exclude-floating-point-library" value="false"/>
         <property key="exclude-standard-libraries" value="false"/>
@@ -408,6 +422,8 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="heap-size" value="512"/>
         <property key="input-libraries" value=""/>
+        <property key="kseg-length" value=""/>
+        <property key="kseg-origin" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
         <property key="no-device-startup-code" value="true"/>
@@ -417,6 +433,8 @@
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
+        <property key="serial-length" value=""/>
+        <property key="serial-origin" value=""/>
         <property key="stack-size" value=""/>
         <property key="symbol-stripping" value=""/>
         <property key="trace-symbols" value=""/>
@@ -424,6 +442,7 @@
       </C32-LD>
       <C32CPP>
         <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -444,13 +463,20 @@
         <property key="preprocessor-macros" value=""/>
         <property key="rtti" value="true"/>
         <property key="strict-ansi" value="false"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
+        <property key="mdtcm" value=""/>
+        <property key="mitcm" value=""/>
+        <property key="mstacktcm" value="false"/>
+        <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
@@ -515,6 +541,31 @@
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="3.25"/>
       </PICkit3PlatformTool>
+      <PKOBSKDEPlatformTool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="1d000000-1d1fffff"/>
+        <property key="memories.userotp" value="true"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges" value=""/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges"
+                  value="${memories.eedata.default}"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="true"/>
+      </PKOBSKDEPlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>

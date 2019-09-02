@@ -23,3 +23,6 @@
 *******************************************************************************/
 -->
 #include "tx_api.h"
+<#if core.CoreArchitecture == "MIPS" >
+#include "tx_tmr1.h"
+</#if>

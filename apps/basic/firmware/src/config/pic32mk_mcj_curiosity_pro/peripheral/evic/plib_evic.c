@@ -1,19 +1,17 @@
 /*******************************************************************************
-  TMR1 Peripheral Library Interface Source File
+  EVIC PLIB Implementation
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_tmr1.c
+  File Name:
+    plib_evic.c
 
-  Summary
-    TMR1 peripheral library source file.
+  Summary:
+    EVIC PLIB Source File
 
-  Description
-    This file implements the interface to the TMR1 peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
+  Description:
+    None
 
 *******************************************************************************/
 
@@ -42,86 +40,65 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-
 #include "device.h"
-#include "plib_tmr1.h"
+#include "plib_evic.h"
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: IRQ Implementation
+// *****************************************************************************
+// *****************************************************************************
 
-void TMR1_Initialize(void)
+void EVIC_Initialize( void )
 {
-    /* Disable Timer */
-    T1CONCLR = _T1CON_ON_MASK;
+    INTCONSET = _INTCON_MVEC_MASK;
 
-    /*
-    SIDL = 0
-    TWDIS = 0
-    TGATE = 0
-    TCKPS = 1
-    TSYNC = 0
-    TCS = 0
-    */
-    T1CONSET = 0x10;
-
-    /* Clear counter */
-    TMR1 = 0x0;
-
-    /*Set period */
-    PR1 = 12499;
-
-    /* Setup TMR1 Interrupt */
-    TMR1_InterruptEnable();  /* Enable interrupt on the way out */
-
-    /* Start TMR1 */
-    TMR1_Start();
+    /* Set up priority / subpriority of enabled interrupts */
 }
 
-
-void TMR1_Start (void)
+void EVIC_SourceEnable( INT_SOURCE source )
 {
-    T1CONSET = _T1CON_ON_MASK;
+    volatile uint32_t *IECx = (volatile uint32_t *) (&IEC0 + ((0x10 * (source / 32)) / 4));
+    volatile uint32_t *IECxSET = (volatile uint32_t *)(IECx + 2);
+
+    *IECxSET = 1 << (source & 0x1f);
 }
 
-
-void TMR1_Stop (void)
+void EVIC_SourceDisable( INT_SOURCE source )
 {
-    T1CONCLR = _T1CON_ON_MASK;
+    volatile uint32_t *IECx = (volatile uint32_t *) (&IEC0 + ((0x10 * (source / 32)) / 4));
+    volatile uint32_t *IECxCLR = (volatile uint32_t *)(IECx + 1);
+
+    *IECxCLR = 1 << (source & 0x1f);
 }
 
-
-void TMR1_PeriodSet(uint16_t period)
+bool EVIC_SourceIsEnabled( INT_SOURCE source )
 {
-    PR1 = period;
+    volatile uint32_t *IECx = (volatile uint32_t *) (&IEC0 + ((0x10 * (source / 32)) / 4));
+
+    return (bool)((*IECx >> (source & 0x1f)) & 0x01);
 }
 
-
-uint16_t TMR1_PeriodGet(void)
+bool EVIC_SourceStatusGet( INT_SOURCE source )
 {
-    return (uint16_t)PR1;
+    volatile uint32_t *IFSx = (volatile uint32_t *)(&IFS0 + ((0x10 * (source / 32)) / 4));
+
+    return (bool)((*IFSx >> (source & 0x1f)) & 0x1);
 }
 
-
-uint16_t TMR1_CounterGet(void)
+void EVIC_SourceStatusSet( INT_SOURCE source )
 {
-    return(TMR1);
+    volatile uint32_t *IFSx = (volatile uint32_t *) (&IFS0 + ((0x10 * (source / 32)) / 4));
+    volatile uint32_t *IFSxSET = (volatile uint32_t *)(IFSx + 2);
+
+    *IFSxSET = 1 << (source & 0x1f);
 }
 
-uint32_t TMR1_FrequencyGet(void)
+void EVIC_SourceStatusClear( INT_SOURCE source )
 {
-    return (12500000);
+    volatile uint32_t *IFSx = (volatile uint32_t *) (&IFS0 + ((0x10 * (source / 32)) / 4));
+    volatile uint32_t *IFSxCLR = (volatile uint32_t *)(IFSx + 1);
+
+    *IFSxCLR = 1 << (source & 0x1f);
 }
 
-
-void TMR1_InterruptEnable(void)
-{
-    IEC0SET = _IEC0_T1IE_MASK;
-}
-
-void TMR1_InterruptDisable(void)
-{
-    IEC0CLR = _IEC0_T1IE_MASK;
-}

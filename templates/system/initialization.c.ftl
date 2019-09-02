@@ -23,7 +23,5 @@
 *******************************************************************************/
 -->
 <#if core.CoreArchitecture == "MIPS" >
-    /* Clear and Enable Timer1 Interrupt */
-    EVIC_SourceStatusClear(INT_SOURCE_TIMER_1);
-    EVIC_SourceEnable(INT_SOURCE_TIMER_1);
+    TMR1_Initialize();
 </#if>

@@ -134,9 +134,12 @@
 #define TX_THREAD_USER_EXTENSION                ????
 */
 
+#define TX_CPU_CLOCK_HZ                         ${THREADX_CPU_CLOCK_HZ}
 #define TX_TICK_RATE_HZ                         ${THREADX_TICK_RATE_HZ}
 #define TX_TICK_PERIOD_MS                       (1000 / TX_TICK_RATE_HZ)
-
+<#if core.CoreArchitecture != "MIPS" >
+#define TX_SYSTICK_CYCLES                       ((TX_CPU_CLOCK_HZ / TX_TICK_RATE_HZ) -1)
+</#if>
 
 <#if THREADX_TX_DISABLE_ERROR_CHECKING == true>
 #define TX_DISABLE_ERROR_CHECKING

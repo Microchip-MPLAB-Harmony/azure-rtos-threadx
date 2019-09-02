@@ -35,16 +35,16 @@
           <Name dnOrder="1">initialization.c</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">F57520358D899991C28E79FB52B012FB</GeneratedChecksum>
-          <UserChecksum dnOrder="5">F57520358D899991C28E79FB52B012FB</UserChecksum>
+          <GeneratedChecksum dnOrder="4">49D2DE61F68D50BF5D1B3438014444AA</GeneratedChecksum>
+          <UserChecksum dnOrder="5">49D2DE61F68D50BF5D1B3438014444AA</UserChecksum>
         </File>
         <File dnOrder="4">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">interrupts.c</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">FC09717AC3B22E8A372421E7DBB5939C</GeneratedChecksum>
-          <UserChecksum dnOrder="5">FC09717AC3B22E8A372421E7DBB5939C</UserChecksum>
+          <GeneratedChecksum dnOrder="4">21AC72888CC2AFF8195C6ACBD940F642</GeneratedChecksum>
+          <UserChecksum dnOrder="5">21AC72888CC2AFF8195C6ACBD940F642</UserChecksum>
         </File>
         <File dnOrder="5">
           <Type dnOrder="0">SOURCE</Type>
@@ -75,8 +75,8 @@
           <Name dnOrder="1">plib_evic.c</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/peripheral/evic/</LogicalPath>
           <PhysicalPath dnOrder="3">/peripheral/evic/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">5F5368A038B859C7D0007715325BEB72</GeneratedChecksum>
-          <UserChecksum dnOrder="5">5F5368A038B859C7D0007715325BEB72</UserChecksum>
+          <GeneratedChecksum dnOrder="4">87D7D0431653F742C8D307020789979B</GeneratedChecksum>
+          <UserChecksum dnOrder="5">87D7D0431653F742C8D307020789979B</UserChecksum>
         </File>
         <File dnOrder="9">
           <Type dnOrder="0">SOURCE</Type>
@@ -88,985 +88,985 @@
         </File>
         <File dnOrder="10">
           <Type dnOrder="0">SOURCE</Type>
-          <Name dnOrder="1">plib_tmr1.c</Name>
-          <LogicalPath dnOrder="2">config/pic32mz_ef_sk/peripheral/tmr1/</LogicalPath>
-          <PhysicalPath dnOrder="3">/peripheral/tmr1/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">4A7CC61C8C729EB21F649A5A3490D8B9</GeneratedChecksum>
-          <UserChecksum dnOrder="5">4A7CC61C8C729EB21F649A5A3490D8B9</UserChecksum>
-        </File>
-        <File dnOrder="11">
-          <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tasks.c</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">85BD6C57F255C34B68FD2B3D0655BC90</GeneratedChecksum>
           <UserChecksum dnOrder="5">85BD6C57F255C34B68FD2B3D0655BC90</UserChecksum>
         </File>
-        <File dnOrder="12">
+        <File dnOrder="11">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_allocate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">E2FC4046C2E5EEDC44724699F8EADF66</GeneratedChecksum>
           <UserChecksum dnOrder="5">E2FC4046C2E5EEDC44724699F8EADF66</UserChecksum>
         </File>
-        <File dnOrder="13">
+        <File dnOrder="12">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_cleanup.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">9E51A3818B3CEC5459444337D2FCC78A</GeneratedChecksum>
           <UserChecksum dnOrder="5">9E51A3818B3CEC5459444337D2FCC78A</UserChecksum>
         </File>
-        <File dnOrder="14">
+        <File dnOrder="13">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">1B5D09F094C8B5FB0BC951EDBFD9B250</GeneratedChecksum>
           <UserChecksum dnOrder="5">1B5D09F094C8B5FB0BC951EDBFD9B250</UserChecksum>
         </File>
-        <File dnOrder="15">
+        <File dnOrder="14">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">10B038DB6830B7DA6B87484EEB6A41EF</GeneratedChecksum>
           <UserChecksum dnOrder="5">10B038DB6830B7DA6B87484EEB6A41EF</UserChecksum>
         </File>
-        <File dnOrder="16">
+        <File dnOrder="15">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">50D6A96C2B0A6BC3F5EB7ACBDB8BA6C5</GeneratedChecksum>
           <UserChecksum dnOrder="5">50D6A96C2B0A6BC3F5EB7ACBDB8BA6C5</UserChecksum>
         </File>
-        <File dnOrder="17">
+        <File dnOrder="16">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8AE4A21A26436245BCBB509180C9D2B9</GeneratedChecksum>
           <UserChecksum dnOrder="5">8AE4A21A26436245BCBB509180C9D2B9</UserChecksum>
         </File>
-        <File dnOrder="18">
+        <File dnOrder="17">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DAA36F7529D0C2F70560ECDA4128F5AC</GeneratedChecksum>
           <UserChecksum dnOrder="5">DAA36F7529D0C2F70560ECDA4128F5AC</UserChecksum>
         </File>
-        <File dnOrder="19">
+        <File dnOrder="18">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">BEFBE64061F34F459036791C3A743341</GeneratedChecksum>
           <UserChecksum dnOrder="5">BEFBE64061F34F459036791C3A743341</UserChecksum>
         </File>
-        <File dnOrder="20">
+        <File dnOrder="19">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_pool_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DD7596F0ED4301298A679BA76670180A</GeneratedChecksum>
           <UserChecksum dnOrder="5">DD7596F0ED4301298A679BA76670180A</UserChecksum>
         </File>
-        <File dnOrder="21">
+        <File dnOrder="20">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_block_release.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">B978A1CAFB9D479F0483B3704ED721BB</GeneratedChecksum>
           <UserChecksum dnOrder="5">B978A1CAFB9D479F0483B3704ED721BB</UserChecksum>
         </File>
-        <File dnOrder="22">
+        <File dnOrder="21">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_allocate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DDD8FE1CA8C4ADB4785314BB93C9D338</GeneratedChecksum>
           <UserChecksum dnOrder="5">DDD8FE1CA8C4ADB4785314BB93C9D338</UserChecksum>
         </File>
-        <File dnOrder="23">
+        <File dnOrder="22">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_cleanup.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">A19D21DB02DE23D8D37B37682B404B3E</GeneratedChecksum>
           <UserChecksum dnOrder="5">A19D21DB02DE23D8D37B37682B404B3E</UserChecksum>
         </File>
-        <File dnOrder="24">
+        <File dnOrder="23">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">BCF3B3111F2A9A7A10766C49895BDC1B</GeneratedChecksum>
           <UserChecksum dnOrder="5">BCF3B3111F2A9A7A10766C49895BDC1B</UserChecksum>
         </File>
-        <File dnOrder="25">
+        <File dnOrder="24">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">C34B6515F20FAB367A751B2F36B413EF</GeneratedChecksum>
           <UserChecksum dnOrder="5">C34B6515F20FAB367A751B2F36B413EF</UserChecksum>
         </File>
-        <File dnOrder="26">
+        <File dnOrder="25">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6B0F40131DCD71618B5EE9EAD819F39F</GeneratedChecksum>
           <UserChecksum dnOrder="5">6B0F40131DCD71618B5EE9EAD819F39F</UserChecksum>
         </File>
-        <File dnOrder="27">
+        <File dnOrder="26">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8D27F992BB76707E129C91F5229754C1</GeneratedChecksum>
           <UserChecksum dnOrder="5">8D27F992BB76707E129C91F5229754C1</UserChecksum>
         </File>
-        <File dnOrder="28">
+        <File dnOrder="27">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">786D96DFA56D50A170CCC3CFA3F932BC</GeneratedChecksum>
           <UserChecksum dnOrder="5">786D96DFA56D50A170CCC3CFA3F932BC</UserChecksum>
         </File>
-        <File dnOrder="29">
+        <File dnOrder="28">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">5D4D57F8CCB8586713CBA239032ABE9C</GeneratedChecksum>
           <UserChecksum dnOrder="5">5D4D57F8CCB8586713CBA239032ABE9C</UserChecksum>
         </File>
-        <File dnOrder="30">
+        <File dnOrder="29">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">9A7E074286892028B8B50E02A5606926</GeneratedChecksum>
           <UserChecksum dnOrder="5">9A7E074286892028B8B50E02A5606926</UserChecksum>
         </File>
-        <File dnOrder="31">
+        <File dnOrder="30">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_pool_search.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">42D306EB6F47528C0B8E962D9A4850FF</GeneratedChecksum>
           <UserChecksum dnOrder="5">42D306EB6F47528C0B8E962D9A4850FF</UserChecksum>
         </File>
-        <File dnOrder="32">
+        <File dnOrder="31">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_byte_release.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">4495FDB54BE0ECE5C1F87097927B9032</GeneratedChecksum>
           <UserChecksum dnOrder="5">4495FDB54BE0ECE5C1F87097927B9032</UserChecksum>
         </File>
-        <File dnOrder="33">
+        <File dnOrder="32">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_cleanup.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">88D074CE9B20D71616802E2746D690D7</GeneratedChecksum>
           <UserChecksum dnOrder="5">88D074CE9B20D71616802E2746D690D7</UserChecksum>
         </File>
-        <File dnOrder="34">
+        <File dnOrder="33">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">02CCB59FA49F8053F9A5FA9247E95A6E</GeneratedChecksum>
           <UserChecksum dnOrder="5">02CCB59FA49F8053F9A5FA9247E95A6E</UserChecksum>
         </File>
-        <File dnOrder="35">
+        <File dnOrder="34">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">32387A82337CD3B2C90060F3AC0EF0C4</GeneratedChecksum>
           <UserChecksum dnOrder="5">32387A82337CD3B2C90060F3AC0EF0C4</UserChecksum>
         </File>
-        <File dnOrder="36">
+        <File dnOrder="35">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">70F0B182A5A89626A9458D72C8C0FBA7</GeneratedChecksum>
           <UserChecksum dnOrder="5">70F0B182A5A89626A9458D72C8C0FBA7</UserChecksum>
         </File>
-        <File dnOrder="37">
+        <File dnOrder="36">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DC2D34CA8B741EA3591E84F85398B2B8</GeneratedChecksum>
           <UserChecksum dnOrder="5">DC2D34CA8B741EA3591E84F85398B2B8</UserChecksum>
         </File>
-        <File dnOrder="38">
+        <File dnOrder="37">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">3A31B68999D5B3F1969EB22D7E98755D</GeneratedChecksum>
           <UserChecksum dnOrder="5">3A31B68999D5B3F1969EB22D7E98755D</UserChecksum>
         </File>
-        <File dnOrder="39">
+        <File dnOrder="38">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">099D778B5623028A6510A5145EBB6317</GeneratedChecksum>
           <UserChecksum dnOrder="5">099D778B5623028A6510A5145EBB6317</UserChecksum>
         </File>
-        <File dnOrder="40">
+        <File dnOrder="39">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6C5178408CD43452AF3A465986AD15A6</GeneratedChecksum>
           <UserChecksum dnOrder="5">6C5178408CD43452AF3A465986AD15A6</UserChecksum>
         </File>
-        <File dnOrder="41">
+        <File dnOrder="40">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_set.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">C0B9FFB4D5A2795DF8EE2281AD2963CD</GeneratedChecksum>
           <UserChecksum dnOrder="5">C0B9FFB4D5A2795DF8EE2281AD2963CD</UserChecksum>
         </File>
-        <File dnOrder="42">
+        <File dnOrder="41">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_event_flags_set_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">4214DEB74532559E54ADDDCA7622F45B</GeneratedChecksum>
           <UserChecksum dnOrder="5">4214DEB74532559E54ADDDCA7622F45B</UserChecksum>
         </File>
-        <File dnOrder="43">
+        <File dnOrder="42">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_initialize_high_level.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">E53FF4A7D4522993D8066ED5CE4BFD1C</GeneratedChecksum>
           <UserChecksum dnOrder="5">E53FF4A7D4522993D8066ED5CE4BFD1C</UserChecksum>
         </File>
-        <File dnOrder="44">
+        <File dnOrder="43">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_initialize_kernel_enter.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DA0FA7AF998A6D6B5EA1F880649B9E81</GeneratedChecksum>
           <UserChecksum dnOrder="5">DA0FA7AF998A6D6B5EA1F880649B9E81</UserChecksum>
         </File>
-        <File dnOrder="45">
+        <File dnOrder="44">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_initialize_kernel_setup.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">4FE15639A68459D6F882FC97878D6854</GeneratedChecksum>
           <UserChecksum dnOrder="5">4FE15639A68459D6F882FC97878D6854</UserChecksum>
         </File>
-        <File dnOrder="46">
+        <File dnOrder="45">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_initialize_low_level.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">52775E89B004AFBA4599A762EBDD3311</GeneratedChecksum>
           <UserChecksum dnOrder="5">52775E89B004AFBA4599A762EBDD3311</UserChecksum>
         </File>
-        <File dnOrder="47">
+        <File dnOrder="46">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_cleanup.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">E76167E07BD3BECF009D5D6FD2295CD3</GeneratedChecksum>
           <UserChecksum dnOrder="5">E76167E07BD3BECF009D5D6FD2295CD3</UserChecksum>
         </File>
-        <File dnOrder="48">
+        <File dnOrder="47">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">978A7E39535A91861B9D71D19BE8C01D</GeneratedChecksum>
           <UserChecksum dnOrder="5">978A7E39535A91861B9D71D19BE8C01D</UserChecksum>
         </File>
-        <File dnOrder="49">
+        <File dnOrder="48">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">4215E56EBFD4E4A7067160E8D0940721</GeneratedChecksum>
           <UserChecksum dnOrder="5">4215E56EBFD4E4A7067160E8D0940721</UserChecksum>
         </File>
-        <File dnOrder="50">
+        <File dnOrder="49">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">9D1E78B7518E826ADE16D59D36794E78</GeneratedChecksum>
           <UserChecksum dnOrder="5">9D1E78B7518E826ADE16D59D36794E78</UserChecksum>
         </File>
-        <File dnOrder="51">
+        <File dnOrder="50">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">9E2F7B65C48DE773E0E7345B71A3AEA5</GeneratedChecksum>
           <UserChecksum dnOrder="5">9E2F7B65C48DE773E0E7345B71A3AEA5</UserChecksum>
         </File>
-        <File dnOrder="52">
+        <File dnOrder="51">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F960C45D9C02FD098562634DD511C411</GeneratedChecksum>
           <UserChecksum dnOrder="5">F960C45D9C02FD098562634DD511C411</UserChecksum>
         </File>
-        <File dnOrder="53">
+        <File dnOrder="52">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8F7633AEC71F8C2867C7F357B51633CC</GeneratedChecksum>
           <UserChecksum dnOrder="5">8F7633AEC71F8C2867C7F357B51633CC</UserChecksum>
         </File>
-        <File dnOrder="54">
+        <File dnOrder="53">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">818E29AA176E691A41BAA23A259FD29D</GeneratedChecksum>
           <UserChecksum dnOrder="5">818E29AA176E691A41BAA23A259FD29D</UserChecksum>
         </File>
-        <File dnOrder="55">
+        <File dnOrder="54">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8C4B7A892D79E306BCB6C21F8B97946D</GeneratedChecksum>
           <UserChecksum dnOrder="5">8C4B7A892D79E306BCB6C21F8B97946D</UserChecksum>
         </File>
-        <File dnOrder="56">
+        <File dnOrder="55">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_priority_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">3837A1C78BDA760C6DAF298232D275A0</GeneratedChecksum>
           <UserChecksum dnOrder="5">3837A1C78BDA760C6DAF298232D275A0</UserChecksum>
         </File>
-        <File dnOrder="57">
+        <File dnOrder="56">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_mutex_put.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">007F3BC3247F108966A3EE40226B6F80</GeneratedChecksum>
           <UserChecksum dnOrder="5">007F3BC3247F108966A3EE40226B6F80</UserChecksum>
         </File>
-        <File dnOrder="58">
+        <File dnOrder="57">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_cleanup.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">A119D50F5DA6DDF49C9513813E07F149</GeneratedChecksum>
           <UserChecksum dnOrder="5">A119D50F5DA6DDF49C9513813E07F149</UserChecksum>
         </File>
-        <File dnOrder="59">
+        <File dnOrder="58">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">FFDCF40EFEC88A09FF970D62E2083D0F</GeneratedChecksum>
           <UserChecksum dnOrder="5">FFDCF40EFEC88A09FF970D62E2083D0F</UserChecksum>
         </File>
-        <File dnOrder="60">
+        <File dnOrder="59">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D61EEB3EE07D402D42DAAE62123FB339</GeneratedChecksum>
           <UserChecksum dnOrder="5">D61EEB3EE07D402D42DAAE62123FB339</UserChecksum>
         </File>
-        <File dnOrder="61">
+        <File dnOrder="60">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_flush.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D27F192BBECDAA1D6C0AF4E063D69731</GeneratedChecksum>
           <UserChecksum dnOrder="5">D27F192BBECDAA1D6C0AF4E063D69731</UserChecksum>
         </File>
-        <File dnOrder="62">
+        <File dnOrder="61">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_front_send.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7E6D869B92A6AC9F4A2D9C35E6D01012</GeneratedChecksum>
           <UserChecksum dnOrder="5">7E6D869B92A6AC9F4A2D9C35E6D01012</UserChecksum>
         </File>
-        <File dnOrder="63">
+        <File dnOrder="62">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F0C62252B8BA5AE06F0346849895BA90</GeneratedChecksum>
           <UserChecksum dnOrder="5">F0C62252B8BA5AE06F0346849895BA90</UserChecksum>
         </File>
-        <File dnOrder="64">
+        <File dnOrder="63">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">39D56E6BD402E308588A8AFF50E2B1E5</GeneratedChecksum>
           <UserChecksum dnOrder="5">39D56E6BD402E308588A8AFF50E2B1E5</UserChecksum>
         </File>
-        <File dnOrder="65">
+        <File dnOrder="64">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DB4D54E7697C772F876B0F0B18AFC2D2</GeneratedChecksum>
           <UserChecksum dnOrder="5">DB4D54E7697C772F876B0F0B18AFC2D2</UserChecksum>
         </File>
-        <File dnOrder="66">
+        <File dnOrder="65">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">18C0E40F90378C1A48DD669E31D4CA89</GeneratedChecksum>
           <UserChecksum dnOrder="5">18C0E40F90378C1A48DD669E31D4CA89</UserChecksum>
         </File>
-        <File dnOrder="67">
+        <File dnOrder="66">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">91A66F010FFEAF3FF61C4F51CF1331A8</GeneratedChecksum>
           <UserChecksum dnOrder="5">91A66F010FFEAF3FF61C4F51CF1331A8</UserChecksum>
         </File>
-        <File dnOrder="68">
+        <File dnOrder="67">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_receive.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6C703C916C7515D979426EADCD9487DD</GeneratedChecksum>
           <UserChecksum dnOrder="5">6C703C916C7515D979426EADCD9487DD</UserChecksum>
         </File>
-        <File dnOrder="69">
+        <File dnOrder="68">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_send.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">1AFBA5E28FCBA89C3C7FA7873C98A2C9</GeneratedChecksum>
           <UserChecksum dnOrder="5">1AFBA5E28FCBA89C3C7FA7873C98A2C9</UserChecksum>
         </File>
-        <File dnOrder="70">
+        <File dnOrder="69">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_queue_send_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">49315A66439DA237D42C8899470E08B1</GeneratedChecksum>
           <UserChecksum dnOrder="5">49315A66439DA237D42C8899470E08B1</UserChecksum>
         </File>
-        <File dnOrder="71">
+        <File dnOrder="70">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_ceiling_put.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">53AC7D60279393BBA756D09D237D0558</GeneratedChecksum>
           <UserChecksum dnOrder="5">53AC7D60279393BBA756D09D237D0558</UserChecksum>
         </File>
-        <File dnOrder="72">
+        <File dnOrder="71">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_cleanup.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">248CC19B53752CCEC961D30B009F5D5F</GeneratedChecksum>
           <UserChecksum dnOrder="5">248CC19B53752CCEC961D30B009F5D5F</UserChecksum>
         </File>
-        <File dnOrder="73">
+        <File dnOrder="72">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">EDFAFFD55411E1CEF919E997E32097B7</GeneratedChecksum>
           <UserChecksum dnOrder="5">EDFAFFD55411E1CEF919E997E32097B7</UserChecksum>
         </File>
-        <File dnOrder="74">
+        <File dnOrder="73">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">A763B905CE736FDD5EFA2BEA904F53B0</GeneratedChecksum>
           <UserChecksum dnOrder="5">A763B905CE736FDD5EFA2BEA904F53B0</UserChecksum>
         </File>
-        <File dnOrder="75">
+        <File dnOrder="74">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">972491EC560B1DC1C6437C61CAC297E6</GeneratedChecksum>
           <UserChecksum dnOrder="5">972491EC560B1DC1C6437C61CAC297E6</UserChecksum>
         </File>
-        <File dnOrder="76">
+        <File dnOrder="75">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8D17511A79BBC95E8C4426E7AC8AB0AF</GeneratedChecksum>
           <UserChecksum dnOrder="5">8D17511A79BBC95E8C4426E7AC8AB0AF</UserChecksum>
         </File>
-        <File dnOrder="77">
+        <File dnOrder="76">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7C953FF6C5B332562CA57C979F53EA5A</GeneratedChecksum>
           <UserChecksum dnOrder="5">7C953FF6C5B332562CA57C979F53EA5A</UserChecksum>
         </File>
-        <File dnOrder="78">
+        <File dnOrder="77">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F791BDF26CE17021179C6F0815AD4085</GeneratedChecksum>
           <UserChecksum dnOrder="5">F791BDF26CE17021179C6F0815AD4085</UserChecksum>
         </File>
-        <File dnOrder="79">
+        <File dnOrder="78">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">BBA2CD06DCEF384B541124DE666DA5A2</GeneratedChecksum>
           <UserChecksum dnOrder="5">BBA2CD06DCEF384B541124DE666DA5A2</UserChecksum>
         </File>
-        <File dnOrder="80">
+        <File dnOrder="79">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">FCE26EE82F62FDA52910C0EB507D658D</GeneratedChecksum>
           <UserChecksum dnOrder="5">FCE26EE82F62FDA52910C0EB507D658D</UserChecksum>
         </File>
-        <File dnOrder="81">
+        <File dnOrder="80">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_put.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">CD84432C9734C629C315E2D5EB1C608A</GeneratedChecksum>
           <UserChecksum dnOrder="5">CD84432C9734C629C315E2D5EB1C608A</UserChecksum>
         </File>
-        <File dnOrder="82">
+        <File dnOrder="81">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_semaphore_put_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">CABA101B6C797C4A9970E036027C84DB</GeneratedChecksum>
           <UserChecksum dnOrder="5">CABA101B6C797C4A9970E036027C84DB</UserChecksum>
         </File>
-        <File dnOrder="83">
+        <File dnOrder="82">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_context_restore.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">35C1F502AE99AE5C86C86426AD86C5BA</GeneratedChecksum>
           <UserChecksum dnOrder="5">35C1F502AE99AE5C86C86426AD86C5BA</UserChecksum>
         </File>
-        <File dnOrder="84">
+        <File dnOrder="83">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_context_save.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7E25F9498988B67EC1051D54561222CB</GeneratedChecksum>
           <UserChecksum dnOrder="5">7E25F9498988B67EC1051D54561222CB</UserChecksum>
         </File>
-        <File dnOrder="85">
+        <File dnOrder="84">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">43E655A73C0BAA235466A67496B1D296</GeneratedChecksum>
           <UserChecksum dnOrder="5">43E655A73C0BAA235466A67496B1D296</UserChecksum>
         </File>
-        <File dnOrder="86">
+        <File dnOrder="85">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6C2C858FA84FC6102ECD525CC72E772F</GeneratedChecksum>
           <UserChecksum dnOrder="5">6C2C858FA84FC6102ECD525CC72E772F</UserChecksum>
         </File>
-        <File dnOrder="87">
+        <File dnOrder="86">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_entry_exit_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0F60F679D1E43C1B314AC5C12200AD71</GeneratedChecksum>
           <UserChecksum dnOrder="5">0F60F679D1E43C1B314AC5C12200AD71</UserChecksum>
         </File>
-        <File dnOrder="88">
+        <File dnOrder="87">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_identify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">71849059FFB4C8D26C4E883244C117CA</GeneratedChecksum>
           <UserChecksum dnOrder="5">71849059FFB4C8D26C4E883244C117CA</UserChecksum>
         </File>
-        <File dnOrder="89">
+        <File dnOrder="88">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0FDD0F996814FE855CEE4E28CA06BDCC</GeneratedChecksum>
           <UserChecksum dnOrder="5">0FDD0F996814FE855CEE4E28CA06BDCC</UserChecksum>
         </File>
-        <File dnOrder="90">
+        <File dnOrder="89">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">C71BBF2A078DE9854E875458A0E4A35F</GeneratedChecksum>
           <UserChecksum dnOrder="5">C71BBF2A078DE9854E875458A0E4A35F</UserChecksum>
         </File>
-        <File dnOrder="91">
+        <File dnOrder="90">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_interrupt_control.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">A217A2942BD2CCAD883144EE7EEC20AE</GeneratedChecksum>
           <UserChecksum dnOrder="5">A217A2942BD2CCAD883144EE7EEC20AE</UserChecksum>
         </File>
-        <File dnOrder="92">
+        <File dnOrder="91">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">C03155CC1F927939172838890258CFDC</GeneratedChecksum>
           <UserChecksum dnOrder="5">C03155CC1F927939172838890258CFDC</UserChecksum>
         </File>
-        <File dnOrder="93">
+        <File dnOrder="92">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">5F1B1DB83513DBBDC4C6DB47AD76F96B</GeneratedChecksum>
           <UserChecksum dnOrder="5">5F1B1DB83513DBBDC4C6DB47AD76F96B</UserChecksum>
         </File>
-        <File dnOrder="94">
+        <File dnOrder="93">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_preemption_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F0B0DA95D6A4D99C2976E8EA4C052E0F</GeneratedChecksum>
           <UserChecksum dnOrder="5">F0B0DA95D6A4D99C2976E8EA4C052E0F</UserChecksum>
         </File>
-        <File dnOrder="95">
+        <File dnOrder="94">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_priority_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">9E72650F0D86344D5DDF5259E664D251</GeneratedChecksum>
           <UserChecksum dnOrder="5">9E72650F0D86344D5DDF5259E664D251</UserChecksum>
         </File>
-        <File dnOrder="96">
+        <File dnOrder="95">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_relinquish.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">930780B4CFFD1F4346246A52ACAB84B3</GeneratedChecksum>
           <UserChecksum dnOrder="5">930780B4CFFD1F4346246A52ACAB84B3</UserChecksum>
         </File>
-        <File dnOrder="97">
+        <File dnOrder="96">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_reset.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7E5F5376C8021C790EEFB178989AB0CE</GeneratedChecksum>
           <UserChecksum dnOrder="5">7E5F5376C8021C790EEFB178989AB0CE</UserChecksum>
         </File>
-        <File dnOrder="98">
+        <File dnOrder="97">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_resume.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">4400A4FA3F782DFF52071452909ADF40</GeneratedChecksum>
           <UserChecksum dnOrder="5">4400A4FA3F782DFF52071452909ADF40</UserChecksum>
         </File>
-        <File dnOrder="99">
+        <File dnOrder="98">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_schedule.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">39730CB9173D9ACBB0DA6782232BA6F5</GeneratedChecksum>
           <UserChecksum dnOrder="5">39730CB9173D9ACBB0DA6782232BA6F5</UserChecksum>
         </File>
-        <File dnOrder="100">
+        <File dnOrder="99">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_shell_entry.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8B7E516DBE68EACAD7CABD764F2495F8</GeneratedChecksum>
           <UserChecksum dnOrder="5">8B7E516DBE68EACAD7CABD764F2495F8</UserChecksum>
         </File>
-        <File dnOrder="101">
+        <File dnOrder="100">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_sleep.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DE38FB2C604D843C9441E01D3F3190B1</GeneratedChecksum>
           <UserChecksum dnOrder="5">DE38FB2C604D843C9441E01D3F3190B1</UserChecksum>
         </File>
-        <File dnOrder="102">
+        <File dnOrder="101">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_stack_analyze.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">51312F417587987323BF12E4D32FA0F0</GeneratedChecksum>
           <UserChecksum dnOrder="5">51312F417587987323BF12E4D32FA0F0</UserChecksum>
         </File>
-        <File dnOrder="103">
+        <File dnOrder="102">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_stack_build.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">3971CE194810DB50A83721CA2145043D</GeneratedChecksum>
           <UserChecksum dnOrder="5">3971CE194810DB50A83721CA2145043D</UserChecksum>
         </File>
-        <File dnOrder="104">
+        <File dnOrder="103">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_stack_error_handler.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6BBF9BBC3E8EB06D2D3059CB1209D05E</GeneratedChecksum>
           <UserChecksum dnOrder="5">6BBF9BBC3E8EB06D2D3059CB1209D05E</UserChecksum>
         </File>
-        <File dnOrder="105">
+        <File dnOrder="104">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_stack_error_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">B842581F151F7E55B6EB8BF97C326E78</GeneratedChecksum>
           <UserChecksum dnOrder="5">B842581F151F7E55B6EB8BF97C326E78</UserChecksum>
         </File>
-        <File dnOrder="106">
+        <File dnOrder="105">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_suspend.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">3963B9019A077C69310B090A20E6D414</GeneratedChecksum>
           <UserChecksum dnOrder="5">3963B9019A077C69310B090A20E6D414</UserChecksum>
         </File>
-        <File dnOrder="107">
+        <File dnOrder="106">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_system_preempt_check.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">FF3D4D899A5555AFC0411FEBEAEBC4BC</GeneratedChecksum>
           <UserChecksum dnOrder="5">FF3D4D899A5555AFC0411FEBEAEBC4BC</UserChecksum>
         </File>
-        <File dnOrder="108">
+        <File dnOrder="107">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_system_resume.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">376D8F3BEE393F41AC2AD627051A63D5</GeneratedChecksum>
           <UserChecksum dnOrder="5">376D8F3BEE393F41AC2AD627051A63D5</UserChecksum>
         </File>
-        <File dnOrder="109">
+        <File dnOrder="108">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_system_return.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6D7F069DF7A5AB404A652D485D819267</GeneratedChecksum>
           <UserChecksum dnOrder="5">6D7F069DF7A5AB404A652D485D819267</UserChecksum>
         </File>
-        <File dnOrder="110">
+        <File dnOrder="109">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_system_suspend.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">120B685DC94288E43A74EE2DBFA5E70E</GeneratedChecksum>
           <UserChecksum dnOrder="5">120B685DC94288E43A74EE2DBFA5E70E</UserChecksum>
         </File>
-        <File dnOrder="111">
+        <File dnOrder="110">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_terminate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7C823B430D96F82D2B8880E717AED3DF</GeneratedChecksum>
           <UserChecksum dnOrder="5">7C823B430D96F82D2B8880E717AED3DF</UserChecksum>
         </File>
-        <File dnOrder="112">
+        <File dnOrder="111">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_time_slice.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">A9B832F477913AF03C54CFD0F69FAC63</GeneratedChecksum>
           <UserChecksum dnOrder="5">A9B832F477913AF03C54CFD0F69FAC63</UserChecksum>
         </File>
-        <File dnOrder="113">
+        <File dnOrder="112">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_time_slice_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">3E6C94B1AE94556A9A43E8FDA1EE27FE</GeneratedChecksum>
           <UserChecksum dnOrder="5">3E6C94B1AE94556A9A43E8FDA1EE27FE</UserChecksum>
         </File>
-        <File dnOrder="114">
+        <File dnOrder="113">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_timeout.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">44EDC944DA11BC4C52641D07D4E46407</GeneratedChecksum>
           <UserChecksum dnOrder="5">44EDC944DA11BC4C52641D07D4E46407</UserChecksum>
         </File>
-        <File dnOrder="115">
+        <File dnOrder="114">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_thread_wait_abort.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">3FAEDDFDD28A071E63861B683B7085D6</GeneratedChecksum>
           <UserChecksum dnOrder="5">3FAEDDFDD28A071E63861B683B7085D6</UserChecksum>
         </File>
-        <File dnOrder="116">
+        <File dnOrder="115">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_time_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F2FD9A5490EE91CAD9ECFC364E10503B</GeneratedChecksum>
           <UserChecksum dnOrder="5">F2FD9A5490EE91CAD9ECFC364E10503B</UserChecksum>
         </File>
-        <File dnOrder="117">
+        <File dnOrder="116">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_time_set.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6AD098A15D1395CC98AF23E2941F7EC2</GeneratedChecksum>
           <UserChecksum dnOrder="5">6AD098A15D1395CC98AF23E2941F7EC2</UserChecksum>
         </File>
-        <File dnOrder="118">
+        <File dnOrder="117">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_activate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">B4259658971F3701F5D52195994D0C7D</GeneratedChecksum>
           <UserChecksum dnOrder="5">B4259658971F3701F5D52195994D0C7D</UserChecksum>
         </File>
-        <File dnOrder="119">
+        <File dnOrder="118">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DC833289436889A09F585402326CEA2D</GeneratedChecksum>
           <UserChecksum dnOrder="5">DC833289436889A09F585402326CEA2D</UserChecksum>
         </File>
-        <File dnOrder="120">
+        <File dnOrder="119">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">2B5B4649D630ED0B2DFD426A0046841A</GeneratedChecksum>
           <UserChecksum dnOrder="5">2B5B4649D630ED0B2DFD426A0046841A</UserChecksum>
         </File>
-        <File dnOrder="121">
+        <File dnOrder="120">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_deactivate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">80AD536E4AB831D1E67C416742C47A68</GeneratedChecksum>
           <UserChecksum dnOrder="5">80AD536E4AB831D1E67C416742C47A68</UserChecksum>
         </File>
-        <File dnOrder="122">
+        <File dnOrder="121">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F057EC5BEC1F21E1AE2825B9B510F132</GeneratedChecksum>
           <UserChecksum dnOrder="5">F057EC5BEC1F21E1AE2825B9B510F132</UserChecksum>
         </File>
-        <File dnOrder="123">
+        <File dnOrder="122">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_expiration_process.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">FB99B736DC4859172EC075A2618A9DA4</GeneratedChecksum>
           <UserChecksum dnOrder="5">FB99B736DC4859172EC075A2618A9DA4</UserChecksum>
         </File>
-        <File dnOrder="124">
+        <File dnOrder="123">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">CDEDB38EFE79D3406C7FE061685033F9</GeneratedChecksum>
           <UserChecksum dnOrder="5">CDEDB38EFE79D3406C7FE061685033F9</UserChecksum>
         </File>
-        <File dnOrder="125">
+        <File dnOrder="124">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8700DA4FA2EF814FF5D99CA469C78795</GeneratedChecksum>
           <UserChecksum dnOrder="5">8700DA4FA2EF814FF5D99CA469C78795</UserChecksum>
         </File>
-        <File dnOrder="126">
+        <File dnOrder="125">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_interrupt.S</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">31D0EBFB5F381E197D192C1D03C57642</GeneratedChecksum>
           <UserChecksum dnOrder="5">31D0EBFB5F381E197D192C1D03C57642</UserChecksum>
         </File>
-        <File dnOrder="127">
+        <File dnOrder="126">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_performance_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">BDEEDACE4A843DE4FDA990C966F8FDCD</GeneratedChecksum>
           <UserChecksum dnOrder="5">BDEEDACE4A843DE4FDA990C966F8FDCD</UserChecksum>
         </File>
-        <File dnOrder="128">
+        <File dnOrder="127">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_performance_system_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7D8221BE06A20615CF0516D7BD459F6D</GeneratedChecksum>
           <UserChecksum dnOrder="5">7D8221BE06A20615CF0516D7BD459F6D</UserChecksum>
         </File>
-        <File dnOrder="129">
+        <File dnOrder="128">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_system_activate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D5276CC1979A34B6E6CF38C49EEBAF51</GeneratedChecksum>
           <UserChecksum dnOrder="5">D5276CC1979A34B6E6CF38C49EEBAF51</UserChecksum>
         </File>
-        <File dnOrder="130">
+        <File dnOrder="129">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_system_deactivate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D2E685901F020EB27DEC636ED9BC0B1B</GeneratedChecksum>
           <UserChecksum dnOrder="5">D2E685901F020EB27DEC636ED9BC0B1B</UserChecksum>
         </File>
-        <File dnOrder="131">
+        <File dnOrder="130">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_timer_thread_entry.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D473D482D0405DD66AC1B59A80FD4238</GeneratedChecksum>
           <UserChecksum dnOrder="5">D473D482D0405DD66AC1B59A80FD4238</UserChecksum>
+        </File>
+        <File dnOrder="131">
+          <Type dnOrder="0">SOURCE</Type>
+          <Name dnOrder="1">tx_tmr1.c</Name>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
+          <GeneratedChecksum dnOrder="4">77274E063C72D7EEB6811CED9DD981F8</GeneratedChecksum>
+          <UserChecksum dnOrder="5">77274E063C72D7EEB6811CED9DD981F8</UserChecksum>
         </File>
         <File dnOrder="132">
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_buffer_full_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0943F7F83B298EA7A15CBC6130CD8688</GeneratedChecksum>
           <UserChecksum dnOrder="5">0943F7F83B298EA7A15CBC6130CD8688</UserChecksum>
         </File>
@@ -1074,7 +1074,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_disable.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">E25BF16E66A10228A620166ECD2D7C96</GeneratedChecksum>
           <UserChecksum dnOrder="5">E25BF16E66A10228A620166ECD2D7C96</UserChecksum>
         </File>
@@ -1082,7 +1082,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_enable.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8533C7FF1C0F677A144591A165BAE005</GeneratedChecksum>
           <UserChecksum dnOrder="5">8533C7FF1C0F677A144591A165BAE005</UserChecksum>
         </File>
@@ -1090,7 +1090,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_event_filter.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">C6349BEF35A6E27EAEAAC09C1851AF39</GeneratedChecksum>
           <UserChecksum dnOrder="5">C6349BEF35A6E27EAEAAC09C1851AF39</UserChecksum>
         </File>
@@ -1098,7 +1098,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_event_unfilter.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DFF5D78FBA317540F692114A74E1A001</GeneratedChecksum>
           <UserChecksum dnOrder="5">DFF5D78FBA317540F692114A74E1A001</UserChecksum>
         </File>
@@ -1106,7 +1106,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_initialize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">1CB50ABF8ADE2C860D45457747A9D572</GeneratedChecksum>
           <UserChecksum dnOrder="5">1CB50ABF8ADE2C860D45457747A9D572</UserChecksum>
         </File>
@@ -1114,7 +1114,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_interrupt_control.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">ADB225099BE85085209592E90A861DA2</GeneratedChecksum>
           <UserChecksum dnOrder="5">ADB225099BE85085209592E90A861DA2</UserChecksum>
         </File>
@@ -1122,7 +1122,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_isr_enter_insert.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">EDD7E17EDB166C22749613F2B08E389D</GeneratedChecksum>
           <UserChecksum dnOrder="5">EDD7E17EDB166C22749613F2B08E389D</UserChecksum>
         </File>
@@ -1130,7 +1130,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_isr_exit_insert.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">515FA122353B9B55C04D3E097E0E0D01</GeneratedChecksum>
           <UserChecksum dnOrder="5">515FA122353B9B55C04D3E097E0E0D01</UserChecksum>
         </File>
@@ -1138,7 +1138,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_object_register.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">9CF378831CC82B1C256967C1F82585A0</GeneratedChecksum>
           <UserChecksum dnOrder="5">9CF378831CC82B1C256967C1F82585A0</UserChecksum>
         </File>
@@ -1146,7 +1146,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_object_unregister.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">49F0B912AA6FEB3C0EBFDEF76E83D6F1</GeneratedChecksum>
           <UserChecksum dnOrder="5">49F0B912AA6FEB3C0EBFDEF76E83D6F1</UserChecksum>
         </File>
@@ -1154,7 +1154,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">tx_trace_user_event_insert.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F7968D329BC366808CECF471A7FEE40A</GeneratedChecksum>
           <UserChecksum dnOrder="5">F7968D329BC366808CECF471A7FEE40A</UserChecksum>
         </File>
@@ -1162,7 +1162,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_block_allocate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">E5CB53E13C6B0BA378E5CE96DD5E3BC0</GeneratedChecksum>
           <UserChecksum dnOrder="5">E5CB53E13C6B0BA378E5CE96DD5E3BC0</UserChecksum>
         </File>
@@ -1170,7 +1170,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_block_pool_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">1C282B79DAB9420B6116BB42F115125E</GeneratedChecksum>
           <UserChecksum dnOrder="5">1C282B79DAB9420B6116BB42F115125E</UserChecksum>
         </File>
@@ -1178,7 +1178,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_block_pool_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0A60EFDB30BAA69C7EBE22CFC85D9BDB</GeneratedChecksum>
           <UserChecksum dnOrder="5">0A60EFDB30BAA69C7EBE22CFC85D9BDB</UserChecksum>
         </File>
@@ -1186,7 +1186,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_block_pool_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">E3763AC2A141D44DF93FC5DC875915E6</GeneratedChecksum>
           <UserChecksum dnOrder="5">E3763AC2A141D44DF93FC5DC875915E6</UserChecksum>
         </File>
@@ -1194,7 +1194,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_block_pool_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">322D2F7BCDAB568AEF1B6F7C92655CB0</GeneratedChecksum>
           <UserChecksum dnOrder="5">322D2F7BCDAB568AEF1B6F7C92655CB0</UserChecksum>
         </File>
@@ -1202,7 +1202,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_block_release.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">1CE639DFACF9EA6CC7D2AC67C2129878</GeneratedChecksum>
           <UserChecksum dnOrder="5">1CE639DFACF9EA6CC7D2AC67C2129878</UserChecksum>
         </File>
@@ -1210,7 +1210,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_byte_allocate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">70D3321A173F41EED2A151E8A2C21CBB</GeneratedChecksum>
           <UserChecksum dnOrder="5">70D3321A173F41EED2A151E8A2C21CBB</UserChecksum>
         </File>
@@ -1218,7 +1218,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_byte_pool_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">93937174577FFF74C6DCEC9B580176AB</GeneratedChecksum>
           <UserChecksum dnOrder="5">93937174577FFF74C6DCEC9B580176AB</UserChecksum>
         </File>
@@ -1226,7 +1226,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_byte_pool_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">32B996C1703888E48CE8F4529F5A4E46</GeneratedChecksum>
           <UserChecksum dnOrder="5">32B996C1703888E48CE8F4529F5A4E46</UserChecksum>
         </File>
@@ -1234,7 +1234,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_byte_pool_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7BD540BF0B149CF9436EEC9EEB58DCD0</GeneratedChecksum>
           <UserChecksum dnOrder="5">7BD540BF0B149CF9436EEC9EEB58DCD0</UserChecksum>
         </File>
@@ -1242,7 +1242,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_byte_pool_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">43FF8D79811E47A3F61B7332D3A347F9</GeneratedChecksum>
           <UserChecksum dnOrder="5">43FF8D79811E47A3F61B7332D3A347F9</UserChecksum>
         </File>
@@ -1250,7 +1250,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_byte_release.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">52CBB5993994FF2505D9AC770A439927</GeneratedChecksum>
           <UserChecksum dnOrder="5">52CBB5993994FF2505D9AC770A439927</UserChecksum>
         </File>
@@ -1258,7 +1258,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_event_flags_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">ED0369A20FF60E9840220C8258609C50</GeneratedChecksum>
           <UserChecksum dnOrder="5">ED0369A20FF60E9840220C8258609C50</UserChecksum>
         </File>
@@ -1266,7 +1266,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_event_flags_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F173B67E8F35F2321691BEEB7989803E</GeneratedChecksum>
           <UserChecksum dnOrder="5">F173B67E8F35F2321691BEEB7989803E</UserChecksum>
         </File>
@@ -1274,7 +1274,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_event_flags_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">19CE9456A08A94A202434C42582B465D</GeneratedChecksum>
           <UserChecksum dnOrder="5">19CE9456A08A94A202434C42582B465D</UserChecksum>
         </File>
@@ -1282,7 +1282,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_event_flags_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DED586178873F70BD31F06CD94BDF23D</GeneratedChecksum>
           <UserChecksum dnOrder="5">DED586178873F70BD31F06CD94BDF23D</UserChecksum>
         </File>
@@ -1290,7 +1290,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_event_flags_set.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">15B8E220B7AF3CEE155C1284B4A7E6C8</GeneratedChecksum>
           <UserChecksum dnOrder="5">15B8E220B7AF3CEE155C1284B4A7E6C8</UserChecksum>
         </File>
@@ -1298,7 +1298,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_event_flags_set_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">FAA4F9DB7D7DC1AA8F476C4702435426</GeneratedChecksum>
           <UserChecksum dnOrder="5">FAA4F9DB7D7DC1AA8F476C4702435426</UserChecksum>
         </File>
@@ -1306,7 +1306,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_mutex_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">C73A312B11AAEC891EBD1041E80178A0</GeneratedChecksum>
           <UserChecksum dnOrder="5">C73A312B11AAEC891EBD1041E80178A0</UserChecksum>
         </File>
@@ -1314,7 +1314,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_mutex_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D3A8416E7179E400E576261B90AF7FE5</GeneratedChecksum>
           <UserChecksum dnOrder="5">D3A8416E7179E400E576261B90AF7FE5</UserChecksum>
         </File>
@@ -1322,7 +1322,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_mutex_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">27A99A9970EBEC02D915BBF1368D296D</GeneratedChecksum>
           <UserChecksum dnOrder="5">27A99A9970EBEC02D915BBF1368D296D</UserChecksum>
         </File>
@@ -1330,7 +1330,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_mutex_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F662357B6AF8744B267E38FE2D8982FA</GeneratedChecksum>
           <UserChecksum dnOrder="5">F662357B6AF8744B267E38FE2D8982FA</UserChecksum>
         </File>
@@ -1338,7 +1338,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_mutex_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D23B97956FCE33BE48D62289BDFE92B7</GeneratedChecksum>
           <UserChecksum dnOrder="5">D23B97956FCE33BE48D62289BDFE92B7</UserChecksum>
         </File>
@@ -1346,7 +1346,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_mutex_put.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">933C228024E54DD27C1D34B507E70096</GeneratedChecksum>
           <UserChecksum dnOrder="5">933C228024E54DD27C1D34B507E70096</UserChecksum>
         </File>
@@ -1354,7 +1354,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">97BC847ACBA74DE204FD04D567421E1E</GeneratedChecksum>
           <UserChecksum dnOrder="5">97BC847ACBA74DE204FD04D567421E1E</UserChecksum>
         </File>
@@ -1362,7 +1362,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7C9F8DF2D92D796028E8177B15BAE201</GeneratedChecksum>
           <UserChecksum dnOrder="5">7C9F8DF2D92D796028E8177B15BAE201</UserChecksum>
         </File>
@@ -1370,7 +1370,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_flush.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">51DA6A5A701B55594C8979B9AD74DE78</GeneratedChecksum>
           <UserChecksum dnOrder="5">51DA6A5A701B55594C8979B9AD74DE78</UserChecksum>
         </File>
@@ -1378,7 +1378,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_front_send.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">33E403090E5CC7A4B0F20A7AA09F490F</GeneratedChecksum>
           <UserChecksum dnOrder="5">33E403090E5CC7A4B0F20A7AA09F490F</UserChecksum>
         </File>
@@ -1386,7 +1386,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F8D2CEA809C8518FDA2B1AE7883C39EE</GeneratedChecksum>
           <UserChecksum dnOrder="5">F8D2CEA809C8518FDA2B1AE7883C39EE</UserChecksum>
         </File>
@@ -1394,7 +1394,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7B44ACB69BD82504999D4E1624C1F54F</GeneratedChecksum>
           <UserChecksum dnOrder="5">7B44ACB69BD82504999D4E1624C1F54F</UserChecksum>
         </File>
@@ -1402,7 +1402,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_receive.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">69707B9281B48B6CFB78B747314B1C6D</GeneratedChecksum>
           <UserChecksum dnOrder="5">69707B9281B48B6CFB78B747314B1C6D</UserChecksum>
         </File>
@@ -1410,7 +1410,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_send.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">5461C0509A8FB85DDE4E99060A55768D</GeneratedChecksum>
           <UserChecksum dnOrder="5">5461C0509A8FB85DDE4E99060A55768D</UserChecksum>
         </File>
@@ -1418,7 +1418,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_queue_send_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">430FA5EE9155298BDCEBFA47FC5288BC</GeneratedChecksum>
           <UserChecksum dnOrder="5">430FA5EE9155298BDCEBFA47FC5288BC</UserChecksum>
         </File>
@@ -1426,7 +1426,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_ceiling_put.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">30BAC59A1CA97A49C3CBF9713AEFEB9F</GeneratedChecksum>
           <UserChecksum dnOrder="5">30BAC59A1CA97A49C3CBF9713AEFEB9F</UserChecksum>
         </File>
@@ -1434,7 +1434,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0645348B5A369A3FC160129A10E7369C</GeneratedChecksum>
           <UserChecksum dnOrder="5">0645348B5A369A3FC160129A10E7369C</UserChecksum>
         </File>
@@ -1442,7 +1442,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">991AB9A5BEEDE9562FEA1C45E01839F7</GeneratedChecksum>
           <UserChecksum dnOrder="5">991AB9A5BEEDE9562FEA1C45E01839F7</UserChecksum>
         </File>
@@ -1450,7 +1450,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">92FB2C87F547C88B11D70FA38C175F70</GeneratedChecksum>
           <UserChecksum dnOrder="5">92FB2C87F547C88B11D70FA38C175F70</UserChecksum>
         </File>
@@ -1458,7 +1458,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">22936A8FB6982C178FDCC4EC4C026924</GeneratedChecksum>
           <UserChecksum dnOrder="5">22936A8FB6982C178FDCC4EC4C026924</UserChecksum>
         </File>
@@ -1466,7 +1466,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_prioritize.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">D14569147FC4F163AD4C8AA78654787C</GeneratedChecksum>
           <UserChecksum dnOrder="5">D14569147FC4F163AD4C8AA78654787C</UserChecksum>
         </File>
@@ -1474,7 +1474,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_put.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">1A82BA0D192C94DC81A1BC2D8095EF86</GeneratedChecksum>
           <UserChecksum dnOrder="5">1A82BA0D192C94DC81A1BC2D8095EF86</UserChecksum>
         </File>
@@ -1482,7 +1482,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_semaphore_put_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">29301C85B207B37E1285187FA97E47F8</GeneratedChecksum>
           <UserChecksum dnOrder="5">29301C85B207B37E1285187FA97E47F8</UserChecksum>
         </File>
@@ -1490,7 +1490,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">E5587CC3629A5B4152BA9C1F214985BB</GeneratedChecksum>
           <UserChecksum dnOrder="5">E5587CC3629A5B4152BA9C1F214985BB</UserChecksum>
         </File>
@@ -1498,7 +1498,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DEFFAA152561C70186B9656196ED4339</GeneratedChecksum>
           <UserChecksum dnOrder="5">DEFFAA152561C70186B9656196ED4339</UserChecksum>
         </File>
@@ -1506,7 +1506,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_entry_exit_notify.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">6774C385A0090AFA5B0B3BD551E3E8CF</GeneratedChecksum>
           <UserChecksum dnOrder="5">6774C385A0090AFA5B0B3BD551E3E8CF</UserChecksum>
         </File>
@@ -1514,7 +1514,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">B8DEBFF48C9A8F615A7D0A6EABB52376</GeneratedChecksum>
           <UserChecksum dnOrder="5">B8DEBFF48C9A8F615A7D0A6EABB52376</UserChecksum>
         </File>
@@ -1522,7 +1522,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_preemption_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">AE7151F12D03F79E51EBBE35E3B9A8A7</GeneratedChecksum>
           <UserChecksum dnOrder="5">AE7151F12D03F79E51EBBE35E3B9A8A7</UserChecksum>
         </File>
@@ -1530,7 +1530,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_priority_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">610A919E4CD34FDC965BD91FD746AFAA</GeneratedChecksum>
           <UserChecksum dnOrder="5">610A919E4CD34FDC965BD91FD746AFAA</UserChecksum>
         </File>
@@ -1538,7 +1538,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_relinquish.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">9CF938A6A87F3BB2DCCFC9853A5FC889</GeneratedChecksum>
           <UserChecksum dnOrder="5">9CF938A6A87F3BB2DCCFC9853A5FC889</UserChecksum>
         </File>
@@ -1546,7 +1546,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_reset.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">448F6C72DB8C888DD3B44A9D9333F266</GeneratedChecksum>
           <UserChecksum dnOrder="5">448F6C72DB8C888DD3B44A9D9333F266</UserChecksum>
         </File>
@@ -1554,7 +1554,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_resume.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8771576172B0F57C510FD480AF45D8EC</GeneratedChecksum>
           <UserChecksum dnOrder="5">8771576172B0F57C510FD480AF45D8EC</UserChecksum>
         </File>
@@ -1562,7 +1562,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_suspend.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">2A84F7586E0D41D55199F58B74F919EE</GeneratedChecksum>
           <UserChecksum dnOrder="5">2A84F7586E0D41D55199F58B74F919EE</UserChecksum>
         </File>
@@ -1570,7 +1570,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_terminate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">B3833CD4FC233235A7287B6F88E570D4</GeneratedChecksum>
           <UserChecksum dnOrder="5">B3833CD4FC233235A7287B6F88E570D4</UserChecksum>
         </File>
@@ -1578,7 +1578,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_time_slice_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">1B05021242724CCC1A7A4830C1264B83</GeneratedChecksum>
           <UserChecksum dnOrder="5">1B05021242724CCC1A7A4830C1264B83</UserChecksum>
         </File>
@@ -1586,7 +1586,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_thread_wait_abort.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">548C2DDD1E13A92B403CF69EBCB7E02A</GeneratedChecksum>
           <UserChecksum dnOrder="5">548C2DDD1E13A92B403CF69EBCB7E02A</UserChecksum>
         </File>
@@ -1594,7 +1594,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_timer_activate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">8AD5579A822FC7F62B66554B75D80F51</GeneratedChecksum>
           <UserChecksum dnOrder="5">8AD5579A822FC7F62B66554B75D80F51</UserChecksum>
         </File>
@@ -1602,7 +1602,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_timer_change.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">7477591A26F389F2A85CFC544D32C6EC</GeneratedChecksum>
           <UserChecksum dnOrder="5">7477591A26F389F2A85CFC544D32C6EC</UserChecksum>
         </File>
@@ -1610,7 +1610,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_timer_create.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0BF8B5638F390A6C8EC2AEB6C175F14D</GeneratedChecksum>
           <UserChecksum dnOrder="5">0BF8B5638F390A6C8EC2AEB6C175F14D</UserChecksum>
         </File>
@@ -1618,7 +1618,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_timer_deactivate.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">DF76C4FC8C5D871C4938F84771ED7211</GeneratedChecksum>
           <UserChecksum dnOrder="5">DF76C4FC8C5D871C4938F84771ED7211</UserChecksum>
         </File>
@@ -1626,7 +1626,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_timer_delete.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">2B08237EE96B7DCB8D0270D2A09D96B8</GeneratedChecksum>
           <UserChecksum dnOrder="5">2B08237EE96B7DCB8D0270D2A09D96B8</UserChecksum>
         </File>
@@ -1634,7 +1634,7 @@
           <Type dnOrder="0">SOURCE</Type>
           <Name dnOrder="1">txe_timer_info_get.c</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F05D85792DC2A9DABC30F84E91CF05D3</GeneratedChecksum>
           <UserChecksum dnOrder="5">F05D85792DC2A9DABC30F84E91CF05D3</UserChecksum>
         </File>
@@ -1675,8 +1675,8 @@
           <Name dnOrder="1">definitions.h</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">4CCFD3CA9A6127B7012485A2EA137348</GeneratedChecksum>
-          <UserChecksum dnOrder="5">4CCFD3CA9A6127B7012485A2EA137348</UserChecksum>
+          <GeneratedChecksum dnOrder="4">9DB58AB6ADBD35AA41E23690BA8352B9</GeneratedChecksum>
+          <UserChecksum dnOrder="5">9DB58AB6ADBD35AA41E23690BA8352B9</UserChecksum>
         </File>
         <File dnOrder="209">
           <Type dnOrder="0">HEADER</Type>
@@ -1736,141 +1736,133 @@
         </File>
         <File dnOrder="216">
           <Type dnOrder="0">HEADER</Type>
-          <Name dnOrder="1">plib_tmr1.h</Name>
-          <LogicalPath dnOrder="2">config/pic32mz_ef_sk/peripheral/tmr1/</LogicalPath>
-          <PhysicalPath dnOrder="3">/peripheral/tmr1/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">0E4BAE52ED343B3329DC432AA7FF1DD7</GeneratedChecksum>
-          <UserChecksum dnOrder="5">0E4BAE52ED343B3329DC432AA7FF1DD7</UserChecksum>
-        </File>
-        <File dnOrder="217">
-          <Type dnOrder="0">HEADER</Type>
-          <Name dnOrder="1">plib_tmr1_common.h</Name>
-          <LogicalPath dnOrder="2">config/pic32mz_ef_sk/peripheral/tmr1/</LogicalPath>
-          <PhysicalPath dnOrder="3">/peripheral/tmr1/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">69E7C8CDAB1B32838331EE261170CEA4</GeneratedChecksum>
-          <UserChecksum dnOrder="5">69E7C8CDAB1B32838331EE261170CEA4</UserChecksum>
-        </File>
-        <File dnOrder="218">
-          <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">toolchain_specifics.h</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F7924D60AC5CC08996AB2DAEC62D3C54</GeneratedChecksum>
           <UserChecksum dnOrder="5">F7924D60AC5CC08996AB2DAEC62D3C54</UserChecksum>
         </File>
-        <File dnOrder="219">
+        <File dnOrder="217">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_api.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F33F8FEBB17EF788B68C6475D16AFA8C</GeneratedChecksum>
           <UserChecksum dnOrder="5">F33F8FEBB17EF788B68C6475D16AFA8C</UserChecksum>
         </File>
-        <File dnOrder="220">
+        <File dnOrder="218">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_block_pool.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">72605BE7CC79AFDBEB670C721BFB52D7</GeneratedChecksum>
           <UserChecksum dnOrder="5">72605BE7CC79AFDBEB670C721BFB52D7</UserChecksum>
         </File>
-        <File dnOrder="221">
+        <File dnOrder="219">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_byte_pool.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">AEB991419FA93CCDE3641DCF891FD3FB</GeneratedChecksum>
           <UserChecksum dnOrder="5">AEB991419FA93CCDE3641DCF891FD3FB</UserChecksum>
         </File>
-        <File dnOrder="222">
+        <File dnOrder="220">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_cpu.inc</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">F4D1E82CA1386DD3A9636DCCA8B2CA00</GeneratedChecksum>
           <UserChecksum dnOrder="5">F4D1E82CA1386DD3A9636DCCA8B2CA00</UserChecksum>
         </File>
-        <File dnOrder="223">
+        <File dnOrder="221">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_event_flags.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">95C8E41F64C664C75062BDBF3E39386D</GeneratedChecksum>
           <UserChecksum dnOrder="5">95C8E41F64C664C75062BDBF3E39386D</UserChecksum>
         </File>
-        <File dnOrder="224">
+        <File dnOrder="222">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_initialize.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0379532DE53F0818BF982F684C6D01A5</GeneratedChecksum>
           <UserChecksum dnOrder="5">0379532DE53F0818BF982F684C6D01A5</UserChecksum>
         </File>
-        <File dnOrder="225">
+        <File dnOrder="223">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_mutex.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">EFBB51C888B5FB00723A4B91400A0A2F</GeneratedChecksum>
           <UserChecksum dnOrder="5">EFBB51C888B5FB00723A4B91400A0A2F</UserChecksum>
         </File>
-        <File dnOrder="226">
+        <File dnOrder="224">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_port.h</Name>
-          <LogicalPath dnOrder="2">ThreadX/gcc/PIC32MZ</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/gcc/PIC32MZ/</PhysicalPath>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">96D32C39AFF9FE3FBB932733667D7098</GeneratedChecksum>
           <UserChecksum dnOrder="5">96D32C39AFF9FE3FBB932733667D7098</UserChecksum>
         </File>
-        <File dnOrder="227">
+        <File dnOrder="225">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_queue.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">479833416F7D653B0E323B801D2E3264</GeneratedChecksum>
           <UserChecksum dnOrder="5">479833416F7D653B0E323B801D2E3264</UserChecksum>
         </File>
-        <File dnOrder="228">
+        <File dnOrder="226">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_semaphore.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">0281DD56A7D9D96AC829F2BF5FE17506</GeneratedChecksum>
           <UserChecksum dnOrder="5">0281DD56A7D9D96AC829F2BF5FE17506</UserChecksum>
         </File>
-        <File dnOrder="229">
+        <File dnOrder="227">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_thread.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">45DF138438E27DAE6D87F8B4EA9ADAAC</GeneratedChecksum>
           <UserChecksum dnOrder="5">45DF138438E27DAE6D87F8B4EA9ADAAC</UserChecksum>
         </File>
-        <File dnOrder="230">
+        <File dnOrder="228">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_timer.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">206F6191B82A93A931FE595D2A4A50A6</GeneratedChecksum>
           <UserChecksum dnOrder="5">206F6191B82A93A931FE595D2A4A50A6</UserChecksum>
         </File>
-        <File dnOrder="231">
+        <File dnOrder="229">
+          <Type dnOrder="0">HEADER</Type>
+          <Name dnOrder="1">tx_tmr1.h</Name>
+          <LogicalPath dnOrder="2">ThreadX/PIC32MZ</LogicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
+          <GeneratedChecksum dnOrder="4">F56226FA21BD04D19C25E8AF4B6A8A99</GeneratedChecksum>
+          <UserChecksum dnOrder="5">F56226FA21BD04D19C25E8AF4B6A8A99</UserChecksum>
+        </File>
+        <File dnOrder="230">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_trace.h</Name>
           <LogicalPath dnOrder="2">ThreadX</LogicalPath>
-          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/</PhysicalPath>
+          <PhysicalPath dnOrder="3">/../../third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx/</PhysicalPath>
           <GeneratedChecksum dnOrder="4">654CD0EBCBCF9663457B455FCA21ECDC</GeneratedChecksum>
           <UserChecksum dnOrder="5">654CD0EBCBCF9663457B455FCA21ECDC</UserChecksum>
         </File>
-        <File dnOrder="232">
+        <File dnOrder="231">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">tx_user.h</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/threadx_config/</LogicalPath>
           <PhysicalPath dnOrder="3">/threadx_config/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">6022B409027420C6530DFDAB1D44BDD0</GeneratedChecksum>
-          <UserChecksum dnOrder="5">6022B409027420C6530DFDAB1D44BDD0</UserChecksum>
+          <GeneratedChecksum dnOrder="4">F4C30B6D86EA0730E637FC40B9D6A900</GeneratedChecksum>
+          <UserChecksum dnOrder="5">F4C30B6D86EA0730E637FC40B9D6A900</UserChecksum>
         </File>
-        <File dnOrder="233">
+        <File dnOrder="232">
           <Type dnOrder="0">HEADER</Type>
           <Name dnOrder="1">user.h</Name>
           <LogicalPath dnOrder="2">config/pic32mz_ef_sk/</LogicalPath>
@@ -1880,11 +1872,11 @@
         </File>
       </Files>
       <Settings dnOrder="1">
-        <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" value="../src/config/pic32mz_ef_sk/threadx_config;../src/third_party/rtos/ThreadX;../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;"/>
+        <Setting append="true" category="C32" delimiter=";" dnOrder="0" key="extra-include-directories" value="../src/config/pic32mz_ef_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx;"/>
         <Setting append="true" category="C32" delimiter=";" dnOrder="1" key="extra-include-directories" value="../src;../src/config/pic32mz_ef_sk;../src/packs/PIC32MZ2048EFH144_DFP;;../src/mips"/>
         <Setting category="C32" dnOrder="2" key="preprocessor-macros" value="TX_INCLUDE_USER_DEFINE_FILE"/>
-        <Setting append="true" category="C32-AS" delimiter=";" dnOrder="3" key="extra-include-directories-for-assembler" value="../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;"/>
-        <Setting append="true" category="C32-AS" delimiter=";" dnOrder="4" key="extra-include-directories-for-preprocessor" value="../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;"/>
+        <Setting append="true" category="C32-AS" delimiter=";" dnOrder="3" key="extra-include-directories-for-assembler" value="../src/config/pic32mz_ef_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx;"/>
+        <Setting append="true" category="C32-AS" delimiter=";" dnOrder="4" key="extra-include-directories-for-preprocessor" value="../src/config/pic32mz_ef_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx;"/>
         <Setting category="C32-LD" dnOrder="5" key="heap-size" value="512"/>
         <Setting category="C32-LD" dnOrder="6" key="no-device-startup-code" value="true"/>
         <Setting category="C32-LD" dnOrder="7" key="preprocessor-macros" value=""/>
@@ -1892,7 +1884,7 @@
     </Manifest>
     <Settings dnOrder="4">
       <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.5.1"/>
-      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32MZ_EF_DFP\1.0.37\atdf\PIC32MZ2048EFH144.atdf"/>
+      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32MZ_EF_DFP\1.0.39\atdf\PIC32MZ2048EFH144.atdf"/>
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>

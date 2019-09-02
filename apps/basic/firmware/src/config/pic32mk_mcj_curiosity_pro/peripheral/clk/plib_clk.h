@@ -1,23 +1,30 @@
 /*******************************************************************************
-  TMR1 Peripheral Library Interface Header File
+  SYS CLK Static Functions for Clock System Service
 
-  Company
+  Company:
     Microchip Technology Inc.
 
-  File Name
-    plib_tmr1_common.h
+  File Name:
+    plib_clk.h
 
-  Summary
-    TMR1 peripheral library interface.
+  Summary:
+    SYS CLK static function interface for the Clock System Service.
 
-  Description
-    This file defines the interface to the TC peripheral library.  This
-    library provides access to and control of the associated peripheral
-    instance.
+  Description:
+    The Clock System Service provides a simple interface to manage the
+    oscillators on Microchip microcontrollers. This file defines the static
+    implementation for the Clock System Service.
+
+  Remarks:
+    Static functions incorporate all system clock configuration settings as
+    determined by the user via the Microchip Harmony Configurator GUI.
+    It provides static version of the routines, eliminating the need for an
+    object ID or object handle.
+
+    Static single-open interfaces also eliminate the need for the open handle.
 
 *******************************************************************************/
 
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
@@ -40,11 +47,9 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
 
-#ifndef PLIB_TMR1_COMMON_H    // Guards against multiple inclusion
-#define PLIB_TMR1_COMMON_H
-
+#ifndef PLIB_CLK_H
+#define PLIB_CLK_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -52,69 +57,62 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*  This section lists the other files that are included in this file.
-*/
 #include <stddef.h>
+#include <stdbool.h>  
 
 // DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
+#ifdef __cplusplus // Provide C++ Compatibility
 
-extern "C" {
+	extern "C" {
 
 #endif
-
 // DOM-IGNORE-END
+ 
+// *****************************************************************************
+// *****************************************************************************
+// Section: CLK Module System Interface Routines
+// *****************************************************************************
+// *****************************************************************************
 
 // *****************************************************************************
-// *****************************************************************************
-// Section: Data Types
-// *****************************************************************************
-// *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part of it.
-*/
-
-
-// *****************************************************************************
-/* TMR1_CALLBACK
+/* Function:
+    void CLK_Initialize( void )
 
   Summary:
-    Use to register a callback with the TMR1.
-
+    Initializes hardware of the System Clock and Peripheral Clock.
+    
   Description:
-    When a match is asserted, a callback can be activated.
-    Use TMR1_CALLBACK as the function pointer to register the callback
-    with the match.
+    This function initializes the hardware of System Clock and Peripheral Clocks.
+
+  Precondition:
+    None.
+
+  Parameters:
+    None.
+
+  Returns:
+    None.
+
+  Example:
+    <code>
+    //Example 1: Do not alter the configuration bit settings
+    CLK_Initialize ( );
+
+    </code>
 
   Remarks:
-    The callback should look like:
-      void callback(handle, context);
-	Make sure the return value and parameters of the callback are correct.
+    None.
 */
 
-typedef void (*TMR1_CALLBACK)(uint32_t status, uintptr_t context);
-
-// *****************************************************************************
-
-typedef struct
-{
-    /*TMR1 callback function happens on Period match*/
-    TMR1_CALLBACK callback_fn;
-    /* - Client data (Event Context) that will be passed to callback */
-    uintptr_t context;
-
-}TMR1_TIMER_OBJECT;
+void CLK_Initialize( void );
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
-}
+    }
 
 #endif
 // DOM-IGNORE-END
 
-#endif //_PLIB_TMR1_COMMON_H
+#endif //PLIB_CLK_H
 
-/**
- End of File
-*/

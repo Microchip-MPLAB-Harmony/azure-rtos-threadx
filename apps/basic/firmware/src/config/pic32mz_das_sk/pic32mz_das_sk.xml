@@ -9,154 +9,154 @@
             <Dynamic dnOrder="0" id="core" value="0"/>
           </Values>
         </KeyValueSet>
-        <Boolean dnOrder="1" id="CORE_SOFTWARE_0_INTERRUPT_ENABLE_UPDATE">
+        <Boolean dnOrder="1" id="EVIC_1_ENABLE_GENERATE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="true"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="2" id="EVIC_1_ENABLE">
+        <Boolean dnOrder="2" id="EVIC_1_ENABLE_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="3" id="EVIC_1_ENABLE_GENERATE">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="core" value="true"/>
-          </Values>
-        </Boolean>
-        <Boolean dnOrder="4" id="EVIC_1_ENABLE_LOCK">
+        <Boolean dnOrder="3" id="EVIC_1_HANDLER_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="5" id="EVIC_1_HANDLER_LOCK">
+        <Boolean dnOrder="4" id="EVIC_1_PRIORITY_GENERATE">
+          <Values dnOrder="0">
+            <Dynamic dnOrder="0" id="core" value="true"/>
+          </Values>
+        </Boolean>
+        <Boolean dnOrder="5" id="EVIC_1_PRIORITY_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="6" id="EVIC_1_PRIORITY_GENERATE">
+        <Boolean dnOrder="6" id="EVIC_1_SUBPRIORITY_GENERATE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="true"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="7" id="EVIC_1_PRIORITY_LOCK">
+        <Boolean dnOrder="7" id="EVIC_1_SUBPRIORITY_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="8" id="EVIC_1_SUBPRIORITY_GENERATE">
+        <Boolean dnOrder="8" id="EVIC_4_ENABLE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="true"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="9" id="EVIC_1_SUBPRIORITY_LOCK">
+        <Boolean dnOrder="9" id="EVIC_4_ENABLE_GENERATE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="10" id="EVIC_4_ENABLE">
+        <Boolean dnOrder="10" id="EVIC_4_ENABLE_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="true"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="11" id="EVIC_4_ENABLE_GENERATE">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="core" value="false"/>
-          </Values>
-        </Boolean>
-        <Boolean dnOrder="12" id="EVIC_4_ENABLE_LOCK">
+        <Boolean dnOrder="11" id="EVIC_4_HANDLER_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="true"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="13" id="EVIC_4_HANDLER_LOCK">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="core" value="true"/>
-          </Values>
-        </Boolean>
-        <String dnOrder="14" id="EVIC_4_INTERRUPT_HANDLER">
+        <String dnOrder="12" id="EVIC_4_INTERRUPT_HANDLER">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="TIMER_1_InterruptHandler"/>
           </Values>
         </String>
-        <Boolean dnOrder="15" id="EVIC_4_PRIORITY_GENERATE">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="core" value="true"/>
-          </Values>
-        </Boolean>
-        <Boolean dnOrder="16" id="EVIC_4_PRIORITY_LOCK">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="core" value="true"/>
-          </Values>
-        </Boolean>
-        <Boolean dnOrder="17" id="EVIC_4_SUBPRIORITY_GENERATE">
+        <Boolean dnOrder="13" id="EVIC_4_PRIORITY_GENERATE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="18" id="EVIC_4_SUBPRIORITY_LOCK">
+        <Boolean dnOrder="14" id="EVIC_4_PRIORITY_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="true"/>
           </Values>
         </Boolean>
-        <Hex dnOrder="19" id="PMD4_REG_VALUE">
+        <Boolean dnOrder="15" id="EVIC_4_SUBPRIORITY_GENERATE">
+          <Values dnOrder="0">
+            <Dynamic dnOrder="0" id="core" value="false"/>
+          </Values>
+        </Boolean>
+        <Boolean dnOrder="16" id="EVIC_4_SUBPRIORITY_LOCK">
+          <Values dnOrder="0">
+            <Dynamic dnOrder="0" id="core" value="true"/>
+          </Values>
+        </Boolean>
+        <Hex dnOrder="17" id="PMD4_REG_VALUE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="510"/>
           </Values>
         </Hex>
-        <Hex dnOrder="20" id="PMD5_REG_VALUE">
+        <Hex dnOrder="18" id="PMD5_REG_VALUE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="807354175"/>
           </Values>
         </Hex>
-        <Hex dnOrder="21" id="PMD6_REG_VALUE">
+        <Hex dnOrder="19" id="PMD6_REG_VALUE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="278986752"/>
           </Values>
         </Hex>
-        <Hex dnOrder="22" id="PMD7_REG_VALUE">
+        <Hex dnOrder="20" id="PMD7_REG_VALUE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="273678336"/>
           </Values>
         </Hex>
-        <Hex dnOrder="23" id="SYS_PORT_B_ANSEL">
+        <Hex dnOrder="21" id="SYS_PORT_B_ANSEL">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="28672"/>
           </Values>
         </Hex>
-        <Hex dnOrder="24" id="SYS_PORT_B_CNPU">
+        <Hex dnOrder="22" id="SYS_PORT_B_CNPU">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="28672"/>
           </Values>
         </Hex>
-        <Hex dnOrder="25" id="SYS_PORT_B_TRIS">
+        <Hex dnOrder="23" id="SYS_PORT_B_TRIS">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="0"/>
           </Values>
         </Hex>
-        <Hex dnOrder="26" id="SYS_PORT_H_LAT">
+        <Hex dnOrder="24" id="SYS_PORT_H_LAT">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="0"/>
           </Values>
         </Hex>
-        <Hex dnOrder="27" id="SYS_PORT_H_TRIS">
+        <Hex dnOrder="25" id="SYS_PORT_H_TRIS">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="7"/>
           </Values>
         </Hex>
-        <Boolean dnOrder="28" id="TIMER_1_INTERRUPT_ENABLE_UPDATE">
+        <Boolean dnOrder="26" id="TIMER_1_INTERRUPT_ENABLE">
+          <Values dnOrder="0">
+            <Dynamic dnOrder="0" id="ThreadX" value="true"/>
+          </Values>
+        </Boolean>
+        <Boolean dnOrder="27" id="TIMER_1_INTERRUPT_ENABLE_UPDATE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <String dnOrder="29" id="TIMER_1_INTERRUPT_HANDLER">
+        <String dnOrder="28" id="TIMER_1_INTERRUPT_HANDLER">
           <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="tmr1" value="TIMER_1_InterruptHandler"/>
+            <Dynamic dnOrder="0" id="ThreadX" value="TIMER_1_InterruptHandler"/>
           </Values>
         </String>
+        <Boolean dnOrder="29" id="TIMER_1_INTERRUPT_HANDLER_LOCK">
+          <Values dnOrder="0">
+            <Dynamic dnOrder="0" id="ThreadX" value="true"/>
+          </Values>
+        </Boolean>
         <Boolean dnOrder="30" id="TMR1_CLOCK_ENABLE">
           <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="tmr1" value="true"/>
+            <Dynamic dnOrder="0" id="ThreadX" value="true"/>
           </Values>
         </Boolean>
         <Integer dnOrder="31" id="TMR1_CLOCK_FREQUENCY">
@@ -270,40 +270,47 @@
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="14" id="OSAL_SYSDEF_H">
+        <File dnOrder="14" id="OSAL_IMPL_BASIC_H">
+          <Attributes dnOrder="0">
+            <Boolean dnOrder="0" id="enabled">
+              <Value dnOrder="0">false</Value>
+            </Boolean>
+          </Attributes>
+        </File>
+        <File dnOrder="15" id="OSAL_SYSDEF_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="15" id="OSAL_THREADX_OS_III_C">
+        <File dnOrder="16" id="OSAL_THREADX_OS_III_C">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="16" id="OSAL_THREADX_OS_III_H">
+        <File dnOrder="17" id="OSAL_THREADX_OS_III_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <Combo dnOrder="17" id="SELECT_RTOS">
+        <Combo dnOrder="18" id="SELECT_RTOS">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="HarmonyCore" value="ThreadX"/>
           </Values>
         </Combo>
-        <File dnOrder="18" id="TASKS_C">
+        <File dnOrder="19" id="TASKS_C">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="19" id="USER_H">
+        <File dnOrder="20" id="USER_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
@@ -312,97 +319,18 @@
         </File>
       </Symbols>
     </UniqueComponent>
-    <UniqueComponent dnOrder="4" id="ThreadX">
-      <Symbols dnOrder="0">
-        <Integer dnOrder="0" id="THREADX_TICK_RATE_HZ">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="ThreadX" value="1000"/>
-          </Values>
-        </Integer>
-      </Symbols>
-      <Attachments dnOrder="1">
-        <DirectDependency dnOrder="0" id="RTOS_TIMER_dependency">
-          <Attributes dnOrder="0">
-            <String dnOrder="0" id="targetComponentID">
-              <Value dnOrder="0">tmr1</Value>
-            </String>
-            <String dnOrder="1" id="targetAttachmentID">
-              <Value dnOrder="0">TMR1_TMR1</Value>
-            </String>
-          </Attributes>
-        </DirectDependency>
-      </Attachments>
-    </UniqueComponent>
-    <UniqueComponent dnOrder="5" id="tmr1">
-      <Symbols dnOrder="0">
-        <Hex dnOrder="0" id="TCON_REG_VALUE">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="tmr1" value="272"/>
-          </Values>
-        </Hex>
-        <Integer dnOrder="1" id="TIMER1_CLOCK_FREQ">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="tmr1" value="12500000"/>
-          </Values>
-        </Integer>
-        <Long dnOrder="2" id="TIMER1_PERIOD">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="tmr1" value="12499"/>
-          </Values>
-        </Long>
-        <KeyValueSet dnOrder="3" id="TIMER1_PRE_SCALER">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="tmr1" value="2"/>
-          </Values>
-        </KeyValueSet>
-        <Float dnOrder="4" id="TIMER1_TIME_PERIOD_MS">
-          <Attributes dnOrder="0">
-            <Float dnOrder="0" id="max">
-              <Value dnOrder="0">5.2428</Value>
-            </Float>
-          </Attributes>
-          <Values dnOrder="1">
-            <Dynamic dnOrder="0" id="tmr1" value="1.0"/>
-          </Values>
-        </Float>
-        <Boolean dnOrder="5" id="TMR1_INTERRUPT_MODE">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="readOnly">
-              <Value dnOrder="0">true</Value>
-            </Boolean>
-          </Attributes>
-        </Boolean>
-        <Integer dnOrder="6" id="TMR1_PRESCALER_VALUE">
-          <Values dnOrder="0">
-            <Dynamic dnOrder="0" id="tmr1" value="8"/>
-          </Values>
-        </Integer>
-      </Symbols>
-      <Attachments dnOrder="1">
-        <DirectCapability dnOrder="0" id="TMR1_TMR1">
-          <Attributes dnOrder="0">
-            <String dnOrder="0" id="targetComponentID">
-              <Value dnOrder="0">ThreadX</Value>
-            </String>
-            <String dnOrder="1" id="targetAttachmentID">
-              <Value dnOrder="0">RTOS_TIMER_dependency</Value>
-            </String>
-          </Attributes>
-        </DirectCapability>
-      </Attachments>
-    </UniqueComponent>
+    <UniqueComponent dnOrder="4" id="ThreadX"/>
   </Components>
   <UserData>
-    <GraphSettings canvasHeight="400" canvasWidth="400" dnOrder="0"/>
-    <ComponentGraph dnOrder="1" id="__ROOTVIEW">
+    <ComponentGraph dnOrder="0" id="__ROOTVIEW">
       <ElementPositions dnOrder="0">
         <ElementPosition dnOrder="0" id="BSP_PIC32MZ_DA_Starter_Kit" x="340" y="20"/>
-        <ElementPosition dnOrder="1" id="HarmonyCore" x="20" y="53"/>
-        <ElementPosition dnOrder="2" id="ThreadX" x="344" y="51"/>
+        <ElementPosition dnOrder="1" id="HarmonyCore" x="30" y="60"/>
+        <ElementPosition dnOrder="2" id="ThreadX" x="240" y="55"/>
         <ElementPosition dnOrder="3" id="core" x="240" y="20"/>
         <ElementPosition dnOrder="4" id="dfp" x="20" y="20"/>
-        <ElementPosition dnOrder="5" id="tmr1" x="190" y="60"/>
       </ElementPositions>
     </ComponentGraph>
+    <GraphSettings canvasHeight="400" canvasWidth="400" dnOrder="1"/>
   </UserData>
 </Configuration>

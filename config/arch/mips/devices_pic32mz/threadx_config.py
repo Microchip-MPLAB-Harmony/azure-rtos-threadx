@@ -43,67 +43,49 @@ threadxSym_PerClockHz.setDefaultValue(perclk)
 threadxSym_PerClockHz.setDependencies(threadxCpuClockHz, ["core.CONFIG_SYS_CLK_PBCLK2_FREQ"])
 threadxSym_PerClockHz.setReadOnly(True)
 
+#Update Timer1 Interrupt Handler name
+timer1Irq                   = "TIMER_1"
+timer1InterruptVector       = timer1Irq + "_INTERRUPT_ENABLE"
+timer1InterruptHandler      = timer1Irq + "_INTERRUPT_HANDLER"
+timer1InterruptHandlerLock  = timer1Irq + "_INTERRUPT_HANDLER_LOCK"
+
+if (Database.getSymbolValue("core", timer1InterruptVector) == False):
+    Database.setSymbolValue("core", timer1InterruptVector, True, 1)
+
+if (Database.getSymbolValue("core", timer1InterruptHandlerLock) == False):
+    Database.setSymbolValue("core", timer1InterruptHandlerLock, True, 1)
+
+interruptName = timer1InterruptHandler.split("_INTERRUPT_HANDLER")[0]
+
+if (Database.getSymbolValue("core", timer1InterruptHandler) != str (interruptName) + "_InterruptHandler"):
+    Database.setSymbolValue("core", timer1InterruptHandler, interruptName + "_InterruptHandler", 1)
+
+#Enable TMR1 Peripheral Clock for FreeRTOS Tick Interrupt Generation
+if (Database.getSymbolValue("core", "TMR1_CLOCK_ENABLE") == False):
+    Database.clearSymbolValue("core", "TMR1_CLOCK_ENABLE")
+    Database.setSymbolValue("core", "TMR1_CLOCK_ENABLE", True)
+
 configName  = Variables.get("__CONFIGURATION_NAME")
 
+threadxTimer1SourceFile = thirdPartyThreadX.createFileSymbol("THREADX_TMR1_C", None)
+threadxTimer1SourceFile.setSourcePath("config/arch/mips/templates/tmr1/tx_tmr1.c.ftl")
+threadxTimer1SourceFile.setOutputName("tx_tmr1.c")
+threadxTimer1SourceFile.setDestPath("../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx/")
+threadxTimer1SourceFile.setProjectPath("ThreadX/" + coreName.upper())
+threadxTimer1SourceFile.setType("SOURCE")
+threadxTimer1SourceFile.setMarkup(True)
+
+threadxTimer1Headerfile = thirdPartyThreadX.createFileSymbol("THREADX_TMR1_H", None)
+threadxTimer1Headerfile.setSourcePath("config/arch/mips/templates/tmr1/tx_tmr1.h")
+threadxTimer1Headerfile.setDestPath("../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx/")
+threadxTimer1Headerfile.setProjectPath("ThreadX/" + coreName.upper())
+threadxTimer1Headerfile.setType("HEADER")
+
 threadxTaskContextStackHeaderFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_CPU_INC", None)
-threadxTaskContextStackHeaderFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_cpu.inc")
-threadxTaskContextStackHeaderFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxTaskContextStackHeaderFile.setProjectPath("ThreadX/gcc/PIC32MZ")
+threadxTaskContextStackHeaderFile.setSourcePath("../thirdparty_expresslogic/tx58" + coreName.lower() + "_mplabx/threadx/tx_cpu.inc")
+threadxTaskContextStackHeaderFile.setDestPath("../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx/")
+threadxTaskContextStackHeaderFile.setProjectPath("ThreadX/" + coreName.upper())
 threadxTaskContextStackHeaderFile.setType("HEADER")
-
-threadxInitLowLevelAsmHeaderFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_PORT_H", None)
-threadxInitLowLevelAsmHeaderFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_port.h")
-threadxInitLowLevelAsmHeaderFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxInitLowLevelAsmHeaderFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxInitLowLevelAsmHeaderFile.setType("HEADER")
-
-threadxInitLowLevelAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_INITIALIZE_LOW_LEVEL_S", None)
-threadxInitLowLevelAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_initialize_low_level.S")
-threadxInitLowLevelAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxInitLowLevelAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxInitLowLevelAsmSourceFile.setType("SOURCE")
-
-threadxContextRestoreAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_THREAD_CONTEXT_RESTORE_S", None)
-threadxContextRestoreAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_thread_context_restore.S")
-threadxContextRestoreAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxContextRestoreAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxContextRestoreAsmSourceFile.setType("SOURCE")
-
-threadxContextSaveAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_THREAD_CONTEXT_SAVE_S", None)
-threadxContextSaveAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_thread_context_save.S")
-threadxContextSaveAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxContextSaveAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxContextSaveAsmSourceFile.setType("SOURCE")
-
-threadxInterruptControlAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_THREAD_INTERRUPT_CONTROL_S", None)
-threadxInterruptControlAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_thread_interrupt_control.S")
-threadxInterruptControlAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxInterruptControlAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxInterruptControlAsmSourceFile.setType("SOURCE")
-
-threadxScheduleAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_THREAD_SCHEDULE_S", None)
-threadxScheduleAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_thread_schedule.S")
-threadxScheduleAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxScheduleAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxScheduleAsmSourceFile.setType("SOURCE")
-
-threadxStackBuildAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_THREAD_STACK_BUILD_S", None)
-threadxStackBuildAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_thread_stack_build.S")
-threadxStackBuildAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxStackBuildAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxStackBuildAsmSourceFile.setType("SOURCE")
-
-threadxSystemReturnAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_THREAD_SYSTEM_RETURN_S", None)
-threadxSystemReturnAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_thread_system_return.S")
-threadxSystemReturnAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxSystemReturnAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxSystemReturnAsmSourceFile.setType("SOURCE")
-
-threadxTimerIntrAsmSourceFile = thirdPartyThreadX.createFileSymbol("THREADX_PIC32MZ_TX_TIMER_INTERRUPT_S", None)
-threadxTimerIntrAsmSourceFile.setSourcePath("../thirdparty_expresslogic/gcc/PIC32MZ/tx_timer_interrupt.S")
-threadxTimerIntrAsmSourceFile.setDestPath("../../third_party/rtos/ThreadX/gcc/PIC32MZ/")
-threadxTimerIntrAsmSourceFile.setProjectPath("ThreadX/gcc/PIC32MZ")
-threadxTimerIntrAsmSourceFile.setType("SOURCE")
 
 # Update C32 Include directories path
 threadxxc32LdPreprocessroMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_LINKER_PREPROC_MARCOS", None)
@@ -114,17 +96,17 @@ threadxxc32LdPreprocessroMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
 threadxOsXc32SettingSym = thirdPartyThreadX.createSettingSymbol("THREADX_OS_XC32_INCLUDE_DIRS", None)
 threadxOsXc32SettingSym.setCategory("C32")
 threadxOsXc32SettingSym.setKey("extra-include-directories")
-threadxOsXc32SettingSym.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX;../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;")
+threadxOsXc32SettingSym.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
 threadxOsXc32SettingSym.setAppend(True, ";")
 
 threadxIncDirForAsm = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_AS_INCLUDE_DIRS", None)
 threadxIncDirForAsm.setCategory("C32-AS")
 threadxIncDirForAsm.setKey("extra-include-directories-for-assembler")
-threadxIncDirForAsm.setValue("../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;")
+threadxIncDirForAsm.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
 threadxIncDirForAsm.setAppend(True, ";")
 
 threadxIncDirForPre = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_AS_INCLUDE_PRE_PROC_DIRS", None)
 threadxIncDirForPre.setCategory("C32-AS")
 threadxIncDirForPre.setKey("extra-include-directories-for-preprocessor")
-threadxIncDirForPre.setValue("../src/third_party/rtos/ThreadX/gcc/PIC32MZ/;")
+threadxIncDirForPre.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
 threadxIncDirForPre.setAppend(True, ";")

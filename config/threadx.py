@@ -28,7 +28,6 @@ import os
 global coreArch
 
 fileSymbolName = "THREADX_"
-threadxSrcPath = "../thirdparty_expresslogic/"
 
 def AddThreadXFile(component, src_path, dest_path, proj_path, filename, file_type, isMarkup = False):
     global fileSymbolName
@@ -40,23 +39,29 @@ def AddThreadXFile(component, src_path, dest_path, proj_path, filename, file_typ
     srcFile.setMarkup(isMarkup)
 
 # Traverse through Thirdparty RTOS ThreadX folder and create File Symbols for ThreadX Source files.
-def AddThreadXFilesDir(component, configName, dirPath):
+def AddThreadXFilesDir(component, configName, dirPath, coreName):
     modulePath = Module.getPath()
     dirPath = str(modulePath + dirPath)
     gccPath = dirPath + "gcc"
-    docPath = dirPath + "doc"
+    docsPath = dirPath + "docs"
     gitPath = dirPath + ".git"
     for (root, dirs, files) in os.walk(dirPath):
         for filename in files:
-            # Include all files under all folders other than gcc/ and doc/ folder
-            if (gccPath not in root) and (docPath not in root) and (gitPath not in root):
+            # Include all files under all folders other than gcc/ and docs/ folder
+            if (gccPath not in root) and (docsPath not in root) and (gitPath not in root):
                 filepath = str(root + os.sep + filename)
                 source_path = filepath[len(modulePath):]
-                destination_path = "../../third_party/rtos/ThreadX"
+                destination_path = "../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx"
                 project_path = "ThreadX"
                 if (".c" in filename):
                     AddThreadXFile(component, source_path , destination_path , project_path, filename, "SOURCE")
-                elif (".h" in filename):
+                elif (".S" in filename):
+                    project_path = "ThreadX/" + coreName
+                    AddThreadXFile(component, source_path , destination_path , project_path, filename, "SOURCE")
+                elif ("tx_port.h" in filename):
+                    project_path = "ThreadX/" + coreName
+                    AddThreadXFile(component, source_path , destination_path , project_path, filename, "HEADER")
+                elif ("tx_user.h" not in filename) and (".h" in filename):
                     AddThreadXFile(component, source_path , destination_path , project_path, filename, "HEADER")
 
 def threadxTimerStackSizeVisibility(symbol, event):
@@ -158,18 +163,6 @@ def threadxCheckTickRate(symbol, event):
     if (event["value"] == 0):
         symbol.setVisible(True)
 
-
-def finalizeComponent(thirdPartyThreadX):
-    global coreArch
-
-    if (coreArch == "MIPS"):
-        autoConnectTable =  [
-                                ["ThreadX", "RTOS_TIMER_dependency", "tmr1", "TMR1_TMR1"]
-                            ]
-        autoComponentIDTable = ["ThreadX", "tmr1"]
-        res = Database.activateComponents(autoComponentIDTable)
-        res = Database.connectDependencies(autoConnectTable)
-
 # Instatntiate ThreadX Component
 def instantiateComponent(thirdPartyThreadX):
     Log.writeInfoMessage("Running ThreadX")
@@ -179,10 +172,6 @@ def instantiateComponent(thirdPartyThreadX):
     # Fetch Core Architecture and Family details
     coreArch     = Database.getSymbolValue("core", "CoreArchitecture")
     coreFamily   = ATDF.getNode( "/avr-tools-device-file/devices/device" ).getAttribute( "family" )
-
-    if (coreArch == "MIPS"):
-        thirdPartyThreadX.addDependency("RTOS_TIMER_dependency", "TMR1", False, True)
-
 
     # Deactivate the active RTOS if any.
     deactivateActiveRtos()
@@ -231,9 +220,21 @@ def instantiateComponent(thirdPartyThreadX):
     threadxSym_TickRate.setLabel("Tick Rate (Hz)")
     threadxSym_TickRate.setDescription("ThreadX - Tick rate (Hz)")
     threadxSym_TickRate.setDefaultValue(1000)
+    threadxSym_TickRate.setMin(250)
+    threadxSym_TickRate.setMax(1000)
+
     if (coreArch == "MIPS"):
-        threadxSym_TickRate.setReadOnly(True)
-        threadxSym_TickRate.setDependencies(threadxCalcTickRate, ["tmr1.TIMER1_TIME_PERIOD_MS"])
+        threadxSym_TimerPrescale = thirdPartyThreadX.createIntegerSymbol("THREADX_TIMER_PRESCALE", None)
+        threadxSym_TimerPrescale.setLabel("Timer Prescale")
+        threadxSym_TimerPrescale.setDescription("ThreadX - Timer Prescale")
+        threadxSym_TimerPrescale.setDefaultValue(8)
+        threadxSym_TimerPrescale.setReadOnly(True)
+
+        threadxSym_TimerPrescaleBits = thirdPartyThreadX.createIntegerSymbol("THREADX_TIMER_PRESCALE_BITS", None)
+        threadxSym_TimerPrescaleBits.setLabel("Timer Prescale Bits")
+        threadxSym_TimerPrescaleBits.setDescription("ThreadX - Timer Prescale Bits")
+        threadxSym_TimerPrescaleBits.setDefaultValue(1)
+        threadxSym_TimerPrescaleBits.setReadOnly(True)
 
     threadxSym_TickRateComment = thirdPartyThreadX.createCommentSymbol("THREADX_TICK_RATE_COMMENT", None)
     threadxSym_TickRateComment.setLabel("Warning!!! Tick Rate cannot be \"0\" !!!")
@@ -483,9 +484,6 @@ def instantiateComponent(thirdPartyThreadX):
     # ThreadX Generic Source Files
     configName = Variables.get("__CONFIGURATION_NAME")
 
-    # BL to add Thirdparty ThreadX Generic Source Code
-    AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath)
-
     threadxUserConfig = thirdPartyThreadX.createFileSymbol("THREADX_TX_USER_H", None)
     threadxUserConfig.setSourcePath("templates/tx_user.h.ftl")
     threadxUserConfig.setOutputName("tx_user.h")
@@ -503,7 +501,7 @@ def instantiateComponent(thirdPartyThreadX):
     if (coreArch == "MIPS"):
         threadxSystemInit = thirdPartyThreadX.createFileSymbol("THREADX_INIT", None)
         threadxSystemInit.setType("STRING")
-        threadxSystemInit.setOutputName("core.LIST_SYSTEM_INIT_INTERRUPTS")
+        threadxSystemInit.setOutputName("core.LIST_SYSTEM_INIT_C_SYS_INITIALIZE_PERIPHERALS")
         threadxSystemInit.setSourcePath("templates/system/initialization.c.ftl")
         threadxSystemInit.setMarkup(True)
 
@@ -527,6 +525,23 @@ def instantiateComponent(thirdPartyThreadX):
 
     # load family specific configuration and port files
     if (coreArch == "MIPS"):
+        coreName = coreFamily[:7].upper()
+        if (coreName == "PIC32MK"):
+            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58pic32mz_mplabx/ThreadX/"
+        else:
+            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreFamily[:7].lower() + "_mplabx/ThreadX/"
+
         execfile(Module.getPath() + "config/arch/mips/devices_" + coreFamily[:7].lower() + "/threadx_config.py")
+
+    elif (coreArch[:6] == "ARM926"):
+        threadxSrcPath = "../thirdparty_expresslogic/" + "tx58arm9_mplabx/ThreadX/"
+        coreName = coreArch[:6].upper()
+        execfile(Module.getPath() + "config/arch/arm/devices_" + coreArch[:6].lower() + "/threadx_config.py")
+
     else:
+        threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreArch.replace("PLUS", "").lower() + "_mplabx/ThreadX/"
+        coreName = coreArch.replace("-", "_").replace("PLUS", "").upper()
         execfile(Module.getPath() + "config/arch/arm/devices_" + coreArch.replace("-", "_").replace("PLUS", "").lower() + "/threadx_config.py")
+
+    # BL to add Thirdparty ThreadX Generic Source Code
+    AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath, coreName)

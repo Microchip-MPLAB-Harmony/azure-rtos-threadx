@@ -54,8 +54,8 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "tx_api.h"
-#include "bsp/bsp.h"
 #include "osal/osal.h"
+#include "bsp/bsp.h"
 #include "app.h"
 
 

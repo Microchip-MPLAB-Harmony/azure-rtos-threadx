@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name
-    plib_tmr1.c
+    tmr1.c
 
   Summary
     TMR1 peripheral library source file.
@@ -49,80 +49,48 @@
 // *****************************************************************************
 
 #include "device.h"
-#include "plib_tmr1.h"
+#include "tx_tmr1.h"
+#include "peripheral/evic/plib_evic.h"
+#include "tx_api.h"
 
+extern void _tx_timer_interrupt( void );
+
+void __ISR(_TIMER_1_VECTOR, ipl1AUTO) TIMER_1_Handler (void)
+{
+    /* Clear Interrupt */
+    IFS0CLR = _IFS0_T1IF_MASK;
+
+    /* Call ThreadX context save. */
+    _tx_thread_context_save();
+
+    /* Call ThreadX timer interrupt processing. */
+    _tx_timer_interrupt();
+
+    /* Call ThreadX context restore. */
+    _tx_thread_context_restore();
+}
 
 void TMR1_Initialize(void)
 {
+    const uint32_t timer1Period = ( (${THREADX_PERIPHERAL_CLOCK_HZ} / ${THREADX_TIMER_PRESCALE}) / ${THREADX_TICK_RATE_HZ} ) - 1UL;
+
     /* Disable Timer */
     T1CONCLR = _T1CON_ON_MASK;
 
-    /*
-    SIDL = 0
-    TWDIS = 0
-    TECS = 1
-    TGATE = 0
-    TCKPS = 1
-    TSYNC = 0
-    TCS = 0
-    */
-    T1CONSET = 0x110;
+    T1CONbits.TCKPS = ${THREADX_TIMER_PRESCALE_BITS};
 
-    /* Clear counter */
-    TMR1 = 0x0;
+    PR1 = timer1Period;
 
-    /*Set period */
-    PR1 = 12499;
-
-    /* Setup TMR1 Interrupt */
-    TMR1_InterruptEnable();  /* Enable interrupt on the way out */
-
-    /* Start TMR1 */
-    TMR1_Start();
-}
-
-
-void TMR1_Start (void)
-{
-    T1CONSET = _T1CON_ON_MASK;
-}
-
-
-void TMR1_Stop (void)
-{
-    T1CONCLR = _T1CON_ON_MASK;
-}
-
-
-void TMR1_PeriodSet(uint16_t period)
-{
-    PR1 = period;
-}
-
-
-uint16_t TMR1_PeriodGet(void)
-{
-    return (uint16_t)PR1;
-}
-
-
-uint16_t TMR1_CounterGet(void)
-{
-    return(TMR1);
-}
-
-uint32_t TMR1_FrequencyGet(void)
-{
-    return (12500000);
-}
-
-
-void TMR1_InterruptEnable(void)
-{
-    IEC0SET = _IEC0_T1IE_MASK;
-}
-
-void TMR1_InterruptDisable(void)
-{
+    /* Clear the interrupt as a starting condition. */
     IEC0CLR = _IEC0_T1IE_MASK;
+
+    /* Enable the interrupt. */
+    IEC0SET = _IEC0_T1IE_MASK;
+
+    /* Start the timer. */
+    T1CONSET = _T1CON_ON_MASK;
+
+    /* Set up priority / subpriority of enabled interrupts */
+    IPC1SET = 0x4 | 0x0;  /* TIMER_1:  Priority 1 / Subpriority 0 */
 }
+
