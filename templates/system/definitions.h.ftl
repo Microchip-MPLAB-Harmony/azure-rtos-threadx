@@ -22,7 +22,10 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 -->
+#include "tx_user.h"
 #include "tx_api.h"
 <#if core.CoreArchitecture == "MIPS" >
 #include "tx_tmr1.h"
+<#elseif core.CoreArchitecture == "ARM926EJS">
+#include "sam9x6_tx_timer.h"
 </#if>

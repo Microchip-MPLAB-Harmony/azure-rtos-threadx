@@ -1,4 +1,21 @@
-<#--
+/*******************************************************************************
+  Periodic Interval Timer (PIT64B) 
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    sam9x6_tx_timer.h
+
+  Summary:
+   Tick timer initialization for Threadx on SAM9X6.
+
+  Description:
+    This file declares the interface for tick timer initialization for threadx
+    on SAM9X6.
+*******************************************************************************/
+
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
@@ -21,9 +38,27 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
--->
-<#if core.CoreArchitecture == "MIPS" >
-    TMR1_Initialize();
-<#elseif core.CoreArchitecture == "ARM926EJS">
-    threadx_timer_intialize();
-</#if>
+// DOM-IGNORE-END
+
+#ifndef SAM9X6_TX_TIMER_H
+#define SAM9X6_TX_TIMER_H
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
+
+// *****************************************************************************
+void threadx_timer_intialize();
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+#endif
+// DOM-IGNORE-END
+
+#endif /* SAM9X6_TX_TIMER_H */

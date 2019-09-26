@@ -64,6 +64,33 @@ def AddThreadXFilesDir(component, configName, dirPath, coreName):
                 elif ("tx_user.h" not in filename) and (".h" in filename):
                     AddThreadXFile(component, source_path , destination_path , project_path, filename, "HEADER")
 
+def AddIARThreadXFiles(component, dirPath, coreName):
+    destPath = "../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_iar/threadx"
+    projectPath = "Threadx"
+    fileNames = os.listdir(dirPath)
+    exclusionList = ["tx_user.h"]
+    for fileName in fileNames:
+        # Find threadx source/header/assembler files
+        if fileName.lower().startswith("tx") and fileName.lower().endswith(('.c', '.s', '.h')):
+            # Dont process files in the exclusion list
+            if fileName in exclusionList:
+                continue    
+            # Get the relative path of the file w.r.t to the module path 
+            sourcePath = os.path.relpath(os.path.join(dirPath, fileName), Module.getPath())
+            #create a file symbol
+            fileSymbolName =  "THREADX_" + fileName.replace(".", "_").upper()
+            txFile = component.createFileSymbol(fileSymbolName, None)
+            txFile.setSourcePath(sourcePath)
+            txFile.setDestPath(destPath)
+            txFile.setProjectPath(projectPath)
+            txFile.setMarkup(False)
+            # if it is a source 
+            if fileName.lower().endswith(('.c','.s')):
+                txFile.setType("SOURCE")
+            else:
+                txFile.setType("HEADER")
+
+
 def threadxTimerStackSizeVisibility(symbol, event):
 
     if(event["value"] == False):
@@ -172,6 +199,7 @@ def instantiateComponent(thirdPartyThreadX):
     # Fetch Core Architecture and Family details
     coreArch     = Database.getSymbolValue("core", "CoreArchitecture")
     coreFamily   = ATDF.getNode( "/avr-tools-device-file/devices/device" ).getAttribute( "family" )
+    compiler     = Database.getSymbolValue("core", "COMPILER_CHOICE")
 
     # Deactivate the active RTOS if any.
     deactivateActiveRtos()
@@ -498,12 +526,11 @@ def instantiateComponent(thirdPartyThreadX):
     threadxSystemDefFile.setSourcePath("templates/system/definitions.h.ftl")
     threadxSystemDefFile.setMarkup(True)
 
-    if (coreArch == "MIPS"):
-        threadxSystemInit = thirdPartyThreadX.createFileSymbol("THREADX_INIT", None)
-        threadxSystemInit.setType("STRING")
-        threadxSystemInit.setOutputName("core.LIST_SYSTEM_INIT_C_SYS_INITIALIZE_PERIPHERALS")
-        threadxSystemInit.setSourcePath("templates/system/initialization.c.ftl")
-        threadxSystemInit.setMarkup(True)
+    threadxSystemInit = thirdPartyThreadX.createFileSymbol("THREADX_INIT", None)
+    threadxSystemInit.setType("STRING")
+    threadxSystemInit.setOutputName("core.LIST_SYSTEM_INIT_C_SYS_INITIALIZE_PERIPHERALS")
+    threadxSystemInit.setSourcePath("templates/system/initialization.c.ftl")
+    threadxSystemInit.setMarkup(True)
 
     threadxSystemTasksFile = thirdPartyThreadX.createFileSymbol("THREADX_SYS_START_SCHED", None)
     threadxSystemTasksFile.setType("STRING")
@@ -523,25 +550,33 @@ def instantiateComponent(thirdPartyThreadX):
     threadxSystemTasksDef.setSourcePath("templates/system/tasks_macros.c.ftl")
     threadxSystemTasksDef.setMarkup(True)
 
-    # load family specific configuration and port files
-    if (coreArch == "MIPS"):
-        coreName = coreFamily[:7].upper()
-        if (coreName == "PIC32MK"):
-            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58pic32mz_mplabx/ThreadX/"
+    # If compiler is XC32
+    if compiler == 0:
+        # load family specific configuration and port files
+        if (coreArch == "MIPS"):
+            coreName = coreFamily[:7].upper()
+            if (coreName == "PIC32MK"):
+                threadxSrcPath = "../thirdparty_expresslogic/" + "tx58pic32mz_mplabx/threadx/"
+            else:
+                threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreFamily[:7].lower() + "_mplabx/threadx/"
+
+            execfile(Module.getPath() + "config/arch/mips/devices_" + coreFamily[:7].lower() + "/threadx_config.py")
+
         else:
-            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreFamily[:7].lower() + "_mplabx/ThreadX/"
+            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreArch.replace("PLUS", "").lower() + "_mplabx/threadx/"
+            coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").upper()
+            execfile(Module.getPath() + "config/arch/arm/devices_" + coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower() + "/threadx_config.py")
 
-        execfile(Module.getPath() + "config/arch/mips/devices_" + coreFamily[:7].lower() + "/threadx_config.py")
+        # BL to add Thirdparty ThreadX Generic Source Code
+        AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath, coreName)
+    
+    #if compiler is IAR
+    elif compiler == 1:
+        coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
+        threadxCoreName = coreName.replace("926","9").replace("cortex_a5", "cortex-a5") 
+        threadxSrcPath =  "../thirdparty_expresslogic/tx58" + threadxCoreName + "_generic_iar/threadx"
+        execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
+        AddIARThreadXFiles(thirdPartyThreadX, threadxSrcPath, coreName)
 
-    elif (coreArch[:6] == "ARM926"):
-        threadxSrcPath = "../thirdparty_expresslogic/" + "tx58arm9_mplabx/ThreadX/"
-        coreName = coreArch[:6].upper()
-        execfile(Module.getPath() + "config/arch/arm/devices_" + coreArch[:6].lower() + "/threadx_config.py")
+        
 
-    else:
-        threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreArch.replace("PLUS", "").lower() + "_mplabx/ThreadX/"
-        coreName = coreArch.replace("-", "_").replace("PLUS", "").upper()
-        execfile(Module.getPath() + "config/arch/arm/devices_" + coreArch.replace("-", "_").replace("PLUS", "").lower() + "/threadx_config.py")
-
-    # BL to add Thirdparty ThreadX Generic Source Code
-    AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath, coreName)
