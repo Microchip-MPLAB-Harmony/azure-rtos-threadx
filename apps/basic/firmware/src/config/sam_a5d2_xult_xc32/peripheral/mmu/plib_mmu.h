@@ -1,5 +1,24 @@
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+  MMU PLIB
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    plib_mmu.h
+
+  Summary:
+    MMU PLIB external functions declartions
+
+  Description:
+    The MMU PLIB supports the MMU found on Cortex A processors.  This library
+    sets up the MMU with a flat 1:1 mapping of the address space and enables
+    the instruction and data cache.
+*******************************************************************************/
+
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -20,33 +39,28 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef PLIB_CLK_H
-#define PLIB_CLK_H
-
-#include <stddef.h>
+#ifndef _PLIB_MMU_H    // Guards against multiple inclusion
+#define _PLIB_MMU_H
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     extern "C" {
 
 #endif
- 
-// *****************************************************************************
-// *****************************************************************************
-// Section: CLK Module System Interface Routines
-// *****************************************************************************
-// *****************************************************************************
+
 
 // *****************************************************************************
 /* Function:
-    void CLK_Initialize ( void )
+    void MMU_Initialize(void);
 
   Summary:
-    Initializes hardware of the System Clock and Peripheral Clock.
-    
+    Initialize and enable MMU.
+
   Description:
-    This function initializes the hardware of System Clock and Peripheral Clocks.
+    Initialize the MMU with a flat address map (e.g. physical and virtual
+    addresses are the same) and enable MMU and caches.
 
   Precondition:
     None.
@@ -56,23 +70,25 @@
 
   Returns:
     None.
-
-  Example:
-    <code>
-    //Example 1: Do not alter the configuration bit settings
-    CLK_Initialize ( );
-
-    </code>
-
-  Remarks:
-    None.
 */
+void MMU_Initialize(void);
 
-void CLK_Initialize ( void );
+void icache_InvalidateAll(void);
+void icache_Enable(void);
+void icache_Disable(void);
+void dcache_InvalidateAll(void);
+void dcache_CleanAll(void);
+void dcache_CleanInvalidateAll(void);
+void dcache_InvalidateByAddr (uint32_t *addr, uint32_t size);
+void dcache_CleanByAddr (uint32_t *addr, uint32_t size);
+void dcache_CleanInvalidateByAddr (uint32_t *addr, uint32_t size);
+void dcache_Enable(void);
+void dcache_Disable(void);
 
-#ifdef __cplusplus
-}
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+
 #endif
 
-#endif //PLIB_CLK_H
-
+#endif // _PLIB_MMU_H

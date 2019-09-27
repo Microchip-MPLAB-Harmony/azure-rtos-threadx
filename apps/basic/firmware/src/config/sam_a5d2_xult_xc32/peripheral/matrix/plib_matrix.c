@@ -1,5 +1,22 @@
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+  Matrix (AHB) PLIB
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    plib_matrix.c
+
+  Summary:
+    AHB Matrix PLIB implementation file
+
+  Description:
+    Configure AHB masters and slaves.
+*******************************************************************************/
+
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -20,59 +37,45 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef PLIB_CLK_H
-#define PLIB_CLK_H
 
-#include <stddef.h>
-
-#ifdef __cplusplus  // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
- 
 // *****************************************************************************
 // *****************************************************************************
-// Section: CLK Module System Interface Routines
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
+#include <device.h>
 
 // *****************************************************************************
 /* Function:
-    void CLK_Initialize ( void )
+    void Matrix_Initialize(void)
 
   Summary:
-    Initializes hardware of the System Clock and Peripheral Clock.
-    
+    Initialize AHB Masters and Slaves.
+
   Description:
-    This function initializes the hardware of System Clock and Peripheral Clocks.
-
-  Precondition:
-    None.
-
-  Parameters:
-    None.
-
-  Returns:
-    None.
-
-  Example:
-    <code>
-    //Example 1: Do not alter the configuration bit settings
-    CLK_Initialize ( );
-
-    </code>
+    Inialize AHB Masters and Slaves and peripheral's as secure or non-secure.
 
   Remarks:
-    None.
+    Until security is implemented all peripherals will be non-secure.
 */
+void Matrix_Initialize(void)
+{
+    int i;
+    uint32_t key;
 
-void CLK_Initialize ( void );
+    for (i=0; i<3; i++) {
+        MATRIX0_REGS->MATRIX_SPSELR[i] = MATRIX_SPSELR_Msk;
+        MATRIX1_REGS->MATRIX_SPSELR[i] = MATRIX_SPSELR_Msk;
+    }
 
-#ifdef __cplusplus
+    key = 0xb6d81c4d ^ SFR_REGS->SFR_SN1;
+    key &= 0xfffffffe;
+
+    SFR_REGS->SFR_AICREDIR = key | SFR_AICREDIR_NSAIC_Msk;
 }
-#endif
 
-#endif //PLIB_CLK_H
-
+/*******************************************************************************
+ End of File
+*/

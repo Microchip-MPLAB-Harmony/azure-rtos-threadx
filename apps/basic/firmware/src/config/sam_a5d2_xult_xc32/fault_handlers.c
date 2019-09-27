@@ -19,53 +19,25 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
 
-#include "device.h"
-#include "plib_clk.h"
-
-
-
-
-
-
-/*********************************************************************************
-Initialize Generic clock
-*********************************************************************************/
-
-static void CLK_GenericClockInitialize(void)
+void __attribute((weak)) undefined_instruction_irq_handler (void)
 {
+	while(1);
 }
 
 
-
-/*********************************************************************************
-Initialize Peripheral clock
-*********************************************************************************/
-
-static void CLK_PeripheralClockInitialize(void)
+void __attribute((weak)) software_interrupt_irq_handler(void)
 {
-    /* Enable clock for the selected peripherals, since the rom boot will turn on
-     * certain clocks turn off all clocks not expressly enabled */
-   	PMC_REGS->PMC_PCER0=0x42000;
-    PMC_REGS->PMC_PCDR0=~0x42000;
-    PMC_REGS->PMC_PCER1=0x0;
-    PMC_REGS->PMC_PCDR1=~0x0;
+	while(1);
 }
 
-
-
-/*********************************************************************************
-Clock Initialize
-*********************************************************************************/
-
-void CLK_Initialize( void )
-{ 
-	/* Initialize Generic Clock */
-	CLK_GenericClockInitialize();
-
-	/* Initialize Peripheral Clock */
-	CLK_PeripheralClockInitialize();
-
+void __attribute((weak)) data_abort_irq_handler(void)
+{
+	while(1);
 }
 
+void __attribute((weak)) prefetch_abort_irq_handler(void)
+{
+	while(1);
+}

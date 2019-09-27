@@ -21,51 +21,16 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "device.h"
-#include "plib_clk.h"
+#ifndef TOOLCHAIN_SPECIFICS_H
+#define TOOLCHAIN_SPECIFICS_H
 
 
+#include <sys/types.h>
+#define NO_INIT        __attribute__((section(".no_init")))
+#define SECTION(a)     __attribute__((__section__(a)))
+
+#define CACHE_ALIGN    __ALIGNED(32)
 
 
-
-
-/*********************************************************************************
-Initialize Generic clock
-*********************************************************************************/
-
-static void CLK_GenericClockInitialize(void)
-{
-}
-
-
-
-/*********************************************************************************
-Initialize Peripheral clock
-*********************************************************************************/
-
-static void CLK_PeripheralClockInitialize(void)
-{
-    /* Enable clock for the selected peripherals, since the rom boot will turn on
-     * certain clocks turn off all clocks not expressly enabled */
-   	PMC_REGS->PMC_PCER0=0x42000;
-    PMC_REGS->PMC_PCDR0=~0x42000;
-    PMC_REGS->PMC_PCER1=0x0;
-    PMC_REGS->PMC_PCDR1=~0x0;
-}
-
-
-
-/*********************************************************************************
-Clock Initialize
-*********************************************************************************/
-
-void CLK_Initialize( void )
-{ 
-	/* Initialize Generic Clock */
-	CLK_GenericClockInitialize();
-
-	/* Initialize Peripheral Clock */
-	CLK_PeripheralClockInitialize();
-
-}
+#endif // end of header
 

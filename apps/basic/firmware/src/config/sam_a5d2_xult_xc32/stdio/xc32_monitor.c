@@ -1,5 +1,22 @@
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+ Debug Console Source file 
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    debug_console.c
+
+  Summary:
+    RSTC Source File
+
+  Description:
+    None
+
+*******************************************************************************/
+
+/*******************************************************************************
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -21,51 +38,12 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "device.h"
-#include "plib_clk.h"
 
+int _mon_getc(int canblock)
+{
+   return 0;
+}
 
-
-
-
-
-/*********************************************************************************
-Initialize Generic clock
-*********************************************************************************/
-
-static void CLK_GenericClockInitialize(void)
+void _mon_putc(char c)
 {
 }
-
-
-
-/*********************************************************************************
-Initialize Peripheral clock
-*********************************************************************************/
-
-static void CLK_PeripheralClockInitialize(void)
-{
-    /* Enable clock for the selected peripherals, since the rom boot will turn on
-     * certain clocks turn off all clocks not expressly enabled */
-   	PMC_REGS->PMC_PCER0=0x42000;
-    PMC_REGS->PMC_PCDR0=~0x42000;
-    PMC_REGS->PMC_PCER1=0x0;
-    PMC_REGS->PMC_PCDR1=~0x0;
-}
-
-
-
-/*********************************************************************************
-Clock Initialize
-*********************************************************************************/
-
-void CLK_Initialize( void )
-{ 
-	/* Initialize Generic Clock */
-	CLK_GenericClockInitialize();
-
-	/* Initialize Peripheral Clock */
-	CLK_PeripheralClockInitialize();
-
-}
-

@@ -37,6 +37,8 @@ def AddThreadXFile(component, src_path, dest_path, proj_path, filename, file_typ
     srcFile.setProjectPath(proj_path)
     srcFile.setType(file_type)
     srcFile.setMarkup(isMarkup)
+    srcFile.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
+    srcFile.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
 
 # Traverse through Thirdparty RTOS ThreadX folder and create File Symbols for ThreadX Source files.
 def AddThreadXFilesDir(component, configName, dirPath, coreName):
@@ -65,6 +67,7 @@ def AddThreadXFilesDir(component, configName, dirPath, coreName):
                     AddThreadXFile(component, source_path , destination_path , project_path, filename, "HEADER")
 
 def AddIARThreadXFiles(component, dirPath, coreName):
+    dirPath = str(Module.getPath() + dirPath)
     destPath = "../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_iar/threadx"
     projectPath = "Threadx"
     fileNames = os.listdir(dirPath)
@@ -74,21 +77,23 @@ def AddIARThreadXFiles(component, dirPath, coreName):
         if fileName.lower().startswith("tx") and fileName.lower().endswith(('.c', '.s', '.h')):
             # Dont process files in the exclusion list
             if fileName in exclusionList:
-                continue    
-            # Get the relative path of the file w.r.t to the module path 
+                continue
+            # Get the relative path of the file w.r.t to the module path
             sourcePath = os.path.relpath(os.path.join(dirPath, fileName), Module.getPath())
             #create a file symbol
-            fileSymbolName =  "THREADX_" + fileName.replace(".", "_").upper()
+            fileSymbolName =  "THREADX_IAR_" + fileName.replace(".", "_").upper()
             txFile = component.createFileSymbol(fileSymbolName, None)
             txFile.setSourcePath(sourcePath)
             txFile.setDestPath(destPath)
             txFile.setProjectPath(projectPath)
             txFile.setMarkup(False)
-            # if it is a source 
+            # if it is a source
             if fileName.lower().endswith(('.c','.s')):
                 txFile.setType("SOURCE")
             else:
                 txFile.setType("HEADER")
+            txFile.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1), ['core.COMPILER_CHOICE'])
+            txFile.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE")  == 1)
 
 
 def threadxTimerStackSizeVisibility(symbol, event):
@@ -550,6 +555,7 @@ def instantiateComponent(thirdPartyThreadX):
     threadxSystemTasksDef.setSourcePath("templates/system/tasks_macros.c.ftl")
     threadxSystemTasksDef.setMarkup(True)
 
+    threadxFileSymbolConfig = 0
     # If compiler is XC32
     if compiler == 0:
         # load family specific configuration and port files
@@ -567,16 +573,16 @@ def instantiateComponent(thirdPartyThreadX):
             coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").upper()
             execfile(Module.getPath() + "config/arch/arm/devices_" + coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower() + "/threadx_config.py")
 
+        threadxFileSymbolConfig += 1
         # BL to add Thirdparty ThreadX Generic Source Code
         AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath, coreName)
-    
-    #if compiler is IAR
-    elif compiler == 1:
-        coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
-        threadxCoreName = coreName.replace("926","9").replace("cortex_a5", "cortex-a5") 
-        threadxSrcPath =  "../thirdparty_expresslogic/tx58" + threadxCoreName + "_generic_iar/threadx"
-        execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
-        AddIARThreadXFiles(thirdPartyThreadX, threadxSrcPath, coreName)
 
-        
+    #if compiler is IAR
+    if compiler == 1 or coreArch == "CORTEX-A5":
+        coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
+        threadxCoreName = coreName.replace("926","9").replace("cortex_a5", "cortex-a5")
+        threadxSrcPath =  "../thirdparty_expresslogic/tx58" + threadxCoreName + "_generic_iar/threadx/"
+        if threadxFileSymbolConfig == 0:
+            execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
+        AddIARThreadXFiles(thirdPartyThreadX, threadxSrcPath, coreName)
 

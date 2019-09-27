@@ -1,5 +1,26 @@
+#ifndef PLIB_AIC_H
+#define PLIB_AIC_H
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+  AIC PLIB Header
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    plib_aic.h
+
+  Summary:
+    This file provides the public declarations for the Advanced Interrupt
+    Controller.
+
+  Description:
+    None
+
+*******************************************************************************/
+
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -20,52 +41,28 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
+#ifdef __cplusplus  // Provide C++ Compatibility
+    extern "C" {
+#endif
+// DOM-IGNORE-END
+#include <stddef.h>
+#include <stdbool.h>
+#include <device.h>
 
-#include "device.h"
-#include "plib_clk.h"
+typedef void (*IrqHandler)(void);
+typedef struct {
+    uint32_t    peripheralId;
+    uint32_t    targetRegisters;
+    IrqHandler  handler;
+    uint32_t    srcType;
+    uint32_t    priority;
+} IrqData;
 
+void INT_Initialize( void );
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    }
+#endif
+// DOM-IGNORE-END
 
-
-
-
-
-/*********************************************************************************
-Initialize Generic clock
-*********************************************************************************/
-
-static void CLK_GenericClockInitialize(void)
-{
-}
-
-
-
-/*********************************************************************************
-Initialize Peripheral clock
-*********************************************************************************/
-
-static void CLK_PeripheralClockInitialize(void)
-{
-    /* Enable clock for the selected peripherals, since the rom boot will turn on
-     * certain clocks turn off all clocks not expressly enabled */
-   	PMC_REGS->PMC_PCER0=0x42000;
-    PMC_REGS->PMC_PCDR0=~0x42000;
-    PMC_REGS->PMC_PCER1=0x0;
-    PMC_REGS->PMC_PCDR1=~0x0;
-}
-
-
-
-/*********************************************************************************
-Clock Initialize
-*********************************************************************************/
-
-void CLK_Initialize( void )
-{ 
-	/* Initialize Generic Clock */
-	CLK_GenericClockInitialize();
-
-	/* Initialize Peripheral Clock */
-	CLK_PeripheralClockInitialize();
-
-}
-
+#endif // PLIB_AIC_H

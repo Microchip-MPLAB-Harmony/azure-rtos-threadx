@@ -21,51 +21,8 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "device.h"
-#include "plib_clk.h"
+#ifndef __OSAL_DEFINITIONS_H
+#define __OSAL_DEFINITIONS_H
 
-
-
-
-
-
-/*********************************************************************************
-Initialize Generic clock
-*********************************************************************************/
-
-static void CLK_GenericClockInitialize(void)
-{
-}
-
-
-
-/*********************************************************************************
-Initialize Peripheral clock
-*********************************************************************************/
-
-static void CLK_PeripheralClockInitialize(void)
-{
-    /* Enable clock for the selected peripherals, since the rom boot will turn on
-     * certain clocks turn off all clocks not expressly enabled */
-   	PMC_REGS->PMC_PCER0=0x42000;
-    PMC_REGS->PMC_PCDR0=~0x42000;
-    PMC_REGS->PMC_PCER1=0x0;
-    PMC_REGS->PMC_PCDR1=~0x0;
-}
-
-
-
-/*********************************************************************************
-Clock Initialize
-*********************************************************************************/
-
-void CLK_Initialize( void )
-{ 
-	/* Initialize Generic Clock */
-	CLK_GenericClockInitialize();
-
-	/* Initialize Peripheral Clock */
-	CLK_PeripheralClockInitialize();
-
-}
-
+#include "osal/osal_threadx.h"
+#endif//__OSAL_DEFINITIONS_H
