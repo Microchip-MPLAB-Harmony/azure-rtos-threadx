@@ -25,81 +25,79 @@
 ############################################################################
 ############### Cortex-A5 Architecture specific configuration ##############
 ############################################################################
+def updateIncludePath(symbol, event):
+    configName = Variables.get("__CONFIGURATION_NAME")
+    coreArch = Database.getSymbolValue("core", "CoreArchitecture")
+    coreName = coreArch.replace("-", "_")
+    compiler = "_mplabx" if Database.getSymbolValue("core", "COMPILER_CHOICE") == 0 else "_iar"
+    symbol.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/tx58" + coreName.lower() + compiler + "/threadx;")
 
 #Default Byte Pool size
 threadxSym_BytePoolSize.setDefaultValue(40960)
 
 #CPU Clock Frequency
-cpuclk = Database.getSymbolValue("core", "CPU_CLOCK_FREQUENCY")
-cpuclk = int(cpuclk)
-
 threadxSym_CpuClockHz.setDependencies(threadxCpuClockHz, ["core.CPU_CLOCK_FREQUENCY"])
-threadxSym_CpuClockHz.setDefaultValue(cpuclk)
+threadxSym_CpuClockHz.setDefaultValue(int(Database.getSymbolValue("core", "CPU_CLOCK_FREQUENCY")))
 
-#Setup SysTick, PendSV and SVCall Interrupt Priorities.
-#SysTick must be highest priority
-SysTickInterruptHandlerIndex    = Interrupt.getInterruptIndex("SysTick")
+Database.activateComponents(["pit"]);
+Database.setSymbolValue("pit", "RTOS_INTERRUPT_HANDLER", "Threadx_Tick_Handler")
+Database.setSymbolValue("core", "USE_THREADX_VECTORS", True)
+Database.setSymbolValue("pit", "ENABLE_COUNTER", False)
 
-SysTickInterruptPri             = "NVIC_"+ str(SysTickInterruptHandlerIndex) +"_0_PRIORITY"
-SysTickInterruptPriLock         = "NVIC_"+ str(SysTickInterruptHandlerIndex) +"_0_PRIORITY_LOCK"
+# Update Include directories path
+threadxLdPreprocessroMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_LINKER_PREPROC_MARCOS", None)
+threadxLdPreprocessroMacroSym.setCategory("C32")
+threadxLdPreprocessroMacroSym.setKey("preprocessor-macros")
+threadxLdPreprocessroMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
+threadxLdPreprocessroMacroSym.setAppend(True, ";")
 
-if (Database.getSymbolValue("core", SysTickInterruptPri) != "1"):
-    Database.clearSymbolValue("core", SysTickInterruptPri)
-    Database.setSymbolValue("core", SysTickInterruptPri, "1")
+compiler = "_mplabx" if Database.getSymbolValue("core", "COMPILER_CHOICE") == 0 else "_iar"
 
-if (Database.getSymbolValue("core", SysTickInterruptPriLock) == False):
-    Database.clearSymbolValue("core", SysTickInterruptPriLock)
-    Database.setSymbolValue("core", SysTickInterruptPriLock, True)
+threadxOsSettingSym = thirdPartyThreadX.createSettingSymbol("THREADX_OS_INCLUDE_DIRS", None)
+threadxOsSettingSym.setCategory("C32")
+threadxOsSettingSym.setKey("extra-include-directories")
+threadxOsSettingSym.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/tx58" + coreName.lower() + compiler + "/threadx;")
+threadxOsSettingSym.setAppend(True, ";")
+threadxOsSettingSym.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
 
-#SVCall must be lowest priority
-SVCallInterruptHandlerIndex    = Interrupt.getInterruptIndex("SVCall")
-
-SVCallInterruptPri             = "NVIC_"+ str(SVCallInterruptHandlerIndex) +"_0_PRIORITY"
-SVCallInterruptPriLock         = "NVIC_"+ str(SVCallInterruptHandlerIndex) +"_0_PRIORITY_LOCK"
-
-if (Database.getSymbolValue("core", SVCallInterruptPri) != "7"):
-    Database.clearSymbolValue("core", SVCallInterruptPri)
-    Database.setSymbolValue("core", SVCallInterruptPri, "7")
-
-if (Database.getSymbolValue("core", SVCallInterruptPriLock) == False):
-    Database.clearSymbolValue("core", SVCallInterruptPriLock)
-    Database.setSymbolValue("core", SVCallInterruptPriLock, True)
-
-#PndSV must be lowest priority
-PendSVInterruptHandlerIndex    = Interrupt.getInterruptIndex("PendSV")
-
-PendSVInterruptPri          = "NVIC_"+ str(PendSVInterruptHandlerIndex) +"_0_PRIORITY"
-PendSVInterruptPriLock      = "NVIC_"+ str(PendSVInterruptHandlerIndex) +"_0_PRIORITY_LOCK"
-
-if (Database.getSymbolValue("core", PendSVInterruptPri) != "7"):
-    Database.clearSymbolValue("core", PendSVInterruptPri)
-    Database.setSymbolValue("core", PendSVInterruptPri, "7")
-
-if (Database.getSymbolValue("core", PendSVInterruptPriLock) == False):
-    Database.clearSymbolValue("core", PendSVInterruptPriLock)
-    Database.setSymbolValue("core", PendSVInterruptPriLock, True)
-
-
-# Update C32 Include directories path
-threadxxc32LdPreprocessroMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_LINKER_PREPROC_MARCOS", None)
-threadxxc32LdPreprocessroMacroSym.setCategory("C32")
-threadxxc32LdPreprocessroMacroSym.setKey("preprocessor-macros")
-threadxxc32LdPreprocessroMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
-
-threadxOsXc32SettingSym = thirdPartyThreadX.createSettingSymbol("THREADX_OS_XC32_INCLUDE_DIRS", None)
-threadxOsXc32SettingSym.setCategory("C32")
-threadxOsXc32SettingSym.setKey("extra-include-directories")
-threadxOsXc32SettingSym.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
-threadxOsXc32SettingSym.setAppend(True, ";")
-
-threadxIncDirForAsm = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_AS_INCLUDE_DIRS", None)
+threadxIncDirForAsm = thirdPartyThreadX.createSettingSymbol("THREADX_AS_INCLUDE_DIRS", None)
 threadxIncDirForAsm.setCategory("C32-AS")
 threadxIncDirForAsm.setKey("extra-include-directories-for-assembler")
-threadxIncDirForAsm.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
+threadxIncDirForAsm.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/tx58" + coreName.lower() + compiler + "/threadx;")
 threadxIncDirForAsm.setAppend(True, ";")
+threadxIncDirForAsm.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
 
-threadxIncDirForPre = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_AS_INCLUDE_PRE_PROC_DIRS", None)
+threadxIncDirForPre = thirdPartyThreadX.createSettingSymbol("THREADX_AS_INCLUDE_PRE_PROC_DIRS", None)
 threadxIncDirForPre.setCategory("C32-AS")
 threadxIncDirForPre.setKey("extra-include-directories-for-preprocessor")
-threadxIncDirForPre.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
+threadxIncDirForPre.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/tx58" + coreName.lower() + compiler + "/threadx;")
 threadxIncDirForPre.setAppend(True, ";")
+threadxIncDirForPre.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
+
+threadxIarPortASMsource = thirdPartyThreadX.createFileSymbol("THREADX_IAR_PORT_S", None)
+threadxIarPortASMsource.setSourcePath("../expresslogic_threadx/config/arch/arm/devices_cortex_a5/src/iar/sama5d2_tx_port.s.ftl")
+threadxIarPortASMsource.setOutputName("sama5d2_tx_port.s")
+threadxIarPortASMsource.setDestPath("threadx_config/")
+threadxIarPortASMsource.setProjectPath("config/" + configName + "/threadx_config/")
+threadxIarPortASMsource.setType("SOURCE")
+threadxIarPortASMsource.setMarkup(True)
+threadxIarPortASMsource.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1), ['core.COMPILER_CHOICE'])
+threadxIarPortASMsource.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE")  == 1)
+
+threadxXc32PortASMsource = thirdPartyThreadX.createFileSymbol("THREADX_XC32_PORT_S", None)
+threadxXc32PortASMsource.setSourcePath("../expresslogic_threadx/config/arch/arm/devices_cortex_a5/src/xc32/sama5d2_tx_port.S.ftl")
+threadxXc32PortASMsource.setOutputName("sama5d2_tx_port.S")
+threadxXc32PortASMsource.setDestPath("threadx_config/")
+threadxXc32PortASMsource.setProjectPath("config/" + configName + "/threadx_config/")
+threadxXc32PortASMsource.setType("SOURCE")
+threadxXc32PortASMsource.setMarkup(True)
+threadxXc32PortASMsource.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
+threadxXc32PortASMsource.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+
+threadxTimerSource = thirdPartyThreadX.createFileSymbol("THREADX_TX_TIMER", None)
+threadxTimerSource.setSourcePath("../expresslogic_threadx/config/arch/arm/devices_cortex_a5/src/sama5d2_tx_timer.c")
+threadxTimerSource.setOutputName("sama5d2_tx_timer.c")
+threadxTimerSource.setDestPath("threadx_config/")
+threadxTimerSource.setProjectPath("config/" + configName + "/threadx_config/")
+threadxTimerSource.setType("SOURCE")
+threadxTimerSource.setMarkup(False)

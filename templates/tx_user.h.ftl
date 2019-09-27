@@ -137,7 +137,7 @@
 #define TX_CPU_CLOCK_HZ                         ${THREADX_CPU_CLOCK_HZ}
 #define TX_TICK_RATE_HZ                         ${THREADX_TICK_RATE_HZ}
 #define TX_TICK_PERIOD_MS                       (1000 / TX_TICK_RATE_HZ)
-<#if core.CoreArchitecture != "MIPS" >
+<#if core.CoreArchitecture != "MIPS" && core.CoreArchitecture != "CORTEX-A" && core.CoreArchitecture != "ARM926EJS">
 #define TX_SYSTICK_CYCLES                       ((TX_CPU_CLOCK_HZ / TX_TICK_RATE_HZ) -1)
 </#if>
 

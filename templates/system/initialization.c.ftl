@@ -26,4 +26,6 @@
     TMR1_Initialize();
 <#elseif core.CoreArchitecture == "ARM926EJS">
     threadx_timer_intialize();
+<#elseif core.CoreArchitecture == "CORTEX-A5" >
+    PIT_TimerStart();
 </#if>
