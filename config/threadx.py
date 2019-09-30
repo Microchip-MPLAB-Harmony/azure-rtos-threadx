@@ -368,7 +368,7 @@ def instantiateComponent(thirdPartyThreadX):
     filling is disabled, MHC defines the ThreadX preprocessor variable \
     TX_DISABLE_STACK_FILLING."
     threadxSym_DisStackFill = thirdPartyThreadX.createBooleanSymbol("THREADX_TX_DISABLE_STACK_FILLING", None)
-    threadxSym_DisStackFill.setLabel("Reactivate timers in-line")
+    threadxSym_DisStackFill.setLabel(" Disable stack filling")
     threadxSym_DisStackFill.setDefaultValue(False)
     threadxSym_DisStackFill.setDescription(threadxSym_DisStackFillDesc)
 
@@ -460,7 +460,7 @@ def instantiateComponent(thirdPartyThreadX):
     on byte pools Gather performance information on byte pools. When enabled, MHC \
     defines the ThreadX preprocessor variable TX_BYTE_POOL_ENABLE_PERFORMANCE_INFO."
     threadxSym_BytePoolEnPerfInfo = thirdPartyThreadX.createBooleanSymbol("THREADX_TX_BYTE_POOL_ENABLE_PERFORMANCE_INFO", None)
-    threadxSym_BytePoolEnPerfInfo.setLabel("Gather performance information on event flags groups")
+    threadxSym_BytePoolEnPerfInfo.setLabel("Gather performance information on byte pools")
     threadxSym_BytePoolEnPerfInfo.setDefaultValue(False)
     threadxSym_BytePoolEnPerfInfo.setDescription(threadxSym_BytePoolEnPerfInfoDesc)
 

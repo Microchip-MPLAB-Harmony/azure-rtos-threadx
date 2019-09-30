@@ -26,28 +26,42 @@
 ############### ARM926EJS Architecture specific configuration ##############
 ############################################################################
 
+def changeTimerTick(symbol, event):
+    pit64Period = (long)(Database.getSymbolValue("core", "PIT64B_CLOCK_FREQUENCY") / 
+                         event["source"].getSymbolValue("THREADX_TICK_RATE_HZ"))
+    Database.setSymbolValue("pit64b", "PERIOD", pit64Period)
+
 #Default Byte Pool size
 threadxSym_BytePoolSize.setDefaultValue(40960)
 
-#CPU Clock Frequency
+# CPU Clock Frequency 
 cpuclk = int(Database.getSymbolValue("core", "CPU_CLOCK_FREQUENCY"))
-
 threadxSym_CpuClockHz.setDependencies(threadxCpuClockHz, ["core.CPU_CLOCK_FREQUENCY"])
 threadxSym_CpuClockHz.setDefaultValue(cpuclk)
 
+#Set timer to work with the configured tick rate (NOTE: will not work with prescaler)
 Database.activateComponents(["pit64b"])
 Database.setSymbolValue("core", "USE_THREADX_VECTORS", True)
 Database.setSymbolValue("pit64b", "PERIOD_INT", True)
 Database.setSymbolValue("pit64b", "CONT", True)
-
 pit64Period = (long)(Database.getSymbolValue("core", "PIT64B_CLOCK_FREQUENCY") / threadxSym_TickRate.getValue())
 Database.setSymbolValue("pit64b", "PERIOD", pit64Period)
+tickChangeListenerSym = thirdPartyThreadX.createBooleanSymbol("TICK_CHANGE_LISTENER", None)
+tickChangeListenerSym.setVisible(False)
+tickChangeListenerSym.setDependencies(changeTimerTick, ["THREADX_TICK_RATE_HZ"])
 
 ############################################################################
 #### Code Generation ####
 ############################################################################
 configName  = Variables.get("__CONFIGURATION_NAME")
 
+
+# Update Include directories path
+threadxLdPreprocessroMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_LINKER_PREPROC_MACROS", None)
+threadxLdPreprocessroMacroSym.setCategory("C32")
+threadxLdPreprocessroMacroSym.setKey("preprocessor-macros")
+threadxLdPreprocessroMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
+threadxLdPreprocessroMacroSym.setAppend(True, ";")
 
 txIncPath = "../src/config/" + configName + "/threadx_config;../src/third_party/rtos/Threadx/tx58" + coreName.lower() + "_iar/threadx" if compiler == 1 else "_mplabx/threadx"
 threadxIncludeSettingsSym = thirdPartyThreadX.createSettingSymbol("THREADX_OS_INCLUDE_DIRS", None)
