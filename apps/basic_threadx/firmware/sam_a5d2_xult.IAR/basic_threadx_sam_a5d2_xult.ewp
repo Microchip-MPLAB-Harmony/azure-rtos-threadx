@@ -220,7 +220,7 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state></state>
+                    <state>TX_INCLUDE_USER_DEFINE_FILE</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -352,7 +352,6 @@
                     <state>$PROJ_DIR$\..\..\firmware\src\packs\CMSIS</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\arm</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\config\sam_a5d2_xult\threadx_config</state>
-                    <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar\threadx</state>
                 </option>
                 <option>
@@ -630,7 +629,6 @@
                     <state>$PROJ_DIR$\..\..\firmware\src\packs\CMSIS</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\arm</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\config\sam_a5d2_xult\threadx_config</state>
-                    <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar\threadx</state>
                 </option>
                 <option>
@@ -720,7 +718,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>basic_sam_a5d2_xult.out</state>
+                    <state>basic_threadx_sam_a5d2_xult.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1017,7 +1015,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>basic_sam_a5d2_xult_import_lib.o</state>
+                    <state>basic_threadx_sam_a5d2_xult_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
@@ -1064,6 +1062,11 @@
         </settings>
         <settings>
             <name>BILINK</name>
+            <archiveVersion>0</archiveVersion>
+            <data />
+        </settings>
+        <settings>
+            <name>Coder</name>
             <archiveVersion>0</archiveVersion>
             <data />
         </settings>
@@ -1419,7 +1422,6 @@
                     <state>$PROJ_DIR$\..\..\firmware\src\packs\CMSIS</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\arm</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\config\sam_a5d2_xult\threadx_config</state>
-                    <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar\threadx</state>
                 </option>
                 <option>
@@ -1697,7 +1699,6 @@
                     <state>$PROJ_DIR$\..\..\firmware\src\packs\CMSIS</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\arm</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\config\sam_a5d2_xult\threadx_config</state>
-                    <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar</state>
                     <state>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58cortex_a5_iar\threadx</state>
                 </option>
                 <option>
@@ -2131,6 +2132,11 @@
         </settings>
         <settings>
             <name>BILINK</name>
+            <archiveVersion>0</archiveVersion>
+            <data />
+        </settings>
+        <settings>
+            <name>Coder</name>
             <archiveVersion>0</archiveVersion>
             <data />
         </settings>
