@@ -492,9 +492,9 @@
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="../src/config/sam_e54_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m4_mplabx/threadx"/>
+                  value="../src/config/sam_e54_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m4_mplabx/threadx;"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/config/sam_e54_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m4_mplabx/threadx"/>
+                  value="../src/config/sam_e54_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m4_mplabx/threadx;"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
