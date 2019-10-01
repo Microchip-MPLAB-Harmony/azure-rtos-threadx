@@ -656,7 +656,7 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d07ffff"/>
         <property key="programmerToGoFilePath"
-                  value="D:/Harmony3/expresslogic_threadx/apps/basic/firmware/pic32mk_mcj_curiosity_pro.X/debug/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro_ptg"/>
+                  value="D:/H3/expresslogic_threadx/apps/basic_threadx/firmware/pic32mk_mcj_curiosity_pro.X/debug/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

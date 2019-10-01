@@ -59,8 +59,8 @@
           <Name dnOrder="1">osal_threadx.c</Name>
           <LogicalPath dnOrder="2">/osal/</LogicalPath>
           <PhysicalPath dnOrder="3">/osal/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">9D9701E163ACDA468FD9D92698F45274</GeneratedChecksum>
-          <UserChecksum dnOrder="5">9D9701E163ACDA468FD9D92698F45274</UserChecksum>
+          <GeneratedChecksum dnOrder="4">B4437618D50936E79C48E675C54E890E</GeneratedChecksum>
+          <UserChecksum dnOrder="5">B4437618D50936E79C48E675C54E890E</UserChecksum>
         </File>
         <File dnOrder="7">
           <Type dnOrder="0">SOURCE</Type>
@@ -1675,8 +1675,8 @@
           <Name dnOrder="1">definitions.h</Name>
           <LogicalPath dnOrder="2">config/pic32mk_mcj_curiosity_pro/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">9DB58AB6ADBD35AA41E23690BA8352B9</GeneratedChecksum>
-          <UserChecksum dnOrder="5">9DB58AB6ADBD35AA41E23690BA8352B9</UserChecksum>
+          <GeneratedChecksum dnOrder="4">A86D5F591D7AB10E4D3DA9BBD6E08285</GeneratedChecksum>
+          <UserChecksum dnOrder="5">A86D5F591D7AB10E4D3DA9BBD6E08285</UserChecksum>
         </File>
         <File dnOrder="209">
           <Type dnOrder="0">HEADER</Type>
@@ -1707,8 +1707,8 @@
           <Name dnOrder="1">osal_threadx.h</Name>
           <LogicalPath dnOrder="2">/osal/</LogicalPath>
           <PhysicalPath dnOrder="3">/osal/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">15D402C37FE764D289F37F198089602A</GeneratedChecksum>
-          <UserChecksum dnOrder="5">15D402C37FE764D289F37F198089602A</UserChecksum>
+          <GeneratedChecksum dnOrder="4">0556CCC8A964023EB0B29579F76BAC61</GeneratedChecksum>
+          <UserChecksum dnOrder="5">0556CCC8A964023EB0B29579F76BAC61</UserChecksum>
         </File>
         <File dnOrder="213">
           <Type dnOrder="0">HEADER</Type>
@@ -1883,7 +1883,7 @@
       </Settings>
     </Manifest>
     <Settings dnOrder="4">
-      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.5.1"/>
+      <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.6.0"/>
       <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32MK-MC_DFP\1.1.68\atdf\PIC32MK0512MCJ064.atdf"/>
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
