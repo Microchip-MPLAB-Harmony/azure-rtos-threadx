@@ -354,7 +354,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;../src/mips;../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx"/>
+                  value="../src;../src/config/pic32mz_das_sk;../src/packs/PIC32MZ2064DAS169_DFP;;../src/mips;../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -381,9 +381,9 @@
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx"/>
+                  value="../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx;"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx"/>
+                  value="../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx;"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
@@ -547,6 +547,7 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>

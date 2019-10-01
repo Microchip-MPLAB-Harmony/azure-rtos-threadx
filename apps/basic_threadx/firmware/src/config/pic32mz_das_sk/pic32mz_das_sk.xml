@@ -228,89 +228,61 @@
             </Boolean>
           </Attributes>
         </Menu>
-        <File dnOrder="8" id="GEN_APP_TASKS">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">false</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <Menu dnOrder="9" id="GEN_APP_TASK_MENU">
+        <Menu dnOrder="8" id="GEN_APP_TASK_MENU">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="visible">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </Menu>
-        <File dnOrder="10" id="GEN_RTOS_APP_TASKS">
+        <File dnOrder="9" id="OSAL_DEFINITIONS_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="11" id="GEN_RTOS_APP_TASKS_DEF">
+        <File dnOrder="10" id="OSAL_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="12" id="OSAL_DEFINITIONS_H">
+        <File dnOrder="11" id="OSAL_SYSDEF_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="13" id="OSAL_H">
+        <File dnOrder="12" id="OSAL_THREADX_OS_III_C">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="14" id="OSAL_IMPL_BASIC_H">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">false</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <File dnOrder="15" id="OSAL_SYSDEF_H">
+        <File dnOrder="13" id="OSAL_THREADX_OS_III_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="16" id="OSAL_THREADX_OS_III_C">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">true</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <File dnOrder="17" id="OSAL_THREADX_OS_III_H">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">true</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <Combo dnOrder="18" id="SELECT_RTOS">
+        <Combo dnOrder="14" id="SELECT_RTOS">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="HarmonyCore" value="ThreadX"/>
           </Values>
         </Combo>
-        <File dnOrder="19" id="TASKS_C">
+        <File dnOrder="15" id="TASKS_C">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="20" id="USER_H">
+        <File dnOrder="16" id="USER_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
@@ -322,7 +294,8 @@
     <UniqueComponent dnOrder="4" id="ThreadX"/>
   </Components>
   <UserData>
-    <ComponentGraph dnOrder="0" id="__ROOTVIEW">
+    <GraphSettings canvasHeight="400" canvasWidth="400" dnOrder="0"/>
+    <ComponentGraph dnOrder="1" id="__ROOTVIEW">
       <ElementPositions dnOrder="0">
         <ElementPosition dnOrder="0" id="BSP_PIC32MZ_DA_Starter_Kit" x="340" y="20"/>
         <ElementPosition dnOrder="1" id="HarmonyCore" x="30" y="60"/>
@@ -331,6 +304,5 @@
         <ElementPosition dnOrder="4" id="dfp" x="20" y="20"/>
       </ElementPositions>
     </ComponentGraph>
-    <GraphSettings canvasHeight="400" canvasWidth="400" dnOrder="1"/>
   </UserData>
 </Configuration>
