@@ -53,6 +53,7 @@
 #include "peripheral/pio/plib_pio.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/efc/plib_efc.h"
+#include "tx_user.h"
 #include "tx_api.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
