@@ -220,7 +220,7 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state></state>
+                    <state>TX_INCLUDE_USER_DEFINE_FILE</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -718,7 +718,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>basic_sam9x60_ek.out</state>
+                    <state>basic_threadx_sam_9x60_ek.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -1015,7 +1015,7 @@
                 </option>
                 <option>
                     <name>IlinkTrustzoneImportLibraryOut</name>
-                    <state>basic_sam9x60_ek_import_lib.o</state>
+                    <state>basic_threadx_sam_9x60_ek_import_lib.o</state>
                 </option>
                 <option>
                     <name>OILinkExtraOption</name>
