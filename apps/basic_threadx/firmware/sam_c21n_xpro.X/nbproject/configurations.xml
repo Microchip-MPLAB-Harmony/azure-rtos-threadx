@@ -387,7 +387,7 @@
         <targetDevice>ATSAMC21N18A</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>jlink</platformTool>
+        <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.30</languageToolchainVersion>
         <platform>3</platform>
@@ -479,9 +479,9 @@
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="../src/config/sam_c21n_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m0_mplabx/threadx"/>
+                  value="../src/config/sam_c21n_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m0_mplabx/threadx;"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/config/sam_c21n_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m0_mplabx/threadx"/>
+                  value="../src/config/sam_c21n_xpro/threadx_config;../src/third_party/rtos/ThreadX/tx58cortex_m0_mplabx/threadx;"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>

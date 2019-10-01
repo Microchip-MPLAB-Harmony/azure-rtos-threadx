@@ -53,6 +53,7 @@
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
+#include "tx_user.h"
 #include "tx_api.h"
 #include "osal/osal.h"
 #include "bsp/bsp.h"
