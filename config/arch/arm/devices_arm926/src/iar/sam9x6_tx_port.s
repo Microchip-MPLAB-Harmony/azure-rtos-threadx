@@ -24,10 +24,13 @@
         MODULE  sam9x6_tx_port
 
 AIC_BASE_ADDRESS  DEFINE 0xFFFFF100
-AIC_SMR         DEFINE 0x04
-AIC_IVR         DEFINE 0x10
-AIC_EOICR       DEFINE 0x38
-
+AIC_SMR           DEFINE 0x04
+AIC_IVR           DEFINE 0x10
+AIC_EOICR         DEFINE 0x38
+ARM_MODE_IRQ      DEFINE 0x12
+ARM_MODE_SVC      DEFINE 0x13
+I_BIT             DEFINE 0x80
+F_BIT             DEFINE 0x40
 
         EXTERN      _tx_thread_vectored_context_save
         EXTERN      _tx_thread_context_restore
@@ -47,12 +50,32 @@ Threadx_IRQ_Handler:
 
         ; Write in the IVR to support Protect Mode.
 
-        LDR         lr, =AIC_BASE_ADDRESS
-        LDR         r0, [r14, #AIC_IVR]
-        STR         lr, [r14, #AIC_IVR]
+        LDR     lr, =AIC_BASE_ADDRESS
+        LDR     r0, [r14, #AIC_IVR]
+        STR     lr, [r14, #AIC_IVR]
+    	; Dummy read to force AIC_IVR write completion
+    	LDR     lr, [r14, #AIC_SMR]
+
+	    ; Branch to interrupt handler in Supervisor mode
+
+	    MSR     CPSR_c, #ARM_MODE_SVC
+	    STMFD   sp!, { r1-r3, r4, r12, lr}
+
+	    ; Check for 8-byte alignment and save lr plus a
+	    ; word to indicate the stack adjustment used (0 or 4)
+
+	    AND     r1, sp, #4
+	    SUB     sp, sp, r1
+	    STMFD   sp!, {r1, lr}
 
         ; Call IRQ processing function.
         BLX         r0
+
+	    LDMIA   sp!, {r1, lr}
+	    ADD     sp, sp, r1
+
+	    LDMIA   sp!, { r1-r3, r4, r12, lr}
+	    MSR     CPSR_c, #ARM_MODE_IRQ | I_BIT | F_BIT
 
         ; Acknowledge interrupt
         LDR         lr, =AIC_BASE_ADDRESS

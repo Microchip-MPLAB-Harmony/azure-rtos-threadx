@@ -25,6 +25,12 @@
 ############################################################################
 ############### ARM926EJS Architecture specific configuration ##############
 ############################################################################
+def updateIncludePath(symbol, event):
+    configName = Variables.get("__CONFIGURATION_NAME")
+    coreArch = Database.getSymbolValue("core", "CoreArchitecture")
+    coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
+    compiler = "_mplabx" if Database.getSymbolValue("core", "COMPILER_CHOICE") == 0 else "_iar"
+    symbol.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/tx58" + coreName.lower() + compiler + "/threadx;")
 
 def changeTimerTick(symbol, event):
     pit64Period = (long)(Database.getSymbolValue("core", "PIT64B_CLOCK_FREQUENCY") / 
@@ -55,7 +61,6 @@ tickChangeListenerSym.setDependencies(changeTimerTick, ["THREADX_TICK_RATE_HZ"])
 ############################################################################
 configName  = Variables.get("__CONFIGURATION_NAME")
 
-
 # Update Include directories path
 threadxLdPreprocessroMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_LINKER_PREPROC_MACROS", None)
 threadxLdPreprocessroMacroSym.setCategory("C32")
@@ -69,14 +74,41 @@ threadxIncludeSettingsSym.setCategory("C32")
 threadxIncludeSettingsSym.setKey("extra-include-directories")
 threadxIncludeSettingsSym.setValue(txIncPath)
 threadxIncludeSettingsSym.setAppend(True, ";")
+threadxIncludeSettingsSym.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
 
-threadxPortAsmFileSym = thirdPartyThreadX.createFileSymbol("SAM_9X6_TX_PORT_S", None)
-threadxPortAsmFileSym.setSourcePath("config/arch/arm/devices_arm926/src/iar/sam9x6_tx_port.s")
-threadxPortAsmFileSym.setOutputName("sam9x6_tx_port.s")
-threadxPortAsmFileSym.setDestPath("threadx_config/")
-threadxPortAsmFileSym.setProjectPath("config/" + configName + "/threadx_config/")
-threadxPortAsmFileSym.setType("SOURCE")
-threadxPortAsmFileSym.setMarkup(False)
+threadxIncDirForAsm = thirdPartyThreadX.createSettingSymbol("THREADX_AS_INCLUDE_DIRS", None)
+threadxIncDirForAsm.setCategory("C32-AS")
+threadxIncDirForAsm.setKey("extra-include-directories-for-assembler")
+threadxIncDirForAsm.setValue(txIncPath)
+threadxIncDirForAsm.setAppend(True, ";")
+threadxIncDirForAsm.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
+
+threadxIncDirForPre = thirdPartyThreadX.createSettingSymbol("THREADX_AS_INCLUDE_PRE_PROC_DIRS", None)
+threadxIncDirForPre.setCategory("C32-AS")
+threadxIncDirForPre.setKey("extra-include-directories-for-preprocessor")
+threadxIncDirForPre.setValue(txIncPath)
+threadxIncDirForPre.setAppend(True, ";")
+threadxIncDirForPre.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
+
+threadxIarPortAsmFileSym = thirdPartyThreadX.createFileSymbol("SAM_9X6_TX_PORT_S", None)
+threadxIarPortAsmFileSym.setSourcePath("config/arch/arm/devices_arm926/src/iar/sam9x6_tx_port.s")
+threadxIarPortAsmFileSym.setOutputName("sam9x6_tx_port.s")
+threadxIarPortAsmFileSym.setDestPath("threadx_config/")
+threadxIarPortAsmFileSym.setProjectPath("config/" + configName + "/threadx_config/")
+threadxIarPortAsmFileSym.setType("SOURCE")
+threadxIarPortAsmFileSym.setMarkup(False)
+threadxIarPortAsmFileSym.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1), ['core.COMPILER_CHOICE'])
+threadxIarPortAsmFileSym.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1)
+
+threadxXc32PortAsmFileSym = thirdPartyThreadX.createFileSymbol("THREADX_XC32_PORT_S", None)
+threadxXc32PortAsmFileSym.setSourcePath("config/arch/arm/devices_arm926/src/xc32/sam9x6_tx_port.S")
+threadxXc32PortAsmFileSym.setOutputName("sam9x6_tx_port.S")
+threadxXc32PortAsmFileSym.setDestPath("threadx_config/")
+threadxXc32PortAsmFileSym.setProjectPath("config/" + configName + "/threadx_config/")
+threadxXc32PortAsmFileSym.setType("SOURCE")
+threadxXc32PortAsmFileSym.setMarkup(False)
+threadxXc32PortAsmFileSym.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
+threadxXc32PortAsmFileSym.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
 
 threadxPortTimerSrcFileSym = thirdPartyThreadX.createFileSymbol("SAM_9X6_TX_TIMER_C", None)
 threadxPortTimerSrcFileSym.setSourcePath("config/arch/arm/devices_arm926/src/sam9x6_tx_timer.c")

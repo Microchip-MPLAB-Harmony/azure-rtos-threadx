@@ -64,7 +64,7 @@ static void threadx_tick_handler(uintptr_t context)
 
 void threadx_timer_intialize()
 {
-    PIT64B_TimerCallbackSet(threadx_tick_handler, NULL);
+    PIT64B_TimerCallbackSet(threadx_tick_handler, 0);
     PIT64B_TimerStart();
 }
 

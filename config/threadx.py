@@ -567,22 +567,25 @@ def instantiateComponent(thirdPartyThreadX):
                 threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreFamily[:7].lower() + "_mplabx/threadx/"
 
             execfile(Module.getPath() + "config/arch/mips/devices_" + coreFamily[:7].lower() + "/threadx_config.py")
-
+        elif ("CORTEX-A5" in coreArch) or ("ARM926" in coreArch):
+            coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
+            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreName.replace("926","9").replace("cortex_a5", "cortex-a5") + "_mplabx/threadx/"
+            execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
         else:
+            coreName = coreArch.replace("-", "_").replace("PLUS", "").lower()
             threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreArch.replace("PLUS", "").lower() + "_mplabx/threadx/"
-            coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").upper()
-            execfile(Module.getPath() + "config/arch/arm/devices_" + coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower() + "/threadx_config.py")
+            execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
 
         threadxFileSymbolConfig += 1
         # BL to add Thirdparty ThreadX Generic Source Code
-        AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath, coreName)
+        AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath, coreName.upper())
 
     #if compiler is IAR
-    if compiler == 1 or coreArch == "CORTEX-A5":
+    if compiler == 1 or ("CORTEX-A5" in coreArch) or ("ARM926" in coreArch):
         coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
         threadxCoreName = coreName.replace("926","9").replace("cortex_a5", "cortex-a5")
         threadxSrcPath =  "../thirdparty_expresslogic/tx58" + threadxCoreName + "_generic_iar/threadx/"
         if threadxFileSymbolConfig == 0:
             execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
-        AddIARThreadXFiles(thirdPartyThreadX, threadxSrcPath, coreName)
+        AddIARThreadXFiles(thirdPartyThreadX, threadxSrcPath, coreName.upper())
 
