@@ -12,7 +12,7 @@
         <path>$PROJ_DIR$\..\..\firmware\src\packs\CMSIS</path>
         <path>$PROJ_DIR$\..\..\firmware\src\arm</path>
         <path>$PROJ_DIR$\..\..\firmware\src\config\sam_9x60_ek\threadx_config</path>
-        <path>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\Threadx\tx58arm926_iar\threadx</path>
+        <path>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58arm926_iar\threadx</path>
     </includePath>
     <asmIncludePath>
         <path>$PROJ_DIR$\..\..\firmware\src</path>
@@ -22,7 +22,7 @@
         <path>$PROJ_DIR$\..\..\firmware\src\packs\CMSIS</path>
         <path>$PROJ_DIR$\..\..\firmware\src\arm</path>
         <path>$PROJ_DIR$\..\..\firmware\src\config\sam_9x60_ek\threadx_config</path>
-        <path>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\Threadx\tx58arm926_iar\threadx</path>
+        <path>$PROJ_DIR$\..\..\firmware\src\third_party\rtos\threadx\tx58arm926_iar\threadx</path>
     </asmIncludePath>
     <defines>
         <defines>TX_INCLUDE_USER_DEFINE_FILE</defines>
@@ -34,14 +34,6 @@
     <files relRoot="$PROJ_DIR$\..\..\firmware\src\config\sam_9x60_ek">
         <group name="Header Files" relRoot="$PROJ_DIR$\..\..\firmware\src\config\sam_9x60_ek">
             <path>\bsp\bsp.h</path>
-            <path>\device_cache.h</path>
-            <path>\toolchain_specifics.h</path>
-            <path>\definitions.h</path>
-            <path>\peripheral\mmu\plib_mmu.h</path>
-            <path>\peripheral\mmu\cp15.h</path>
-            <path>\peripheral\clk\plib_clk.h</path>
-            <path>\peripheral\pio\plib_pio.h</path>
-            <path>\peripheral\aic\plib_aic.h</path>
             <path>\..\..\packs\SAM9X60_DFP\device.h</path>
             <path>\..\..\packs\SAM9X60_DFP\component\adc.h</path>
             <path>\..\..\packs\SAM9X60_DFP\component\aes.h</path>
@@ -90,6 +82,14 @@
             <path>\..\..\packs\SAM9X60_DFP\component\xdmac.h</path>
             <path>\..\..\packs\SAM9X60_DFP\sam9x60.h</path>
             <path>\..\..\packs\SAM9X60_DFP\pio\sam9x60.h</path>
+            <path>\device_cache.h</path>
+            <path>\toolchain_specifics.h</path>
+            <path>\definitions.h</path>
+            <path>\peripheral\mmu\plib_mmu.h</path>
+            <path>\peripheral\mmu\cp15.h</path>
+            <path>\peripheral\clk\plib_clk.h</path>
+            <path>\peripheral\pio\plib_pio.h</path>
+            <path>\peripheral\aic\plib_aic.h</path>
             <path>\peripheral\pit64b\plib_pit64b.h</path>
             <path>\threadx_config\tx_user.h</path>
             <path>\threadx_config\sam9x6_tx_timer.h</path>
@@ -106,6 +106,9 @@
             <path>\..\..\third_party\rtos\ThreadX\tx58arm926_iar\threadx\tx_timer.h</path>
             <path>\..\..\third_party\rtos\ThreadX\tx58arm926_iar\threadx\tx_trace.h</path>
             <path>\system\cache\sys_cache.h</path>
+            <path>\osal\osal.h</path>
+            <path>\osal\osal_definitions.h</path>
+            <path>\osal\osal_threadx.h</path>
             <path>\..\..\app.h</path>
             <path>\user.h</path>
             <path>\configuration.h</path>
@@ -115,7 +118,6 @@
             <path>\..\..\main.c</path>
             <path>\initialization.c</path>
             <path>\interrupts.c</path>
-            <path>\exceptions.c</path>
             <path>\stdio\iar_monitor.c</path>
             <path>\peripheral\mmu\plib_mmu.c</path>
             <path>\peripheral\clk\plib_clk.c</path>
@@ -329,6 +331,7 @@
             <path>\..\..\third_party\rtos\ThreadX\tx58arm926_iar\threadx\tx_trace_object_unregister.c</path>
             <path>\..\..\third_party\rtos\ThreadX\tx58arm926_iar\threadx\tx_trace_user_event_insert.c</path>
             <path>\system\cache\sys_cache.c</path>
+            <path>\osal\osal_threadx.c</path>
             <path>\..\..\app.c</path>
             <path>\tasks.c</path>
         </group>

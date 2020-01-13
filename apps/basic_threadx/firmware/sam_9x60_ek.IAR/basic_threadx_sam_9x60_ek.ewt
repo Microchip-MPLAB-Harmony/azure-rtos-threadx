@@ -2443,6 +2443,15 @@
                 <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\component\mpddrc.h</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\osal\osal.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\osal\osal_definitions.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\osal\osal_threadx.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\src\packs\SAM9X60_DFP\component\otpc.h</name>
             </file>
             <file>
@@ -2614,9 +2623,6 @@
                 <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\cstartup.s</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\exceptions.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\stdio\iar_monitor.c</name>
             </file>
             <file>
@@ -2627,6 +2633,9 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\src\main.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\osal\osal_threadx.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\src\config\sam_9x60_ek\peripheral\aic\plib_aic.c</name>

@@ -58,6 +58,7 @@
 #include "tx_api.h"
 #include "sam9x6_tx_timer.h"
 #include "system/cache/sys_cache.h"
+#include "osal/osal.h"
 #include "app.h"
 
 
