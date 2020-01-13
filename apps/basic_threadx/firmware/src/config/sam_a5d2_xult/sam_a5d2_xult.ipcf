@@ -101,9 +101,6 @@
             <path>\..\..\packs\CMSIS\CMSIS\Core_A\Include\cmsis_iccarm.h</path>
             <path>\..\..\packs\CMSIS\CMSIS\Core_A\Include\cmsis_cp15.h</path>
             <path>\..\..\packs\CMSIS\CMSIS\Core_A\Include\core_ca.h</path>
-            <path>\..\..\packs\CMSIS\CMSIS\DSP\Include\arm_common_tables.h</path>
-            <path>\..\..\packs\CMSIS\CMSIS\DSP\Include\arm_const_structs.h</path>
-            <path>\..\..\packs\CMSIS\CMSIS\DSP\Include\arm_math.h</path>
             <path>\threadx_config\tx_user.h</path>
             <path>\..\..\third_party\rtos\ThreadX\tx58cortex_a5_iar\threadx\tx_api.h</path>
             <path>\..\..\third_party\rtos\ThreadX\tx58cortex_a5_iar\threadx\tx_block_pool.h</path>
@@ -131,7 +128,6 @@
             <path>\..\..\main.c</path>
             <path>\initialization.c</path>
             <path>\interrupts.c</path>
-            <path>\exceptions.c</path>
             <path>\stdio\iar_monitor.c</path>
             <path>\peripheral\mmu\plib_mmu.c</path>
             <path>\peripheral\matrix\plib_matrix.c</path>
