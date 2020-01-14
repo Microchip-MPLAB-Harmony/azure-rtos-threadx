@@ -262,69 +262,55 @@
             <Dynamic dnOrder="0" id="ThreadX" value="true"/>
           </Values>
         </Boolean>
-        <Comment dnOrder="51" id="SYSTICK_COMMENT">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="visible">
-              <Value dnOrder="0">true</Value>
-            </Boolean>
-          </Attributes>
-        </Comment>
-        <Boolean dnOrder="52" id="SysTick_INTERRUPT_ENABLE">
+        <Boolean dnOrder="51" id="SysTick_INTERRUPT_ENABLE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="ThreadX" value="true"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="53" id="SysTick_INTERRUPT_ENABLE_UPDATE">
+        <Boolean dnOrder="52" id="SysTick_INTERRUPT_ENABLE_UPDATE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <String dnOrder="54" id="SysTick_INTERRUPT_HANDLER">
+        <String dnOrder="53" id="SysTick_INTERRUPT_HANDLER">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="ThreadX" value="__tx_SysTickHandler"/>
           </Values>
         </String>
-        <Boolean dnOrder="55" id="SysTick_INTERRUPT_HANDLER_LOCK">
+        <Boolean dnOrder="54" id="SysTick_INTERRUPT_HANDLER_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="ThreadX" value="true"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="56" id="TCM_ENABLE">
+        <Boolean dnOrder="55" id="TCM_ENABLE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <String dnOrder="57" id="TCM_SIZE">
+        <String dnOrder="56" id="TCM_SIZE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="0 KB"/>
           </Values>
         </String>
-        <Boolean dnOrder="58" id="WDT_INTERRUPT_ENABLE">
+        <Boolean dnOrder="57" id="WDT_INTERRUPT_ENABLE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
         </Boolean>
-        <Boolean dnOrder="59" id="WDT_INTERRUPT_ENABLE_UPDATE">
+        <Boolean dnOrder="58" id="WDT_INTERRUPT_ENABLE_UPDATE">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="true"/>
           </Values>
         </Boolean>
-        <String dnOrder="60" id="WDT_INTERRUPT_HANDLER">
+        <String dnOrder="59" id="WDT_INTERRUPT_HANDLER">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="WDT_Handler"/>
           </Values>
         </String>
-        <Boolean dnOrder="61" id="WDT_INTERRUPT_HANDLER_LOCK">
+        <Boolean dnOrder="60" id="WDT_INTERRUPT_HANDLER_LOCK">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="core" value="false"/>
           </Values>
-        </Boolean>
-        <Boolean dnOrder="62" id="systickEnable">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="visible">
-              <Value dnOrder="0">false</Value>
-            </Boolean>
-          </Attributes>
         </Boolean>
       </Symbols>
     </UniqueComponent>
@@ -394,89 +380,61 @@
             </Boolean>
           </Attributes>
         </Menu>
-        <File dnOrder="8" id="GEN_APP_TASKS">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">false</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <Menu dnOrder="9" id="GEN_APP_TASK_MENU">
+        <Menu dnOrder="8" id="GEN_APP_TASK_MENU">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="visible">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </Menu>
-        <File dnOrder="10" id="GEN_RTOS_APP_TASKS">
+        <File dnOrder="9" id="OSAL_DEFINITIONS_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="11" id="GEN_RTOS_APP_TASKS_DEF">
+        <File dnOrder="10" id="OSAL_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="12" id="OSAL_DEFINITIONS_H">
+        <File dnOrder="11" id="OSAL_SYSDEF_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="13" id="OSAL_H">
+        <File dnOrder="12" id="OSAL_THREADX_OS_III_C">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="14" id="OSAL_IMPL_BASIC_H">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">false</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <File dnOrder="15" id="OSAL_SYSDEF_H">
+        <File dnOrder="13" id="OSAL_THREADX_OS_III_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="16" id="OSAL_THREADX_OS_III_C">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">true</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <File dnOrder="17" id="OSAL_THREADX_OS_III_H">
-          <Attributes dnOrder="0">
-            <Boolean dnOrder="0" id="enabled">
-              <Value dnOrder="0">true</Value>
-            </Boolean>
-          </Attributes>
-        </File>
-        <Combo dnOrder="18" id="SELECT_RTOS">
+        <Combo dnOrder="14" id="SELECT_RTOS">
           <Values dnOrder="0">
             <Dynamic dnOrder="0" id="HarmonyCore" value="ThreadX"/>
           </Values>
         </Combo>
-        <File dnOrder="19" id="TASKS_C">
+        <File dnOrder="15" id="TASKS_C">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
             </Boolean>
           </Attributes>
         </File>
-        <File dnOrder="20" id="USER_H">
+        <File dnOrder="16" id="USER_H">
           <Attributes dnOrder="0">
             <Boolean dnOrder="0" id="enabled">
               <Value dnOrder="0">true</Value>
@@ -488,8 +446,7 @@
     <UniqueComponent dnOrder="6" id="ThreadX"/>
   </Components>
   <UserData>
-    <GraphSettings canvasHeight="400" canvasWidth="400" dnOrder="0"/>
-    <ComponentGraph dnOrder="1" id="__ROOTVIEW">
+    <ComponentGraph dnOrder="0" id="__ROOTVIEW">
       <ElementPositions dnOrder="0">
         <ElementPosition dnOrder="0" id="BSP_SAM_E70_Xplained_Ultra" x="30" y="60"/>
         <ElementPosition dnOrder="1" id="HarmonyCore" x="270" y="60"/>
@@ -500,5 +457,6 @@
         <ElementPosition dnOrder="6" id="efc" x="480" y="20"/>
       </ElementPositions>
     </ComponentGraph>
+    <GraphSettings canvasHeight="400" canvasWidth="400" dnOrder="1"/>
   </UserData>
 </Configuration>
