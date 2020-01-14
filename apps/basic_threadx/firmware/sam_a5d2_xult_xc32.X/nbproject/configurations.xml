@@ -119,18 +119,11 @@
                 <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/core_ca.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <logicalFolder name="f2" displayName="DSP" projectFiles="true">
-              <logicalFolder name="f1" displayName="Include" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/DSP/Include/arm_common_tables.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/DSP/Include/arm_const_structs.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/DSP/Include/arm_math.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="ThreadX" projectFiles="true">
-        <logicalFolder name="f1" displayName="CORTEX_A5" projectFiles="true">
+        <logicalFolder name="f1" displayName="cortex_a5" projectFiles="true">
           <itemPath>../src/third_party/rtos/ThreadX/tx58cortex_a5_mplabx/threadx/tx_port.h</itemPath>
         </logicalFolder>
         <itemPath>../src/third_party/rtos/ThreadX/tx58cortex_a5_mplabx/threadx/tx_api.h</itemPath>
@@ -198,7 +191,6 @@
           </logicalFolder>
           <itemPath>../src/config/sam_a5d2_xult_xc32/initialization.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_xc32/interrupts.c</itemPath>
-          <itemPath>../src/config/sam_a5d2_xult_xc32/exceptions.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_xc32/cstartup.S</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_xc32/fault_handlers.c</itemPath>
           <itemPath>../src/config/sam_a5d2_xult_xc32/tasks.c</itemPath>
@@ -208,7 +200,7 @@
         <itemPath>../src/config/sam_a5d2_xult_xc32/osal/osal_threadx.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="ThreadX" projectFiles="true">
-        <logicalFolder name="f1" displayName="CORTEX_A5" projectFiles="true">
+        <logicalFolder name="f1" displayName="cortex_a5" projectFiles="true">
           <itemPath>../src/third_party/rtos/ThreadX/tx58cortex_a5_mplabx/threadx/tx_initialize_low_level.S</itemPath>
           <itemPath>../src/third_party/rtos/ThreadX/tx58cortex_a5_mplabx/threadx/tx_thread_context_restore.S</itemPath>
           <itemPath>../src/third_party/rtos/ThreadX/tx58cortex_a5_mplabx/threadx/tx_thread_context_save.S</itemPath>
@@ -438,7 +430,6 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.0.1"/>
         <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.0.1"/>
       </packs>
       <compileType>

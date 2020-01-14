@@ -43,7 +43,7 @@ MEMORY
 C_STACK_SIZE   = 4096;
 IRQ_STACK_SIZE = 96;
 FIQ_STACK_SIZE = 96;
-SYS_STACK_SIZE = 64;
+SVC_STACK_SIZE = 4096;
 ABT_STACK_SIZE = 64;
 UND_STACK_SIZE = 64;
 HEAP_SIZE      = 512;
@@ -198,9 +198,9 @@ SECTIONS
 		. = ALIGN(8);
 		_undstack = .;
 
-		. += SYS_STACK_SIZE;
+		. += SVC_STACK_SIZE;
 		. = ALIGN(8);
-		_sysstack = .;
+		_svcstack = .;
 
 		. += C_STACK_SIZE;
 		. = ALIGN(8);
