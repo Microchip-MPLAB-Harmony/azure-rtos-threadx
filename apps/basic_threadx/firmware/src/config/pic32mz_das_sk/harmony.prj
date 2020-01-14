@@ -35,8 +35,8 @@
           <Name dnOrder="1">initialization.c</Name>
           <LogicalPath dnOrder="2">config/pic32mz_das_sk/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">16CC5B77D8E56EB0C7DF2514178B2E73</GeneratedChecksum>
-          <UserChecksum dnOrder="5">16CC5B77D8E56EB0C7DF2514178B2E73</UserChecksum>
+          <GeneratedChecksum dnOrder="4">115D473715694607B22ACF2537E26600</GeneratedChecksum>
+          <UserChecksum dnOrder="5">115D473715694607B22ACF2537E26600</UserChecksum>
         </File>
         <File dnOrder="4">
           <Type dnOrder="0">SOURCE</Type>
@@ -1739,8 +1739,8 @@
           <Name dnOrder="1">toolchain_specifics.h</Name>
           <LogicalPath dnOrder="2">config/pic32mz_das_sk/</LogicalPath>
           <PhysicalPath dnOrder="3">/</PhysicalPath>
-          <GeneratedChecksum dnOrder="4">F7924D60AC5CC08996AB2DAEC62D3C54</GeneratedChecksum>
-          <UserChecksum dnOrder="5">F7924D60AC5CC08996AB2DAEC62D3C54</UserChecksum>
+          <GeneratedChecksum dnOrder="4">9D344CAF1743381AA0EA1641ABCDE373</GeneratedChecksum>
+          <UserChecksum dnOrder="5">9D344CAF1743381AA0EA1641ABCDE373</UserChecksum>
         </File>
         <File dnOrder="217">
           <Type dnOrder="0">HEADER</Type>
@@ -1879,16 +1879,16 @@
         <Setting append="true" category="C32-AS" delimiter=";" dnOrder="4" key="extra-include-directories-for-preprocessor" value="../src/config/pic32mz_das_sk/threadx_config;../src/third_party/rtos/ThreadX/tx58pic32mz_mplabx/threadx;"/>
         <Setting category="C32-LD" dnOrder="5" key="heap-size" value="512"/>
         <Setting category="C32-LD" dnOrder="6" key="no-device-startup-code" value="true"/>
-        <Setting category="C32-LD" dnOrder="7" key="preprocessor-macros" value=""/>
+        <Setting append="true" category="C32-LD" delimiter=";" dnOrder="7" key="preprocessor-macros" value=""/>
       </Settings>
     </Manifest>
     <Settings dnOrder="4">
       <Setting dnOrder="0" key="CMSISPath" value=".\dev_packs\arm\CMSIS\5.6.0"/>
-      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32MZ_DA_DFP\1.0.81\atdf\PIC32MZ2064DAS169.atdf"/>
+      <Setting dnOrder="1" key="DFPPath" value=".\dev_packs\Microchip\PIC32MZ_DA_DFP\1.1.98\atdf\PIC32MZ2064DAS169.atdf"/>
       <Setting dnOrder="2" key="FORCE_OPTIMIZATION" value="false"/>
       <Setting dnOrder="3" key="GENERATE_BACKUP" value="true"/>
       <Setting dnOrder="4" key="MERGE_STRATEGY" value="USER_ALL"/>
-      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;csp;expresslogic_threadx;"/>
+      <Setting dnOrder="5" key="PackageFilter" value="bsp;core;csp;expresslogic_threadx;net;"/>
     </Settings>
   </Configurator>
 </Configuration>
