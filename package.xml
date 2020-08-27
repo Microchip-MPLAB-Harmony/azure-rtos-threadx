@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Package name="expresslogic_threadx">
+<Package name="azure-rtos-threadx">
     <Dependencies>
-        <Dependency name="core" version="3.6.1"/>
+        <Dependency name="core" version="v3.8.0"/>
     </Dependencies>
 </Package>

@@ -27,74 +27,39 @@
 import os
 global coreArch
 
-fileSymbolName = "THREADX_"
+compilers = {"XC32" : 0, "IAR" : 1}
+exclusionList = ["tx_user_sample.h", "tx_misra.s"]
 
-def AddThreadXFile(component, src_path, dest_path, proj_path, filename, file_type, isMarkup = False):
-    global fileSymbolName
-    srcFile = component.createFileSymbol(fileSymbolName + str(filename.replace(".", "_").upper()), None)
-    srcFile.setSourcePath(src_path)
-    srcFile.setDestPath(dest_path)
-    srcFile.setProjectPath(proj_path)
-    srcFile.setType(file_type)
-    srcFile.setMarkup(isMarkup)
-    srcFile.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
-    srcFile.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
-
-# Traverse through Thirdparty RTOS ThreadX folder and create File Symbols for ThreadX Source files.
-def AddThreadXFilesDir(component, configName, dirPath, coreName):
-    modulePath = Module.getPath()
-    dirPath = str(modulePath + dirPath)
-    gccPath = dirPath + "gcc"
-    docsPath = dirPath + "docs"
-    gitPath = dirPath + ".git"
-    for (root, dirs, files) in os.walk(dirPath):
-        for filename in files:
-            # Include all files under all folders other than gcc/ and docs/ folder
-            if (gccPath not in root) and (docsPath not in root) and (gitPath not in root):
-                filepath = str(root + os.sep + filename)
-                source_path = filepath[len(modulePath):]
-                destination_path = "../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx"
-                project_path = "ThreadX"
-                if (".c" in filename):
-                    AddThreadXFile(component, source_path , destination_path , project_path, filename, "SOURCE")
-                elif (".S" in filename):
-                    project_path = "ThreadX/" + coreName
-                    AddThreadXFile(component, source_path , destination_path , project_path, filename, "SOURCE")
-                elif ("tx_port.h" in filename):
-                    project_path = "ThreadX/" + coreName
-                    AddThreadXFile(component, source_path , destination_path , project_path, filename, "HEADER")
-                elif ("tx_user.h" not in filename) and (".h" in filename):
-                    AddThreadXFile(component, source_path , destination_path , project_path, filename, "HEADER")
-
-def AddIARThreadXFiles(component, dirPath, coreName):
+# Traverse through Thirdparty Azure RTOS ThreadX folder and create File Symbols.
+def AddThreadXFiles(component, dirPath, destPath, threadxCommonFilesEnable, compiler):
     dirPath = str(Module.getPath() + dirPath)
-    destPath = "../../third_party/rtos/ThreadX/tx58" + coreName.lower() + "_iar/threadx"
-    projectPath = "Threadx"
     fileNames = os.listdir(dirPath)
-    exclusionList = ["tx_user.h"]
     for fileName in fileNames:
         # Find threadx source/header/assembler files
-        if fileName.lower().startswith("tx") and fileName.lower().endswith(('.c', '.s', '.h')):
+        if fileName.lower().startswith("tx") and fileName.lower().endswith(('.c', '.s', '.S', '.h')):
             # Dont process files in the exclusion list
             if fileName in exclusionList:
                 continue
             # Get the relative path of the file w.r.t to the module path
             sourcePath = os.path.relpath(os.path.join(dirPath, fileName), Module.getPath())
             #create a file symbol
-            fileSymbolName =  "THREADX_IAR_" + fileName.replace(".", "_").upper()
+            if compiler == compilers["IAR"]:
+                fileSymbolName =  "THREADX_IAR_" + fileName.replace(".", "_").upper()
+            else:
+                fileSymbolName =  "THREADX_" + fileName.replace(".", "_").upper()
             txFile = component.createFileSymbol(fileSymbolName, None)
             txFile.setSourcePath(sourcePath)
             txFile.setDestPath(destPath)
-            txFile.setProjectPath(projectPath)
+            txFile.setProjectPath(destPath.split("../../third_party/rtos/")[1])
             txFile.setMarkup(False)
             # if it is a source
-            if fileName.lower().endswith(('.c','.s')):
+            if fileName.lower().endswith(('.c','.s', '.S')):
                 txFile.setType("SOURCE")
             else:
                 txFile.setType("HEADER")
-            txFile.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1), ['core.COMPILER_CHOICE'])
-            txFile.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE")  == 1)
-
+            if threadxCommonFilesEnable == False:
+                txFile.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == compiler), ['core.COMPILER_CHOICE'])
+                txFile.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE")  == compiler)
 
 def threadxTimerStackSizeVisibility(symbol, event):
 
@@ -197,7 +162,7 @@ def threadxCheckTickRate(symbol, event):
 
 # Instatntiate ThreadX Component
 def instantiateComponent(thirdPartyThreadX):
-    Log.writeInfoMessage("Running ThreadX")
+    Log.writeInfoMessage("Running Azure RTOS ThreadX")
 
     global coreArch
 
@@ -555,37 +520,33 @@ def instantiateComponent(thirdPartyThreadX):
     threadxSystemTasksDef.setSourcePath("templates/system/tasks_macros.c.ftl")
     threadxSystemTasksDef.setMarkup(True)
 
-    threadxFileSymbolConfig = 0
-    # If compiler is XC32
-    if compiler == 0:
-        # load family specific configuration and port files
-        if (coreArch == "MIPS"):
-            coreName = coreFamily[:7].upper()
-            if (coreName == "PIC32MK"):
-                threadxSrcPath = "../thirdparty_expresslogic/" + "tx58pic32mz_mplabx/threadx/"
-            else:
-                threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreFamily[:7].lower() + "_mplabx/threadx/"
-
-            execfile(Module.getPath() + "config/arch/mips/devices_" + coreFamily[:7].lower() + "/threadx_config.py")
-        elif ("CORTEX-A5" in coreArch) or ("ARM926" in coreArch):
-            coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
-            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreName.replace("926","9").replace("cortex_a5", "cortex-a5") + "_mplabx/threadx/"
-            execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
-        else:
-            coreName = coreArch.replace("-", "_").replace("PLUS", "").lower()
-            threadxSrcPath = "../thirdparty_expresslogic/" + "tx58" + coreArch.replace("PLUS", "").lower() + "_mplabx/threadx/"
-            execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
-
-        threadxFileSymbolConfig += 1
-        # BL to add Thirdparty ThreadX Generic Source Code
-        AddThreadXFilesDir(thirdPartyThreadX, configName, threadxSrcPath, coreName.upper())
-
-    #if compiler is IAR
-    if compiler == 1 or ("CORTEX-A5" in coreArch) or ("ARM926" in coreArch):
+    # Azure RTOS ThreadX source
+    if coreArch == "MIPS":
+        coreName = coreFamily[:7].lower()
+        arch = "mips"
+    else:
         coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
-        threadxCoreName = coreName.replace("926","9").replace("cortex_a5", "cortex-a5")
-        threadxSrcPath =  "../thirdparty_expresslogic/tx58" + threadxCoreName + "_generic_iar/threadx/"
-        if threadxFileSymbolConfig == 0:
-            execfile(Module.getPath() + "config/arch/arm/devices_" + coreName + "/threadx_config.py")
-        AddIARThreadXFiles(thirdPartyThreadX, threadxSrcPath, coreName.upper())
+        arch = "arm"
+    threadxSourcePath = "../threadx"
+    threadxDestPath = "../../third_party/rtos/threadx"
+    # Add Azure RTOS ThreadX common source files
+    AddThreadXFiles(thirdPartyThreadX, threadxSourcePath + "/common/src/", threadxDestPath + "/common/src/", True, compilers["XC32"])
+    AddThreadXFiles(thirdPartyThreadX, threadxSourcePath + "/common/inc/", threadxDestPath + "/common/inc/", True, compilers["XC32"])
 
+    # Add Azure RTOS ThreadX port files
+    if coreArch != "MIPS":
+        #XC32 port files
+        threadxXc32PortSourcePath = threadxSourcePath + "/ports/" + coreName.replace("926","9") + "/gnu"
+        threadxXc32PortDestPath = threadxDestPath + "/ports/" + coreName.replace("926","9") + "/mplabx"
+        AddThreadXFiles(thirdPartyThreadX, threadxXc32PortSourcePath + "/src/", threadxXc32PortDestPath + "/src/", False, compilers["XC32"])
+        if not (("CORTEX-A5" in coreArch) or ("ARM926" in coreArch)):
+            AddThreadXFiles(thirdPartyThreadX, threadxXc32PortSourcePath + "/inc/", threadxXc32PortDestPath + "/inc/", False, compilers["XC32"])
+
+        #IAR port files
+        threadxIarPortSourcePath = threadxSourcePath + "/ports/" + coreName.replace("926","9") + "/iar"
+        threadxIarPortDestPath = threadxDestPath + "/ports/" + coreName.replace("926","9") + "/iar"
+        AddThreadXFiles(thirdPartyThreadX, threadxIarPortSourcePath + "/src/", threadxIarPortDestPath + "/src/", False, compilers["IAR"])
+        AddThreadXFiles(thirdPartyThreadX, threadxIarPortSourcePath + "/inc/", threadxIarPortDestPath + "/inc/", False, compilers["IAR"])
+
+    # Load family specific configuration and port files
+    execfile(Module.getPath() + "config/arch/" + arch + "/devices_" + coreName + "/threadx_config.py")

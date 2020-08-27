@@ -23,7 +23,7 @@
 *****************************************************************************"""
 
 def loadModule():
-    print("Load Module: Third Party Library - ExpressLogic ThreadX")
+    print("Load Module: Third Party Library - Azure RTOS ThreadX")
 
     thirdPartyThreadX = Module.CreateComponent("ThreadX", "ThreadX", "/Third Party Libraries/RTOS/", "config/threadx.py")
     thirdPartyThreadX.setDisplayType("Third Party Library")

@@ -29,18 +29,18 @@ def updateIncludePath(symbol, event):
     configName = Variables.get("__CONFIGURATION_NAME")
     coreArch = Database.getSymbolValue("core", "CoreArchitecture")
     coreName = coreArch.replace("-", "_").replace("PLUS", "").replace("EJS","").lower()
-    compiler = "_mplabx" if Database.getSymbolValue("core", "COMPILER_CHOICE") == 0 else "_iar"
-    symbol.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/tx58" + coreName.lower() + compiler + "/threadx;")
+    compiler = "/mplabx" if Database.getSymbolValue("core", "COMPILER_CHOICE") == 0 else "/iar"
+    symbol.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/common/inc;../src/third_party/rtos/threadx/ports/" + coreName.replace("926","9") + compiler + "/inc;")
 
 def changeTimerTick(symbol, event):
-    pit64Period = (long)(Database.getSymbolValue("core", "PIT64B_CLOCK_FREQUENCY") / 
+    pit64Period = (long)(Database.getSymbolValue("core", "PIT64B_CLOCK_FREQUENCY") /
                          event["source"].getSymbolValue("THREADX_TICK_RATE_HZ"))
     Database.setSymbolValue("pit64b", "PERIOD", pit64Period)
 
 #Default Byte Pool size
 threadxSym_BytePoolSize.setDefaultValue(40960)
 
-# CPU Clock Frequency 
+# CPU Clock Frequency
 cpuclk = int(Database.getSymbolValue("core", "CPU_CLOCK_FREQUENCY"))
 threadxSym_CpuClockHz.setDependencies(threadxCpuClockHz, ["core.CPU_CLOCK_FREQUENCY"])
 threadxSym_CpuClockHz.setDefaultValue(cpuclk)
@@ -62,19 +62,35 @@ tickChangeListenerSym.setDependencies(changeTimerTick, ["THREADX_TICK_RATE_HZ"])
 configName  = Variables.get("__CONFIGURATION_NAME")
 
 # Update Include directories path
-threadxLdPreprocessroMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_LINKER_PREPROC_MACROS", None)
-threadxLdPreprocessroMacroSym.setCategory("C32")
-threadxLdPreprocessroMacroSym.setKey("preprocessor-macros")
-threadxLdPreprocessroMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
-threadxLdPreprocessroMacroSym.setAppend(True, ";")
+threadxLdPreprocessorMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_LINKER_PREPROC_MACROS", None)
+threadxLdPreprocessorMacroSym.setCategory("C32")
+threadxLdPreprocessorMacroSym.setKey("preprocessor-macros")
+threadxLdPreprocessorMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
+threadxLdPreprocessorMacroSym.setAppend(True, ";")
 
-txIncPath = "../src/config/" + configName + "/threadx_config;../src/third_party/rtos/Threadx/tx58" + coreName.lower() + "_iar/threadx" if compiler == 1 else "_mplabx/threadx"
+threadxLdPreprocessorMacroSym_xc32cpp = thirdPartyThreadX.createSettingSymbol("THREADX_LINKER_PREPROC_MACROS_XC32CPP", None)
+threadxLdPreprocessorMacroSym_xc32cpp.setCategory("C32CPP")
+threadxLdPreprocessorMacroSym_xc32cpp.setKey("preprocessor-macros")
+threadxLdPreprocessorMacroSym_xc32cpp.setValue(threadxLdPreprocessorMacroSym.getValue())
+threadxLdPreprocessorMacroSym_xc32cpp.setAppend(True, ";")
+threadxLdPreprocessorMacroSym_xc32cpp.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+threadxLdPreprocessorMacroSym_xc32cpp.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
+
+txIncPath = "../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/common/inc;../src/third_party/rtos/threadx/ports/" + coreName.replace("926","9") + "/iar/inc;" if compiler == 1 else "/mplabx/inc;"
 threadxIncludeSettingsSym = thirdPartyThreadX.createSettingSymbol("THREADX_OS_INCLUDE_DIRS", None)
 threadxIncludeSettingsSym.setCategory("C32")
 threadxIncludeSettingsSym.setKey("extra-include-directories")
 threadxIncludeSettingsSym.setValue(txIncPath)
 threadxIncludeSettingsSym.setAppend(True, ";")
 threadxIncludeSettingsSym.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
+
+threadxIncludeSettingsSym_xc32cpp = thirdPartyThreadX.createSettingSymbol("THREADX_OS_INCLUDE_DIRS_XC32CPP", None)
+threadxIncludeSettingsSym_xc32cpp.setCategory("C32CPP")
+threadxIncludeSettingsSym_xc32cpp.setKey("extra-include-directories")
+threadxIncludeSettingsSym_xc32cpp.setValue(threadxIncludeSettingsSym.getValue())
+threadxIncludeSettingsSym_xc32cpp.setAppend(True, ";")
+threadxIncludeSettingsSym_xc32cpp.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+threadxIncludeSettingsSym_xc32cpp.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
 
 threadxIncDirForAsm = thirdPartyThreadX.createSettingSymbol("THREADX_AS_INCLUDE_DIRS", None)
 threadxIncDirForAsm.setCategory("C32-AS")
@@ -89,6 +105,33 @@ threadxIncDirForPre.setKey("extra-include-directories-for-preprocessor")
 threadxIncDirForPre.setValue(txIncPath)
 threadxIncDirForPre.setAppend(True, ";")
 threadxIncDirForPre.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
+
+threadxxc32InitializeLowLevelAsm = thirdPartyThreadX.createFileSymbol("THREADX_TX_INITIALIZE_LOW_LEVEL_S", None)
+threadxxc32InitializeLowLevelAsm.setSourcePath("config/arch/arm/devices_" + coreName.lower() + "/src/xc32/tx_initialize_low_level.S")
+threadxxc32InitializeLowLevelAsm.setOutputName("tx_initialize_low_level.S")
+threadxxc32InitializeLowLevelAsm.setDestPath("../../third_party/rtos/threadx/ports/" + coreName.replace("926","9") + "/mplabx/src/")
+threadxxc32InitializeLowLevelAsm.setProjectPath("threadx/ports/" + coreName.replace("926","9") + "/mplabx/src/")
+threadxxc32InitializeLowLevelAsm.setType("SOURCE")
+threadxxc32InitializeLowLevelAsm.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+threadxxc32InitializeLowLevelAsm.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
+
+threadxIarInitializeLowLevelAsm = thirdPartyThreadX.createFileSymbol("THREADX_TX_INITIALIZE_LOW_LEVEL_S_IAR", None)
+threadxIarInitializeLowLevelAsm.setSourcePath("config/arch/arm/devices_" + coreName.lower() + "/src/iar/tx_initialize_low_level.s")
+threadxIarInitializeLowLevelAsm.setOutputName("tx_initialize_low_level.s")
+threadxIarInitializeLowLevelAsm.setDestPath("../../third_party/rtos/threadx/ports/" + coreName.replace("926","9") + "/iar/src/")
+threadxIarInitializeLowLevelAsm.setProjectPath("threadx/ports/" + coreName.replace("926","9") + "/iar/src/")
+threadxIarInitializeLowLevelAsm.setType("SOURCE")
+threadxIarInitializeLowLevelAsm.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1)
+threadxIarInitializeLowLevelAsm.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1), ['core.COMPILER_CHOICE'])
+
+threadxxc32TxPortHeader = thirdPartyThreadX.createFileSymbol("THREADX_TX_PORT_H", None)
+threadxxc32TxPortHeader.setSourcePath("config/arch/arm/devices_" + coreName.lower() + "/src/xc32/tx_port.h")
+threadxxc32TxPortHeader.setOutputName("tx_port.h")
+threadxxc32TxPortHeader.setDestPath("../../third_party/rtos/threadx/ports/" + coreName.replace("926","9") + "/mplabx/inc/")
+threadxxc32TxPortHeader.setProjectPath("threadx/ports/" + coreName.replace("926","9") + "/mplabx/inc/")
+threadxxc32TxPortHeader.setType("HEADER")
+threadxxc32TxPortHeader.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+threadxxc32TxPortHeader.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
 
 threadxIarPortAsmFileSym = thirdPartyThreadX.createFileSymbol("SAM_9X6_TX_PORT_S", None)
 threadxIarPortAsmFileSym.setSourcePath("config/arch/arm/devices_arm926/src/iar/sam9x6_tx_port.s")

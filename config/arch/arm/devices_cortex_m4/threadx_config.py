@@ -26,6 +26,13 @@
 ############### Cortex-M4 Architecture specific configuration ##############
 ############################################################################
 
+def updateIncludePath(symbol, event):
+    configName = Variables.get("__CONFIGURATION_NAME")
+    coreArch = Database.getSymbolValue("core", "CoreArchitecture")
+    coreName = coreArch.replace("-", "_")
+    compiler = "/mplabx" if Database.getSymbolValue("core", "COMPILER_CHOICE") == 0 else "/iar"
+    symbol.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/common/inc;../src/third_party/rtos/threadx/ports/" + coreName.lower() + compiler + "/inc;")
+
 #Default Byte Pool size
 threadxSym_BytePoolSize.setDefaultValue(40960)
 
@@ -79,26 +86,65 @@ if (Database.getSymbolValue("core", PendSVInterruptPriLock) == False):
     Database.clearSymbolValue("core", PendSVInterruptPriLock)
     Database.setSymbolValue("core", PendSVInterruptPriLock, True)
 
-# Update C32 Include directories path
-threadxxc32LdPreprocessroMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_LINKER_PREPROC_MARCOS", None)
-threadxxc32LdPreprocessroMacroSym.setCategory("C32")
-threadxxc32LdPreprocessroMacroSym.setKey("preprocessor-macros")
-threadxxc32LdPreprocessroMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
+threadxxc32InitializeLowLevelAsm = thirdPartyThreadX.createFileSymbol("THREADX_TX_INITIALIZE_LOW_LEVEL_S", None)
+threadxxc32InitializeLowLevelAsm.setSourcePath("config/arch/arm/devices_" + coreName.lower() + "/src/xc32/tx_initialize_low_level.S")
+threadxxc32InitializeLowLevelAsm.setOutputName("tx_initialize_low_level.S")
+threadxxc32InitializeLowLevelAsm.setDestPath("../../third_party/rtos/threadx/ports/" + coreName.lower() + "/mplabx/src/")
+threadxxc32InitializeLowLevelAsm.setProjectPath("threadx/ports/" + coreName.lower() + "/mplabx/src/")
+threadxxc32InitializeLowLevelAsm.setType("SOURCE")
+threadxxc32InitializeLowLevelAsm.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+threadxxc32InitializeLowLevelAsm.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
 
+threadxIarInitializeLowLevelAsm = thirdPartyThreadX.createFileSymbol("THREADX_TX_INITIALIZE_LOW_LEVEL_S_IAR", None)
+threadxIarInitializeLowLevelAsm.setSourcePath("config/arch/arm/devices_" + coreName.lower() + "/src/iar/tx_initialize_low_level.s")
+threadxIarInitializeLowLevelAsm.setOutputName("tx_initialize_low_level.s")
+threadxIarInitializeLowLevelAsm.setDestPath("../../third_party/rtos/threadx/ports/" + coreName.lower() + "/iar/src/")
+threadxIarInitializeLowLevelAsm.setProjectPath("threadx/ports/" + coreName.lower() + "/iar/src/")
+threadxIarInitializeLowLevelAsm.setType("SOURCE")
+threadxIarInitializeLowLevelAsm.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1)
+threadxIarInitializeLowLevelAsm.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 1), ['core.COMPILER_CHOICE'])
+
+# Update C32 Include directories path
+threadxxc32LdPreprocessorMacroSym = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_LINKER_PREPROC_MARCOS", None)
+threadxxc32LdPreprocessorMacroSym.setCategory("C32")
+threadxxc32LdPreprocessorMacroSym.setKey("preprocessor-macros")
+threadxxc32LdPreprocessorMacroSym.setValue("TX_INCLUDE_USER_DEFINE_FILE")
+threadxxc32LdPreprocessorMacroSym.setAppend(True, ";")
+
+threadxxc32LdPreprocessorMacroSym_xc32cpp = thirdPartyThreadX.createSettingSymbol("THREADX_XC32CPP_LINKER_PREPROC_MARCOS", None)
+threadxxc32LdPreprocessorMacroSym_xc32cpp.setCategory("C32CPP")
+threadxxc32LdPreprocessorMacroSym_xc32cpp.setKey("preprocessor-macros")
+threadxxc32LdPreprocessorMacroSym_xc32cpp.setValue(threadxxc32LdPreprocessorMacroSym.getValue())
+threadxxc32LdPreprocessorMacroSym_xc32cpp.setAppend(True, ";")
+threadxxc32LdPreprocessorMacroSym_xc32cpp.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+threadxxc32LdPreprocessorMacroSym_xc32cpp.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
+
+txIncPath = "../src/config/" + configName + "/threadx_config;../src/third_party/rtos/threadx/common/inc;../src/third_party/rtos/threadx/ports/" + coreName.lower() + "/iar/inc;" if compiler == 1 else "/mplabx/inc;"
 threadxOsXc32SettingSym = thirdPartyThreadX.createSettingSymbol("THREADX_OS_XC32_INCLUDE_DIRS", None)
 threadxOsXc32SettingSym.setCategory("C32")
 threadxOsXc32SettingSym.setKey("extra-include-directories")
-threadxOsXc32SettingSym.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
+threadxOsXc32SettingSym.setValue(txIncPath)
 threadxOsXc32SettingSym.setAppend(True, ";")
+threadxOsXc32SettingSym.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
+
+threadxOsXc32SettingSym_xc32cpp = thirdPartyThreadX.createSettingSymbol("THREADX_OS_XC32CPP_INCLUDE_DIRS", None)
+threadxOsXc32SettingSym_xc32cpp.setCategory("C32CPP")
+threadxOsXc32SettingSym_xc32cpp.setKey("extra-include-directories")
+threadxOsXc32SettingSym_xc32cpp.setValue(threadxOsXc32SettingSym.getValue())
+threadxOsXc32SettingSym_xc32cpp.setAppend(True, ";")
+threadxOsXc32SettingSym_xc32cpp.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0)
+threadxOsXc32SettingSym_xc32cpp.setDependencies(lambda symbol, event: symbol.setEnabled(Database.getSymbolValue("core", "COMPILER_CHOICE") == 0), ['core.COMPILER_CHOICE'])
 
 threadxIncDirForAsm = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_AS_INCLUDE_DIRS", None)
 threadxIncDirForAsm.setCategory("C32-AS")
 threadxIncDirForAsm.setKey("extra-include-directories-for-assembler")
-threadxIncDirForAsm.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
+threadxIncDirForAsm.setValue(txIncPath)
 threadxIncDirForAsm.setAppend(True, ";")
+threadxIncDirForAsm.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
 
 threadxIncDirForPre = thirdPartyThreadX.createSettingSymbol("THREADX_XC32_AS_INCLUDE_PRE_PROC_DIRS", None)
 threadxIncDirForPre.setCategory("C32-AS")
 threadxIncDirForPre.setKey("extra-include-directories-for-preprocessor")
-threadxIncDirForPre.setValue("../src/config/" + configName + "/threadx_config;../src/third_party/rtos/ThreadX/tx58" + coreName.lower() + "_mplabx/threadx;")
+threadxIncDirForPre.setValue(txIncPath)
 threadxIncDirForPre.setAppend(True, ";")
+threadxIncDirForPre.setDependencies(updateIncludePath, ['core.COMPILER_CHOICE'])
