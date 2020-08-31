@@ -1,0 +1,34 @@
+{
+    "linker": {
+        "script": "..\\src\\config\\sam_9x60_ek_iar\\ddram.icf"
+    }, 
+    "assembler": {
+        "macros": [], 
+        "includes": [
+            "..\\src\\config\\sam_9x60_ek_iar\\threadx_config", 
+            "..\\src\\third_party\\rtos\\threadx\\common\\inc", 
+            "..\\src\\third_party\\rtos\\threadx\\ports\\arm9\\iar\\inc", 
+            "."
+        ]
+    }, 
+    "general": {
+        "name": "sam_9x60_ek_iar", 
+        "device": "SAM9X60"
+    }, 
+    "compiler": {
+        "macros": [
+            "TX_INCLUDE_USER_DEFINE_FILE"
+        ], 
+        "includes": [
+            "..\\src", 
+            "..\\src\\config\\sam_9x60_ek_iar", 
+            "..\\src\\packs\\SAM9X60_DFP", 
+            "..\\src\\packs\\CMSIS\\CMSIS\\Core\\Include", 
+            "..\\src\\packs\\CMSIS", 
+            "..\\src\\config\\sam_9x60_ek_iar\\threadx_config", 
+            "..\\src\\third_party\\rtos\\threadx\\common\\inc", 
+            "..\\src\\third_party\\rtos\\threadx\\ports\\arm9\\iar\\inc", 
+            "."
+        ]
+    }
+}

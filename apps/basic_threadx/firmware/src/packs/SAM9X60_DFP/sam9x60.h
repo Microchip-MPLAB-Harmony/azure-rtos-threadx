@@ -1,7 +1,7 @@
 /**
  * \brief Header file for SAM9X60
  *
- * Copyright (c) 2019 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2019-12-16T13:49:08Z */
+/* file generated from device description version 2020-05-19T13:57:46Z */
 #ifndef _SAM9X60_H_
 #define _SAM9X60_H_
 
@@ -76,12 +76,12 @@ typedef enum IRQn
 {
 /******  SAM9X60 specific Interrupt Numbers ***********************************/
   EXT_FIQ_IRQn              =   0, /**< 0   Advanced Interrupt Controller (AIC) */
-  PMC_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (PMC) */
-  RSTC_IRQn                 =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (RSTC) */
-  RTT_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (RTT) */
-  PIT_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (PIT) */
-  WDT_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (WDT) */
   RTC_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (RTC) */
+  RTT_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (RTT) */
+  WDT_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (WDT) */
+  RSTC_IRQn                 =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (RSTC) */
+  PMC_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (PMC) */
+  PIT_IRQn                  =   1, /**< 1   Shared between PMC RSTC RTT PIT WDT RTC (PIT) */
   PIOA_IRQn                 =   2, /**< 2   Parallel Input/Output Controller (PIOA) */
   PIOB_IRQn                 =   3, /**< 3   Parallel Input/Output Controller (PIOB) */
   PIOC_IRQn                 =   4, /**< 4   Parallel Input/Output Controller (PIOC) */
@@ -102,6 +102,7 @@ typedef enum IRQn
   ADC_IRQn                  =  19, /**< 19  Analog-to-Digital Converter (ADC)   */
   XDMAC_IRQn                =  20, /**< 20  Extensible DMA Controller (XDMAC)   */
   MATRIX_IRQn               =  21, /**< 21  AHB Bus Matrix (MATRIX)             */
+  UHPHS_IRQn                =  22, /**< 22  UHPHS (UHPHS)                       */
   UDPHS_IRQn                =  23, /**< 23  USB High Speed Device Port (UDPHS)  */
   EMAC0_IRQn                =  24, /**< 24  Ethernet MAC 10/100 (EMAC0)         */
   LCDC_IRQn                 =  25, /**< 25  LCD Controller (LCDC)               */
@@ -129,12 +130,71 @@ typedef enum IRQn
   DBGU_IRQn                 =  47, /**< 47  Debug Unit (DBGU)                   */
   PMECC_IRQn                =  48, /**< 48  Shared between PMECC PMERRLOC (PMECC) */
   PMERRLOC_IRQn             =  48, /**< 48  Shared between PMECC PMERRLOC (PMERRLOC) */
-  SDRAMC_IRQn               =  49, /**< 49  Shared between SDRAMC MPDDRC SMC (SDRAMC) */
   MPDDRC_IRQn               =  49, /**< 49  Shared between SDRAMC MPDDRC SMC (MPDDRC) */
+  SDRAMC_IRQn               =  49, /**< 49  Shared between SDRAMC MPDDRC SMC (SDRAMC) */
   SMC_IRQn                  =  49, /**< 49  Shared between SDRAMC MPDDRC SMC (SMC) */
 
   PERIPH_MAX_IRQn           =  49  /**< Max peripheral ID */
 } IRQn_Type;
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if !defined DONT_USE_PREDEFINED_CORE_HANDLERS
+/* ARM926EJS exception handlers */
+#endif /* DONT_USE_PREDEFINED_CORE_HANDLERS */
+
+#if !defined DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS
+/* Peripherals interrupt handlers */
+void EXT_FIQ_Handler               ( void );
+void SYSC_Handler                  ( void );
+void PIOA_Handler                  ( void );
+void PIOB_Handler                  ( void );
+void PIOC_Handler                  ( void );
+void FLEXCOM0_Handler              ( void );
+void FLEXCOM1_Handler              ( void );
+void FLEXCOM2_Handler              ( void );
+void FLEXCOM3_Handler              ( void );
+void FLEXCOM6_Handler              ( void );
+void FLEXCOM7_Handler              ( void );
+void FLEXCOM8_Handler              ( void );
+void SDMMC0_Handler                ( void );
+void FLEXCOM4_Handler              ( void );
+void FLEXCOM5_Handler              ( void );
+void FLEXCOM9_Handler              ( void );
+void FLEXCOM10_Handler             ( void );
+void TC0_Handler                   ( void );
+void PWM_Handler                   ( void );
+void ADC_Handler                   ( void );
+void XDMAC_Handler                 ( void );
+void MATRIX_Handler                ( void );
+void UDPHS_Handler                 ( void );
+void EMAC0_Handler                 ( void );
+void LCDC_Handler                  ( void );
+void SDMMC1_Handler                ( void );
+void EMAC1_Handler                 ( void );
+void SSC_Handler                   ( void );
+void CAN0_Handler                  ( void );
+void CAN1_Handler                  ( void );
+void EXT_IRQ_Handler               ( void );
+void FLEXCOM11_Handler             ( void );
+void FLEXCOM12_Handler             ( void );
+void I2SMCC_Handler                ( void );
+void QSPI_Handler                  ( void );
+void GFX2D_Handler                 ( void );
+void PIT64B_Handler                ( void );
+void TRNG_Handler                  ( void );
+void AES_Handler                   ( void );
+void TDES_Handler                  ( void );
+void SHA_Handler                   ( void );
+void CLASSD_Handler                ( void );
+void ISI_Handler                   ( void );
+void PIOD_Handler                  ( void );
+void TC1_Handler                   ( void );
+void OTPC_Handler                  ( void );
+void DBGU_Handler                  ( void );
+void ECC_Handler                   ( void );
+void MC_Handler                    ( void );
+#endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /*
@@ -212,53 +272,53 @@ typedef enum IRQn
 /* ************************************************************************** */
 /*  PERIPHERAL ID DEFINITIONS FOR SAM9X60                                     */
 /* ************************************************************************** */
-#define ID_PIOA          (  2) /**< \brief Parallel Input/Output Controller (PIOA ) */
-#define ID_PIOB          (  3) /**< \brief Parallel Input/Output Controller (PIOB ) */
-#define ID_PIOC          (  4) /**< \brief Parallel Input/Output Controller (PIOC ) */
-#define ID_FLEXCOM0      (  5) /**< \brief Flexible Serial Communication (FLEXCOM0 ) */
-#define ID_FLEXCOM1      (  6) /**< \brief Flexible Serial Communication (FLEXCOM1 ) */
-#define ID_FLEXCOM2      (  7) /**< \brief Flexible Serial Communication (FLEXCOM2 ) */
-#define ID_FLEXCOM3      (  8) /**< \brief Flexible Serial Communication (FLEXCOM3 ) */
-#define ID_FLEXCOM6      (  9) /**< \brief Flexible Serial Communication (FLEXCOM6 ) */
-#define ID_FLEXCOM7      ( 10) /**< \brief Flexible Serial Communication (FLEXCOM7 ) */
-#define ID_FLEXCOM8      ( 11) /**< \brief Flexible Serial Communication (FLEXCOM8 ) */
-#define ID_SDMMC0        ( 12) /**< \brief Secure Digital MultiMedia Card Controller (SDMMC0 ) */
-#define ID_FLEXCOM4      ( 13) /**< \brief Flexible Serial Communication (FLEXCOM4 ) */
-#define ID_FLEXCOM5      ( 14) /**< \brief Flexible Serial Communication (FLEXCOM5 ) */
-#define ID_FLEXCOM9      ( 15) /**< \brief Flexible Serial Communication (FLEXCOM9 ) */
-#define ID_FLEXCOM10     ( 16) /**< \brief Flexible Serial Communication (FLEXCOM10 ) */
-#define ID_TC0           ( 17) /**< \brief Timer Counter (TC0 ) */
-#define ID_PWM           ( 18) /**< \brief Pulse Width Modulation Controller (PWM ) */
-#define ID_ADC           ( 19) /**< \brief Analog-to-Digital Converter (ADC ) */
-#define ID_XDMAC         ( 20) /**< \brief Extensible DMA Controller (XDMAC ) */
-#define ID_MATRIX        ( 21) /**< \brief AHB Bus Matrix (MATRIX ) */
-#define ID_UHPHS_EHCI    ( 22) /**< \brief USB Host High Speed Port (UHPHS_EHCI ) */
-#define ID_UDPHS         ( 23) /**< \brief USB High Speed Device Port (UDPHS ) */
-#define ID_EMAC0         ( 24) /**< \brief Ethernet MAC 10/100 (EMAC0 ) */
-#define ID_LCDC          ( 25) /**< \brief LCD Controller (LCDC ) */
-#define ID_SDMMC1        ( 26) /**< \brief Secure Digital MultiMedia Card Controller (SDMMC1 ) */
-#define ID_EMAC1         ( 27) /**< \brief Ethernet MAC 10/100 (EMAC1 ) */
-#define ID_SSC           ( 28) /**< \brief Synchronous Serial Controller (SSC ) */
-#define ID_CAN0          ( 29) /**< \brief Controller Area Network (CAN0 ) */
-#define ID_CAN1          ( 30) /**< \brief Controller Area Network (CAN1 ) */
-#define ID_FLEXCOM11     ( 32) /**< \brief Flexible Serial Communication (FLEXCOM11 ) */
-#define ID_FLEXCOM12     ( 33) /**< \brief Flexible Serial Communication (FLEXCOM12 ) */
-#define ID_I2SMCC        ( 34) /**< \brief Inter-IC Sound Multi Channel Controller (I2SMCC ) */
-#define ID_QSPI          ( 35) /**< \brief Quad Serial Peripheral Interface (QSPI ) */
-#define ID_GFX2D         ( 36) /**< \brief 2D Graphics Engine (GFX2D ) */
-#define ID_PIT64B        ( 37) /**< \brief Periodic Interval Timer 64-bit (PIT64B ) */
-#define ID_TRNG          ( 38) /**< \brief True Random Number Generator (TRNG ) */
-#define ID_AES           ( 39) /**< \brief Advanced Encryption Standard (AES ) */
-#define ID_TDES          ( 40) /**< \brief Triple Data Encryption Standard (TDES ) */
-#define ID_SHA           ( 41) /**< \brief Secure Hash Algorithm (SHA ) */
-#define ID_CLASSD        ( 42) /**< \brief Audio Class D Amplifier (CLASSD ) */
-#define ID_ISI           ( 43) /**< \brief Image Sensor Interface (ISI ) */
-#define ID_PIOD          ( 44) /**< \brief Parallel Input/Output Controller (PIOD ) */
-#define ID_TC1           ( 45) /**< \brief Timer Counter (TC1 ) */
-#define ID_OTPC          ( 46) /**< \brief OTP Memory Controller (OTPC ) */
-#define ID_DBGU          ( 47) /**< \brief Debug Unit (DBGU ) */
-#define ID_PMECC         ( 48) /**< \brief Programmable Multibit Error Correction Code Controller (PMECC ) */
-#define ID_SDRAMC        ( 49) /**< \brief SDRAM Controller (SDRAMC ) */
+#define ID_PIOA          (  2) /**< \brief Parallel Input/Output Controller (PIOA) */
+#define ID_PIOB          (  3) /**< \brief Parallel Input/Output Controller (PIOB) */
+#define ID_PIOC          (  4) /**< \brief Parallel Input/Output Controller (PIOC) */
+#define ID_FLEXCOM0      (  5) /**< \brief Flexible Serial Communication (FLEXCOM0) */
+#define ID_FLEXCOM1      (  6) /**< \brief Flexible Serial Communication (FLEXCOM1) */
+#define ID_FLEXCOM2      (  7) /**< \brief Flexible Serial Communication (FLEXCOM2) */
+#define ID_FLEXCOM3      (  8) /**< \brief Flexible Serial Communication (FLEXCOM3) */
+#define ID_FLEXCOM6      (  9) /**< \brief Flexible Serial Communication (FLEXCOM6) */
+#define ID_FLEXCOM7      ( 10) /**< \brief Flexible Serial Communication (FLEXCOM7) */
+#define ID_FLEXCOM8      ( 11) /**< \brief Flexible Serial Communication (FLEXCOM8) */
+#define ID_SDMMC0        ( 12) /**< \brief Secure Digital MultiMedia Card Controller (SDMMC0) */
+#define ID_FLEXCOM4      ( 13) /**< \brief Flexible Serial Communication (FLEXCOM4) */
+#define ID_FLEXCOM5      ( 14) /**< \brief Flexible Serial Communication (FLEXCOM5) */
+#define ID_FLEXCOM9      ( 15) /**< \brief Flexible Serial Communication (FLEXCOM9) */
+#define ID_FLEXCOM10     ( 16) /**< \brief Flexible Serial Communication (FLEXCOM10) */
+#define ID_TC0           ( 17) /**< \brief Timer Counter (TC0) */
+#define ID_PWM           ( 18) /**< \brief Pulse Width Modulation Controller (PWM) */
+#define ID_ADC           ( 19) /**< \brief Analog-to-Digital Converter (ADC) */
+#define ID_XDMAC         ( 20) /**< \brief Extensible DMA Controller (XDMAC) */
+#define ID_MATRIX        ( 21) /**< \brief AHB Bus Matrix (MATRIX) */
+#define ID_UHPHS_EHCI    ( 22) /**< \brief USB Host High Speed Port (UHPHS_EHCI) */
+#define ID_UDPHS         ( 23) /**< \brief USB High Speed Device Port (UDPHS) */
+#define ID_EMAC0         ( 24) /**< \brief Ethernet MAC 10/100 (EMAC0) */
+#define ID_LCDC          ( 25) /**< \brief LCD Controller (LCDC) */
+#define ID_SDMMC1        ( 26) /**< \brief Secure Digital MultiMedia Card Controller (SDMMC1) */
+#define ID_EMAC1         ( 27) /**< \brief Ethernet MAC 10/100 (EMAC1) */
+#define ID_SSC           ( 28) /**< \brief Synchronous Serial Controller (SSC) */
+#define ID_CAN0          ( 29) /**< \brief Controller Area Network (CAN0) */
+#define ID_CAN1          ( 30) /**< \brief Controller Area Network (CAN1) */
+#define ID_FLEXCOM11     ( 32) /**< \brief Flexible Serial Communication (FLEXCOM11) */
+#define ID_FLEXCOM12     ( 33) /**< \brief Flexible Serial Communication (FLEXCOM12) */
+#define ID_I2SMCC        ( 34) /**< \brief Inter-IC Sound Multi Channel Controller (I2SMCC) */
+#define ID_QSPI          ( 35) /**< \brief Quad Serial Peripheral Interface (QSPI) */
+#define ID_GFX2D         ( 36) /**< \brief 2D Graphics Engine (GFX2D) */
+#define ID_PIT64B        ( 37) /**< \brief Periodic Interval Timer 64-bit (PIT64B) */
+#define ID_TRNG          ( 38) /**< \brief True Random Number Generator (TRNG) */
+#define ID_AES           ( 39) /**< \brief Advanced Encryption Standard (AES) */
+#define ID_TDES          ( 40) /**< \brief Triple Data Encryption Standard (TDES) */
+#define ID_SHA           ( 41) /**< \brief Secure Hash Algorithm (SHA) */
+#define ID_CLASSD        ( 42) /**< \brief Audio Class D Amplifier (CLASSD) */
+#define ID_ISI           ( 43) /**< \brief Image Sensor Interface (ISI) */
+#define ID_PIOD          ( 44) /**< \brief Parallel Input/Output Controller (PIOD) */
+#define ID_TC1           ( 45) /**< \brief Timer Counter (TC1) */
+#define ID_OTPC          ( 46) /**< \brief OTP Memory Controller (OTPC) */
+#define ID_DBGU          ( 47) /**< \brief Debug Unit (DBGU) */
+#define ID_PMECC         ( 48) /**< \brief Programmable Multibit Error Correction Code Controller (PMECC) */
+#define ID_SDRAMC        ( 49) /**< \brief SDRAM Controller (SDRAMC) */
 
 #define ID_PERIPH_MAX    ( 49) /**< \brief Number of peripheral IDs */
 /** @}  end of Peripheral Ids Definitions */
@@ -444,6 +504,7 @@ typedef enum IRQn
 #define SDMMC0_SIZE                    _UL_(0x00100000)    /* 1024kB Memory segment type: other */
 #define SDMMC1_SIZE                    _UL_(0x00100000)    /* 1024kB Memory segment type: other */
 #define OTPC_SIZE                      _UL_(0x00001000)    /*    4kB Memory segment type: other */
+#define PERIPHERALS_SIZE               _UL_(0x10000000)    /* 262144kB Memory segment type: io */
 
 #define ECC_ROM_ADDR                   _UL_(0x00100000)    /**< ECC_ROM base address (type: other)*/
 #define SRAM0_ADDR                     _UL_(0x00300000)    /**< SRAM0 base address (type: other)*/
@@ -464,6 +525,7 @@ typedef enum IRQn
 #define SDMMC0_ADDR                    _UL_(0x80000000)    /**< SDMMC0 base address (type: other)*/
 #define SDMMC1_ADDR                    _UL_(0x90000000)    /**< SDMMC1 base address (type: other)*/
 #define OTPC_ADDR                      _UL_(0xeff00000)    /**< OTPC base address (type: other)*/
+#define PERIPHERALS_ADDR               _UL_(0xf0000000)    /**< PERIPHERALS base address (type: io)*/
 
 /* ************************************************************************** */
 /**  DEVICE SIGNATURES FOR SAM9X60                                            */
