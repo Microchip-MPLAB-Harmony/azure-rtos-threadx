@@ -1,17 +1,19 @@
 /*******************************************************************************
-  EVIC PLIB Implementation
+  TMR1 Peripheral Library Interface Source File
 
-  Company:
+  Company
     Microchip Technology Inc.
 
-  File Name:
-    plib_evic.c
+  File Name
+    tmr1.c
 
-  Summary:
-    EVIC PLIB Source File
+  Summary
+    TMR1 peripheral library source file.
 
-  Description:
-    None
+  Description
+    This file implements the interface to the TMR1 peripheral library.  This
+    library provides access to and control of the associated peripheral
+    instance.
 
 *******************************************************************************/
 
@@ -40,70 +42,55 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
+
 #include "device.h"
-#include "plib_evic.h"
+#include "tx_tmr1.h"
+#include "peripheral/evic/plib_evic.h"
+#include "tx_api.h"
 
+extern void _tx_timer_interrupt( void );
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: IRQ Implementation
-// *****************************************************************************
-// *****************************************************************************
-
-void EVIC_Initialize( void )
+void __ISR(_TIMER_1_VECTOR, ipl1AUTO) TIMER_1_Handler (void)
 {
-    INTCONSET = _INTCON_MVEC_MASK;
+    /* Clear Interrupt */
+    IFS0CLR = _IFS0_T1IF_MASK;
 
-    /* Set up priority and subpriority of enabled interrupts */
+    /* Call ThreadX context save. */
+    _tx_thread_context_save();
 
+    /* Call ThreadX timer interrupt processing. */
+    _tx_timer_interrupt();
 
+    /* Call ThreadX context restore. */
+    _tx_thread_context_restore();
 }
 
-void EVIC_SourceEnable( INT_SOURCE source )
+void TMR1_Initialize(void)
 {
-    volatile uint32_t *IECx = (volatile uint32_t *) (&IEC0 + ((0x10 * (source / 32)) / 4));
-    volatile uint32_t *IECxSET = (volatile uint32_t *)(IECx + 2);
+    const uint32_t timer1Period = ( (100000000 / 8) / 1000 ) - 1UL;
 
-    *IECxSET = 1 << (source & 0x1f);
+    /* Disable Timer */
+    T1CONCLR = _T1CON_ON_MASK;
+
+    T1CONbits.TCKPS = 1;
+
+    PR1 = timer1Period;
+
+    /* Clear the interrupt as a starting condition. */
+    IEC0CLR = _IEC0_T1IE_MASK;
+
+    /* Enable the interrupt. */
+    IEC0SET = _IEC0_T1IE_MASK;
+
+    /* Start the timer. */
+    T1CONSET = _T1CON_ON_MASK;
+
+    /* Set up priority / subpriority of enabled interrupts */
+    IPC1SET = 0x4 | 0x0;  /* TIMER_1:  Priority 1 / Subpriority 0 */
 }
 
-void EVIC_SourceDisable( INT_SOURCE source )
-{
-    volatile uint32_t *IECx = (volatile uint32_t *) (&IEC0 + ((0x10 * (source / 32)) / 4));
-    volatile uint32_t *IECxCLR = (volatile uint32_t *)(IECx + 1);
-
-    *IECxCLR = 1 << (source & 0x1f);
-}
-
-bool EVIC_SourceIsEnabled( INT_SOURCE source )
-{
-    volatile uint32_t *IECx = (volatile uint32_t *) (&IEC0 + ((0x10 * (source / 32)) / 4));
-
-    return (bool)((*IECx >> (source & 0x1f)) & 0x01);
-}
-
-bool EVIC_SourceStatusGet( INT_SOURCE source )
-{
-    volatile uint32_t *IFSx = (volatile uint32_t *)(&IFS0 + ((0x10 * (source / 32)) / 4));
-
-    return (bool)((*IFSx >> (source & 0x1f)) & 0x1);
-}
-
-void EVIC_SourceStatusSet( INT_SOURCE source )
-{
-    volatile uint32_t *IFSx = (volatile uint32_t *) (&IFS0 + ((0x10 * (source / 32)) / 4));
-    volatile uint32_t *IFSxSET = (volatile uint32_t *)(IFSx + 2);
-
-    *IFSxSET = 1 << (source & 0x1f);
-}
-
-void EVIC_SourceStatusClear( INT_SOURCE source )
-{
-    volatile uint32_t *IFSx = (volatile uint32_t *) (&IFS0 + ((0x10 * (source / 32)) / 4));
-    volatile uint32_t *IFSxCLR = (volatile uint32_t *)(IFSx + 1);
-
-    *IFSxCLR = 1 << (source & 0x1f);
-}
-
-
-/* End of file */

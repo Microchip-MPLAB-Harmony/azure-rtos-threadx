@@ -1,22 +1,25 @@
 /*******************************************************************************
- Debug Console Source file
+  Data Type definition of Timer PLIB
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    xc32_monitor.c
+    tmr1.h
 
   Summary:
-    debug console Source File
+    Data Type definition of the Timer Peripheral Interface Plib.
 
   Description:
-    None
+    This file defines the Data Types for the Timer Plib.
+
+  Remarks:
+    None.
 
 *******************************************************************************/
 
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -38,18 +41,25 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
+#ifndef THREADX_TMR1_H
+#define THREADX_TMR1_H
 
-#ifdef __arm__
-/* Declaration of these functions are missing in stdio.h for ARM parts*/
-int _mon_getc(int canblock);
-void _mon_putc(char c);
-#endif //__arm__
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
 
-int _mon_getc(int canblock)
-{
-   return 0;
-}
+    extern "C" {
 
-void _mon_putc(char c)
-{
-}
+#endif
+// DOM-IGNORE-END
+
+// *****************************************************************************
+void TMR1_Initialize(void);
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+#endif
+// DOM-IGNORE-END
+
+#endif /* THREADX_TMR1_H */
