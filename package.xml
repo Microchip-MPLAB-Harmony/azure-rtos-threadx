@@ -2,5 +2,6 @@
 <Package name="azure-rtos-threadx">
     <Dependencies>
         <Dependency name="core" version="v3.8.0"/>
+        <Dependency name="threadx" version="v6.0.2"/>
     </Dependencies>
 </Package>
