@@ -53,7 +53,6 @@
 #include "configuration.h"
 #include "definitions.h"
 
-
 /* ThreadX byte memory pool from which to allocate the thread stacks. */
 #define TX_BYTE_POOL_SIZE   (4096 + 512)
 
@@ -151,6 +150,7 @@ void tx_application_define(void* first_unused_memory)
 
 
 }
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: System "Tasks" Routine
