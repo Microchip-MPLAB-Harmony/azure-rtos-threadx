@@ -1,7 +1,7 @@
 /**
  * \brief Header file for ATSAMA5D27
  *
- * Copyright (c) 2019 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2019-12-06T14:18:29Z */
+/* file generated from device description version 2020-05-04T06:27:24Z */
 #ifndef _SAMA5D27_H_
 #define _SAMA5D27_H_
 
@@ -77,6 +77,7 @@ typedef enum IRQn
 /******  CORTEX-A5 Processor Exceptions Numbers ******************************/
 /******  SAMA5D27 specific Interrupt Numbers ***********************************/
   SAIC_IRQn                 =   0, /**< 0   Advanced Interrupt Controller (SAIC) */
+  PMU_IRQn                  =   2, /**< 2   PMU (PMU)                           */
   PIT_IRQn                  =   3, /**< 3   Periodic Interval Timer (PIT)       */
   WDT_IRQn                  =   4, /**< 4   Watchdog Timer (WDT)                */
   GMAC_IRQn                 =   5, /**< 5   Gigabit Ethernet MAC (GMAC)         */
@@ -91,6 +92,7 @@ typedef enum IRQn
   MATRIX1_IRQn              =  14, /**< 14  AHB Bus Matrix (MATRIX1)            */
   MATRIX0_IRQn              =  15, /**< 15  AHB Bus Matrix (MATRIX0)            */
   SECUMOD_IRQn              =  16, /**< 16  Security Module (SECUMOD)           */
+  HSMC_IRQn                 =  17, /**< 17  HSMC (HSMC)                         */
   PIOA_IRQn                 =  18, /**< 18  Parallel Input/Output Controller (PIOA) */
   FLEXCOM0_IRQn             =  19, /**< 19  Flexible Serial Communication (FLEXCOM0) */
   FLEXCOM1_IRQn             =  20, /**< 20  Flexible Serial Communication (FLEXCOM1) */
@@ -109,9 +111,10 @@ typedef enum IRQn
   SPI0_IRQn                 =  33, /**< 33  Serial Peripheral Interface (SPI0)  */
   SPI1_IRQn                 =  34, /**< 34  Serial Peripheral Interface (SPI1)  */
   TC0_IRQn                  =  35, /**< 35  Timer Counter (TC0)                 */
-  TC1_IRQn                  =  36, /**< 36  Timer Counter (TC0)                 */
+  TC1_IRQn                  =  36, /**< 36  Timer Counter (TC1)                 */
   PWM_IRQn                  =  38, /**< 38  Pulse Width Modulation Controller (PWM) */
   ADC_IRQn                  =  40, /**< 40  Analog-to-Digital Converter (ADC)   */
+  UHPHS_IRQn                =  41, /**< 41  UHPHS (UHPHS)                       */
   UDPHS_IRQn                =  42, /**< 42  USB High Speed Device Port (UDPHS)  */
   SSC0_IRQn                 =  43, /**< 43  Synchronous Serial Controller (SSC0) */
   SSC1_IRQn                 =  44, /**< 44  Synchronous Serial Controller (SSC1) */
@@ -121,6 +124,7 @@ typedef enum IRQn
   PDMIC_IRQn                =  48, /**< 48  Pulse Density Modulation Interface Controller (PDMIC) */
   AIC_IRQn                  =  49, /**< 49  Advanced Interrupt Controller (AIC) */
   SFC_IRQn                  =  50, /**< 50  Secure Fuse Controller (SFC)        */
+  SECURAM_IRQn              =  51, /**< 51  SECURAM (SECURAM)                   */
   QSPI0_IRQn                =  52, /**< 52  Quad Serial Peripheral Interface (QSPI0) */
   QSPI1_IRQn                =  53, /**< 53  Quad Serial Peripheral Interface (QSPI1) */
   I2SC0_IRQn                =  54, /**< 54  Inter-IC Sound Controller (I2SC0)   */
@@ -139,124 +143,14 @@ typedef enum IRQn
   PIOD_IRQn                 =  70, /**< 70  Parallel Input/Output Controller (PIOD) */
   SDMMC0_TIMER_IRQn         =  71, /**< 71  Secure Digital MultiMedia Card Controller (SDMMC0) */
   SDMMC1_TIMER_IRQn         =  72, /**< 72  Secure Digital MultiMedia Card Controller (SDMMC1) */
-  PMC_IRQn                  =  74, /**< 74  Shared between PMC RSTC RTC (PMC)   */
   RSTC_IRQn                 =  74, /**< 74  Shared between PMC RSTC RTC (RSTC)  */
   RTC_IRQn                  =  74, /**< 74  Shared between PMC RSTC RTC (RTC)   */
+  PMC_IRQn                  =  74, /**< 74  Shared between PMC RSTC RTC (PMC)   */
   ACC_IRQn                  =  75, /**< 75  Analog Comparator Controller (ACC)  */
   RXLP_IRQn                 =  76, /**< 76  Low Power Asynchronous Receiver (RXLP) */
 
   PERIPH_MAX_IRQn           =  76  /**< Max peripheral ID */
 } IRQn_Type;
-#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-
-#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-typedef struct _DeviceVectors
-{
-  /* Stack pointer */
-  void* pvStack;
-  /* Cortex-M handlers */
-  void* pvReservedC15;
-  void* pvReservedC14;
-  void* pvReservedC13;
-  void* pvReservedC12;
-  void* pvReservedC11;
-  void* pvReservedC10;
-  void* pvReservedC9;
-  void* pvReservedC8;
-  void* pvReservedC7;
-  void* pvReservedC6;
-  void* pvReservedC5;
-  void* pvReservedC4;
-  void* pvReservedC3;
-  void* pvReservedC2;
-  void* pvReservedC1;
-
-  /* Peripheral handlers */
-  void* pfnSAIC_Handler;                         /*   0 Advanced Interrupt Controller (SAIC) */
-  void* pvReserved1;
-  void* pvReserved2;
-  void* pfnPIT_Handler;                          /*   3 Periodic Interval Timer (PIT) */
-  void* pfnWDT_Handler;                          /*   4 Watchdog Timer (WDT) */
-  void* pfnGMAC_Handler;                         /*   5 Gigabit Ethernet MAC (GMAC) */
-  void* pfnXDMAC0_Handler;                       /*   6 Extensible DMA Controller (XDMAC0) */
-  void* pfnXDMAC1_Handler;                       /*   7 Extensible DMA Controller (XDMAC1) */
-  void* pfnICM_Handler;                          /*   8 Integrity Check Monitor (ICM) */
-  void* pfnAES_Handler;                          /*   9 Advanced Encryption Standard (AES) */
-  void* pfnAESB_Handler;                         /*  10 Advanced Encryption Standard Bridge (AESB) */
-  void* pfnTDES_Handler;                         /*  11 Triple Data Encryption Standard (TDES) */
-  void* pfnSHA_Handler;                          /*  12 Secure Hash Algorithm (SHA) */
-  void* pfnMPDDRC_Handler;                       /*  13 AHB Multiport DDR-SDRAM Controller (MPDDRC) */
-  void* pfnMATRIX1_Handler;                      /*  14 AHB Bus Matrix (MATRIX1) */
-  void* pfnMATRIX0_Handler;                      /*  15 AHB Bus Matrix (MATRIX0) */
-  void* pfnSECUMOD_Handler;                      /*  16 Security Module (SECUMOD) */
-  void* pvReserved17;
-  void* pfnPIOA_Handler;                         /*  18 Parallel Input/Output Controller (PIOA) */
-  void* pfnFLEXCOM0_Handler;                     /*  19 Flexible Serial Communication (FLEXCOM0) */
-  void* pfnFLEXCOM1_Handler;                     /*  20 Flexible Serial Communication (FLEXCOM1) */
-  void* pfnFLEXCOM2_Handler;                     /*  21 Flexible Serial Communication (FLEXCOM2) */
-  void* pfnFLEXCOM3_Handler;                     /*  22 Flexible Serial Communication (FLEXCOM3) */
-  void* pfnFLEXCOM4_Handler;                     /*  23 Flexible Serial Communication (FLEXCOM4) */
-  void* pfnUART0_Handler;                        /*  24 Universal Asynchronous Receiver Transmitter (UART0) */
-  void* pfnUART1_Handler;                        /*  25 Universal Asynchronous Receiver Transmitter (UART1) */
-  void* pfnUART2_Handler;                        /*  26 Universal Asynchronous Receiver Transmitter (UART2) */
-  void* pfnUART3_Handler;                        /*  27 Universal Asynchronous Receiver Transmitter (UART3) */
-  void* pfnUART4_Handler;                        /*  28 Universal Asynchronous Receiver Transmitter (UART4) */
-  void* pfnTWIHS0_Handler;                       /*  29 Two-wire Interface High Speed (TWIHS0) */
-  void* pfnTWIHS1_Handler;                       /*  30 Two-wire Interface High Speed (TWIHS1) */
-  void* pfnSDMMC0_Handler;                       /*  31 Secure Digital MultiMedia Card Controller (SDMMC0) */
-  void* pfnSDMMC1_Handler;                       /*  32 Secure Digital MultiMedia Card Controller (SDMMC1) */
-  void* pfnSPI0_Handler;                         /*  33 Serial Peripheral Interface (SPI0) */
-  void* pfnSPI1_Handler;                         /*  34 Serial Peripheral Interface (SPI1) */
-  void* pfnTC0_Handler;                          /*  35 Timer Counter (TC0) */
-  void* pfnTC1_Handler;                          /*  36 Timer Counter (TC0) */
-  void* pvReserved37;
-  void* pfnPWM_Handler;                          /*  38 Pulse Width Modulation Controller (PWM) */
-  void* pvReserved39;
-  void* pfnADC_Handler;                          /*  40 Analog-to-Digital Converter (ADC) */
-  void* pvReserved41;
-  void* pfnUDPHS_Handler;                        /*  42 USB High Speed Device Port (UDPHS) */
-  void* pfnSSC0_Handler;                         /*  43 Synchronous Serial Controller (SSC0) */
-  void* pfnSSC1_Handler;                         /*  44 Synchronous Serial Controller (SSC1) */
-  void* pfnLCDC_Handler;                         /*  45 LCD Controller (LCDC) */
-  void* pfnISC_Handler;                          /*  46 Image Sensor Controller (ISC) */
-  void* pfnTRNG_Handler;                         /*  47 True Random Number Generator (TRNG) */
-  void* pfnPDMIC_Handler;                        /*  48 Pulse Density Modulation Interface Controller (PDMIC) */
-  void* pfnAIC_Handler;                          /*  49 Advanced Interrupt Controller (AIC) */
-  void* pfnSFC_Handler;                          /*  50 Secure Fuse Controller (SFC) */
-  void* pvReserved51;
-  void* pfnQSPI0_Handler;                        /*  52 Quad Serial Peripheral Interface (QSPI0) */
-  void* pfnQSPI1_Handler;                        /*  53 Quad Serial Peripheral Interface (QSPI1) */
-  void* pfnI2SC0_Handler;                        /*  54 Inter-IC Sound Controller (I2SC0) */
-  void* pfnI2SC1_Handler;                        /*  55 Inter-IC Sound Controller (I2SC1) */
-  void* pfnMCAN0_INT0_Handler;                   /*  56 Controller Area Network (MCAN0) */
-  void* pfnMCAN1_INT0_Handler;                   /*  57 Controller Area Network (MCAN1) */
-  void* pfnPTC_Handler;                          /*  58 Peripheral Touch Controller (PTC) */
-  void* pfnCLASSD_Handler;                       /*  59 Audio Class D Amplifier (CLASSD) (CLASSD) */
-  void* pvReserved60;
-  void* pvReserved61;
-  void* pvReserved62;
-  void* pfnL2CC_Handler;                         /*  63 L2 Cache Controller (L2CC) */
-  void* pfnMCAN0_INT1_Handler;                   /*  64 Controller Area Network (MCAN0) */
-  void* pfnMCAN1_INT1_Handler;                   /*  65 Controller Area Network (MCAN1) */
-  void* pfnGMAC_Q1_Handler;                      /*  66 Gigabit Ethernet MAC (GMAC) */
-  void* pfnGMAC_Q2_Handler;                      /*  67 Gigabit Ethernet MAC (GMAC) */
-  void* pfnPIOB_Handler;                         /*  68 Parallel Input/Output Controller (PIOB) */
-  void* pfnPIOC_Handler;                         /*  69 Parallel Input/Output Controller (PIOC) */
-  void* pfnPIOD_Handler;                         /*  70 Parallel Input/Output Controller (PIOD) */
-  void* pfnSDMMC0_TIMER_Handler;                 /*  71 Secure Digital MultiMedia Card Controller (SDMMC0) */
-  void* pfnSDMMC1_TIMER_Handler;                 /*  72 Secure Digital MultiMedia Card Controller (SDMMC1) */
-  void* pvReserved73;
-  void* pfnSYSC_Handler;                         /*  74 System Controller Interrupt (PMC RSTC RTC) */
-  void* pfnACC_Handler;                          /*  75 Analog Comparator Controller (ACC) */
-  void* pfnRXLP_Handler;                         /*  76 Low Power Asynchronous Receiver (RXLP) */
-} DeviceVectors;
-
-/* Defines for Deprecated Interrupt and Exceptions handler names */
-#define pfnMemManage_Handler      pfnMemoryManagement_Handler     /**< \deprecated  Backward compatibility for ASF*/
-#define pfnDebugMon_Handler       pfnDebugMonitor_Handler         /**< \deprecated  Backward compatibility for ASF*/
-#define pfnNMI_Handler            pfnNonMaskableInt_Handler       /**< \deprecated  Backward compatibility for ASF*/
-#define pfnSVC_Handler            pfnSVCall_Handler               /**< \deprecated  Backward compatibility for ASF*/
-
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -333,18 +227,14 @@ void SYSC_Handler                  ( void );
 void ACC_Handler                   ( void );
 void RXLP_Handler                  ( void );
 #endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
-/* Defines for Deprecated Interrupt and Exceptions handler names */
-#define MemManage_Handler         MemoryManagement_Handler        /**< \deprecated  Backward compatibility*/
-#define DebugMon_Handler          DebugMonitor_Handler            /**< \deprecated  Backward compatibility*/
-#define NMI_Handler               NonMaskableInt_Handler          /**< \deprecated  Backward compatibility*/
-#define SVC_Handler               SVCall_Handler                  /**< \deprecated  Backward compatibility*/
-
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-/*
- * \brief Configuration of the CORTEX-A5 Processor and Core Peripherals
- */
+/** \brief Configuration of the CORTEX-A5 Processor and Core Peripherals */
+#define __CA_REV                  0x0001 /**< CA5 Core Revision                                                         */
+#define __CORTEX_A                     5 /**< Core type number (Cortex-A5)                                              */
 #define __FPU_PRESENT                  1 /**< FPU is present on core                                                    */
+#define __GIC_PRESENT                  0 /**< GIC is present on core                                                    */
+#define __TIM_PRESENT                  0 /**< Private Timer is present on core                                          */
 
 /*
  * \brief CMSIS includes
