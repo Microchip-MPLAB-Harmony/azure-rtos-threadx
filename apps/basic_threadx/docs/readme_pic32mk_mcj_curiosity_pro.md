@@ -27,9 +27,9 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| pic32mk_mcj_curiosity_pro.X | MPLABX Project for PIC32MK MCJ Curiosity Pro Development Board |
+| pic32mk_mcj_curiosity_pro.X | MPLABX Project for [PIC32MK MCJ Curiosity Pro Development Board]() |
 
-## Setting up PIC32MK MCJ Curiosity Pro Development Board
+## Setting up [PIC32MK MCJ Curiosity Pro Development Board]()
 
 - Connect micro USB cable to the 'Debug USB' connector(J1) on the board to the computer
 
@@ -43,5 +43,5 @@ Refer to the following table for LED name:
 
 | Board | LED Name |
 | ----- | -------- |
-| [PIC32MK MCJ Curiosity Pro Development Board] | LED2 |
+| [PIC32MK MCJ Curiosity Pro Development Board]() | LED2 |
 |||
