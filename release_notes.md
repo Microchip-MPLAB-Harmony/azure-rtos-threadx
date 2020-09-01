@@ -1,5 +1,44 @@
+---
+title: Release notes
+nav_order: 99
+---
 
-# Microchip MPLAB Harmony configurations and applications for Express Logic ThreadX Release Notes
+![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
+![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
+
+# Microchip MPLAB® Harmony 3 Release Notes
+
+## Release v3.2.0
+### NEW FEATURES
+- Azure RTOS ThreadX v6.0.2 support for SAM and PIC32M devices
+
+**Development kit and demo application support** - The following table provides number of Azure RTOS ThreadX demo application available for different development kits
+
+| Development kits                                                                                                                              | XC32  | IAR |
+| ----------------------------------------------------------------------------------------------------------------------------------------------| ------|-----|
+| [SAM E54 Xplained Pro Evaluation Kit](https://www.microchip.com/developmenttools/ProductDetails/atsame54-xpro)                                |  1    |  -  |
+| [SAM E70 Xplained Ultra Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=ATSAME70-XULT)                  |  1    |  -  |
+| [PIC32MZ Embedded Graphics with Stacked DRAM (DA) Starter Kit (Crypto)](http://www.microchip.com/DevelopmentTools/ProductDetails/DM320010)    |  1    |  -  |
+| [PIC32MZ Embedded Connectivity with FPU (EF) Starter Kit](http://www.microchip.com/Developmenttools/ProductDetails/DM320007)                  |  1    |  -  |
+| PIC32MK MCJ Curiosity Pro Development Board                                                                                                   |  1    |  -  |
+| [SAM C21N Xplained Pro Evaluation Kit](http://www.microchip.com/developmenttools/ProductDetails/atsamc21n-xpro)                               |  1    |  -  |
+| [SAM A5D2 Xplained Ultra board](http://www.microchip.com/DevelopmentTools/ProductDetails/ATSAMA5D2C-XULT)                                     |  1    |  1  |
+| [ATSAM9X60-EK](https://www.microchip.com/design-centers/32-bit-mpus/microprocessors/sam9)                                                     |  1    |  1  |
+
+### KNOWN ISSUES
+
+The current known issues are as follows:
+- When creating IAR project for SAMA5D2, project should be manually configured to generate code in ARM mode (Default mode is Thumb)
+
+### DEVELOPMENT TOOLS
+
+- [MPLAB® X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide)
+- [MPLAB® XC32 C/C++ Compiler v2.41](https://www.microchip.com/mplab/compilers)
+- [IAR EWARM v8.50](https://www.iar.com/iar-embedded-workbench/#!?architecture=Arm)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Harmony Configurator (MHC) v3.6.0
+
+
 ## Release v3.1.0
 ### NEW FEATURES
 - Added XC32 support for SAM 9X60
